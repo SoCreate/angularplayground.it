@@ -10,27 +10,31 @@ import 'rxjs/add/operator/toPromise';
   template: `<ng-content></ng-content>`
 })
 export class MarkdownComponent {
-  @Input() path: string;
+  _path;
+  @Input() set path(value) {
+    this._path = value;
+    if(this._path) {
+      this.getContent();
+    }
+  }
   private md;
   private ext;
   constructor(private el: ElementRef, private http: Http) {}
 
   ngAfterViewInit() {
-    if (!this.path) {
+    if (!this._path) {
       this.md = this.prepare(this.el.nativeElement.innerHTML);
       this.el.nativeElement.innerHTML = marked(this.md);
       Prism.highlightAll(false);
-    } else {
-      this.getContent();
     }
   }
 
   getContent() {
-    if (!!this.path) {
-      this.ext = this.path.split('.').splice(-1).join();
+    if (!!this._path) {
+      this.ext = this._path.split('.').splice(-1).join();
     }
 
-    this.http.get(this.path)
+    this.http.get(this._path)
       .toPromise()
       .then(resp => {
         this.md = resp.text();

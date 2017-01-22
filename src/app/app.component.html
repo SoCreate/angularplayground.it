@@ -1,19 +1,9 @@
 <header>
-  <a href="">home</a>
-  <a href="">docs</a>
-  <a href="">about</a>
+  <a routerLink="/">home</a>
+  <a routerLink="/docs">docs</a>
+  <a routerLink="/about">about</a>
 </header>
-<h1>Angular Playground</h1>
-<h3>Work Your Components in Isolation<br />(Scenario Driven Development)</h3>
-
-<div markdown>
-  ```
-  npm i -S angular-playground
-  ```
-</div>
-
-<div markdown path="content/test.md"></div>
-
+<router-outlet></router-outlet>
 <footer>
   Built with ❤️ for the Angular Community by <a href="https://socreate.it">SoCreate</a>
 </footer>
