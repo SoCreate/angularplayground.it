@@ -1,3 +1,5 @@
+Writing a sandbox for a component.
+
 *notice.component.sandbox.ts*
 ```typescript
 import { sandboxOf } from 'angular-playground';
