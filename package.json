@@ -6,6 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "site:deploy": "ng github-pages:deploy -bh / -cd angularplayground.it",
     "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check"
   },
   "private": true,
