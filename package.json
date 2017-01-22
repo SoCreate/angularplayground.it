@@ -30,7 +30,7 @@
     "@types/marked": "0.0.28",
     "@types/node": "^6.0.42",
     "@types/prismjs": "^1.4.18",
-    "angular-cli": "1.0.0-beta.25.5",
+    "angular-cli": "1.0.0-beta.26",
     "codelyzer": "~2.0.0-beta.1",
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
