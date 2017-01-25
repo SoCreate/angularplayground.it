@@ -9,6 +9,7 @@ import {MarkdownComponent} from './shared/markdown.component';
 import {AboutComponent} from './about/about/about.component';
 import {HomeComponent} from './home/home.component';
 import {DocsComponent} from './docs/docs/docs.component';
+import { GithubCornerComponent } from './shared/github-corner.component';
 
 const appRoutes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    GithubCornerComponent,
     MarkdownComponent,
     AboutComponent,
     HomeComponent,

@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  > aside {
+    width: 200px;
+    min-width: 200px;
+    padding-right: 15px;
+    border-right: 1px solid #ebebeb;
+    > h2 {
+      font-size: 18px;
+    }
+    > a {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 8px;
+      color: #444;
+      font-size: 14px;
+      &:visited, &:active, &:focus, &:hover {
+        text-decoration: none;
+        color: #444;
+      }
+      &:hover {
+        opacity: .7;
+      }
+      &.active {
+        color: #60c126;
+      }
+    }
+  }
+  > article {
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 26px;
+    /deep/ {
+      h1 {
+        font-size: 26px;
+      }
+      p > code {
+        background-color: #f5f2f0;
+        border-radius: 2px;
+        padding: 2px 5px;
+      }
+    }
+  }
+}

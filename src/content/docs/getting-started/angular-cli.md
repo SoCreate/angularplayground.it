@@ -1,6 +1,6 @@
 # Setting up an Angular CLI Powered Project
 
-Angular Playground ❤'s Angular CLI and has built in support for integrating with it.
+Angular Playground ❤️'s Angular CLI and has built in support for integrating with it.
 If your app is using the **Angular CLI** you can set up your **angular-playground.json**
 file to have Angular Playground make use of its `ng serve` under the hood.  
 
