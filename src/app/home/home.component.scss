@@ -1,0 +1,42 @@
+:host {
+    font-size: 1rem;
+}
+
+.title {
+    font-size: 1em;
+    margin: 0;
+    padding: 1em 0 0;
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 40em;
+    }
+
+    &__label {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px !important;
+        overflow: hidden;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+    }
+
+}
+
+.subTitle {
+    text-align: center;
+}
+
+.demo {
+    background: black;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 56%;
+}
+
+.message {
+    text-align: center;
+}
