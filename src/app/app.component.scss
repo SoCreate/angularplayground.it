@@ -1,11 +1,10 @@
 :host {
   font-family: Open Sans,sans-serif;
-  display: block;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
   > header {
     > nav {
-      float: right;
-      position: relative;
       > a {
         margin-right: 15px;
         text-transform: uppercase;

@@ -1,0 +1,24 @@
+<h1>Sandboxing Components</h1>
+<p markdown>
+  To create a sandbox with scenarios for components in your Angular application you need
+  to use the `sandboxOf` function and export the call to that as the default for the file.
+  This file needs to have the `.sandbox.ts` extension for it to be auto-discovered.
+
+  So let's say you have a `NoticeComponent` in a file named `notice.component.ts`.
+</p>
+<div markdown path="content/docs/sandboxing/sandboxing-components.md"></div>
+<p markdown>
+  You can create a file next to it named `notice.component.sandbox.ts` with the following content:
+</p>
+<div markdown path="content/docs/sandboxing/sandboxing-components2.md"></div>
+<p markdown>
+  The `sandboxOf` function returns an instance of a `SandboxBuilder` that has a fluid
+  api via it's `add` method. The `add` method is used to add scenarios for your sandboxed component.
+  Each scenario needs a `description` (the first parameter), and a `scenarioConfig` object
+  (the second parameter). The `scenarioConfig` object requires a `template` property at a minimum.
+
+  The `sandboxOf` function and `SandboxBuilder` are *"TypeScripted"* out so you can discover
+  the different parameters/options/etc within your IDE/editor (if it has TypeScript support).
+  Or you can always explore the [source code](https://github.com/socreate/angular-playground)!
+  Or...you can contribute and add more docs to show how to use the api. 😎
+</p>

@@ -6,6 +6,9 @@
   <a routerLink="/docs/getting-started/cli" routerLinkActive="active">Angular Playground CLI</a>
   <a routerLink="/docs/getting-started/angular-cli" routerLinkActive="active">Setup With Angular CLI</a>
   <h2>Sandboxing</h2>
-  <a routerLink="/docs/sandboxing/writing-simple-sandboxes" routerLinkActive="active">Writing Simple Sandboxes</a>
+  <a routerLink="/docs/sandboxing/sandboxing-components" routerLinkActive="active">Sandboxing Components</a>
+  <a routerLink="/docs/sandboxing/api" routerLinkActive="active">Sandbox API</a>
 </aside>
-<article markdown [path]="path"></article>
+<article>
+  <router-outlet></router-outlet>
+</article>
