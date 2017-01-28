@@ -1,6 +1,6 @@
-# Website for [www.AngularPlayground.it](https://www.AngularPlayground.it)
+# Website for [www.AngularPlayground.it](http://www.AngularPlayground.it)
 
-This is the source for the [www.AngularPlayground.it](https://www.AngularPlayground.it) website. It is built with Angular and the Angular CLI.
+This is the source for the [www.AngularPlayground.it](http://www.AngularPlayground.it) website. It is built with Angular and the Angular CLI.
 
 ## Kudos
 
