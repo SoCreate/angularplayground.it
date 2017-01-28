@@ -1,6 +1,7 @@
 <app-github-corner repositoryUrl="https://github.com/socreate/angular-playground"></app-github-corner>
 <header class="header">
   <a 
+    *ngIf="route !== ''"
     routerLink="/"
     class="header__link">
     <playground-logo class="header__logo"></playground-logo>

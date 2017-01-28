@@ -4,21 +4,32 @@
 
 
 .logo {
-
-    &__symbol {
-        fill: $color__02--01;
-    }
-
-    &__letter01 {
-        fill: $color__03--02;
-    }
+    fill: $color__01--04;
+    opacity: 0.3;
 
     &__letter02 {
         fill: $color__01--01;
     }
 
-    &__letter03 {
-        fill: $color__02--01;
+    &:hover {
+        opacity: 1;
+
+        .logo {
+
+            &__symbol {
+                fill: $color__02--01;
+            }
+
+            &__letter01 {
+                fill: $color__03--02;
+            }
+
+            &__letter03 {
+                fill: $color__02--01;
+            }
+
+        }
+
     }
 
 }
