@@ -1,7 +1,31 @@
 <h1>Installing</h1>
-<p>Angular Playground is available as an npm package.</p>
-<div markdown>
+<p>
+  Angular Playground is available as an npm package.
+</p>
+<section markdown>
 ```
 npm i -D angular-playground
 ```
-</div>
+</section>
+<p>
+  There are three primary steps to getting up and running with Angular Playground.
+</p>
+<ol>
+  <li>
+    Install the package into your project.
+  </li>
+  <li>
+    Create a <a routerLink="/docs/getting-started/cli">json config file</a> for
+    the Angular Playground CLI to use.
+  </li>
+  <li>
+    Set up <a routerLink="/docs/getting-started/bootstrapping">bootstrap logic</a>
+    to make use of the `PlaygroundModule` as an entry module.
+  </li>
+</ol>
+<section markdown>
+  From there you can start writing sandbox files for your components and directives
+  and make use of the Angular Playground CLI to discover those files and watch for changes.
+  With all that in place, you just need to serve up the bootstrap logic that uses
+  the `PlaygroundModule`.
+</section>
