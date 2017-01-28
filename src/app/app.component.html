@@ -1,12 +1,48 @@
 <app-github-corner repositoryUrl="https://github.com/socreate/angular-playground"></app-github-corner>
-<header>
-  <nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">home</a>
-    <a routerLink="/docs" routerLinkActive="active">docs</a>
-    <a routerLink="/about" routerLinkActive="active">about</a>
+<header class="header">
+  <a 
+    *ngIf="route !== ''"
+    routerLink="/"
+    class="header__link">
+    <playground-logo class="header__logo"></playground-logo>
+  </a>
+  <nav class="header__nav">
+    <a 
+      routerLink="/" 
+      routerLinkActive="header__navItem--active" 
+      [routerLinkActiveOptions]="{exact:true}"
+      class="header__navItem">
+        Home
+    </a>
+    <a 
+      routerLink="/docs" 
+      routerLinkActive="header__navItem--active"
+      class="header__navItem">
+      docs
+    </a>
+    <a 
+      routerLink="/about" 
+      routerLinkActive="header__navItem--active"
+      class="header__navItem">
+      about
+    </a>
   </nav>
 </header>
-<router-outlet></router-outlet>
-<footer>
-  Built with ❤️ for the Angular Community by the team at <a href="https://socreate.it">SoCreate</a>
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+<footer class="footer">
+  <div class="footer__content">
+    Built with ❤️ for the Angular Community by the team at 
+    <a 
+      href="https://socreate.it"
+      class="footer__link">
+      SoCreate
+    </a>
+    <a
+      class="footer__brand" 
+      href="https://socreate.it">
+      <socreate-logo href="footer__brandLogo"></socreate-logo>
+    </a>    
+  </div>
 </footer>

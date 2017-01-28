@@ -1,14 +1,53 @@
-<aside>
-  <h2>Getting Started</h2>
-  <a routerLink="/docs/getting-started/introduction" routerLinkActive="active">Introduction</a>
-  <a routerLink="/docs/getting-started/installing" routerLinkActive="active">Installing</a>
-  <a routerLink="/docs/getting-started/bootstrapping" routerLinkActive="active">Bootstrapping Angular Playground</a>
-  <a routerLink="/docs/getting-started/cli" routerLinkActive="active">Angular Playground CLI</a>
-  <a routerLink="/docs/getting-started/angular-cli" routerLinkActive="active">Setup With Angular CLI</a>
-  <h2>Sandboxing</h2>
-  <a routerLink="/docs/sandboxing/sandboxing-components" routerLinkActive="active">Sandboxing Components</a>
-  <a routerLink="/docs/sandboxing/api" routerLinkActive="active">Sandbox API</a>
+<aside class="nav">
+  <div class="nav__block">
+  <h5>Getting Started</h5>
+    <a 
+      routerLink="/docs/getting-started/introduction" 
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Introduction
+    </a>
+    <a 
+      routerLink="/docs/getting-started/installing" 
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Installing
+    </a>
+    <a 
+      routerLink="/docs/getting-started/bootstrapping" 
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Bootstrapping Angular Playground
+    </a>
+    <a 
+      routerLink="/docs/getting-started/cli"
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Angular Playground CLI
+    </a>
+    <a 
+      routerLink="/docs/getting-started/angular-cli" 
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Setup With Angular CLI
+    </a>
+  </div>
+  <div class="nav__block">
+    <h5>Sandboxing</h5>
+    <a 
+      routerLink="/docs/sandboxing/sandboxing-components" 
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Sandboxing Components
+    </a>
+    <a 
+      routerLink="/docs/sandboxing/api" 
+      routerLinkActive="nav__item--active"
+      class="nav__item">
+      Sandbox API
+    </a>
+  </div>
 </aside>
-<article>
+<article class="content">
   <router-outlet></router-outlet>
 </article>

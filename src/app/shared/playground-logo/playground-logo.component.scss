@@ -1,0 +1,40 @@
+@import '../../scss/colors';
+
+
+
+
+.logo {
+
+    &__box {
+
+        &--01 {
+            fill: $color__02--01;
+        }
+
+        &--02 {
+            fill: $color__03--01;
+        }
+
+        &--03 {
+            fill: $color__03--02;
+        }
+
+    }
+
+    &__letter { 
+        fill: $color__01--01;
+    }
+
+    &__highlight {
+    
+        &--01 {
+            fill: $color__04--01;
+        }
+
+        &--02 {
+            fill: $color__04--02;
+        }
+
+    }
+
+}

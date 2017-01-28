@@ -1,3 +1,5 @@
+import { SoCreateLogoComponent } from './shared/socreate-logo/socreate-logo.component';
+import { PlaygroundLogoComponent } from './shared/playground-logo/playground-logo.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -40,6 +42,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    PlaygroundLogoComponent,
+    SoCreateLogoComponent,
     GithubCornerComponent,
     MarkdownComponent,
     AboutComponent,
