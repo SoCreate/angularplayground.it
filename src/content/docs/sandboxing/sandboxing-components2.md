@@ -1,4 +1,4 @@
-*notice.component.sandbox.ts*
+###### notice.component.sandbox.ts
 ```typescript
 import { sandboxOf } from 'angular-playground';
 import { NoticeComponent } from './notice.component';

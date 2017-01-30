@@ -1,4 +1,4 @@
-*notice.component.ts*
+###### notice.component.ts
 ```typescript
 import { Component } from '@angular/core';
 @Component({
