@@ -9,7 +9,7 @@ $app__spacing: 2.5em;
 
 :host {
   background: $color__01--01;
-  color: $color__01--04;
+  color: $color__01--05;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -52,7 +52,7 @@ $app__spacing: 2.5em;
     padding-top: 0.5em;
   
     &Item {
-      color: $color__01--05;
+      color: $color__01--06;
       font-size: 80%;
       margin-left: 1em;
       position: relative;
@@ -71,7 +71,7 @@ $app__spacing: 2.5em;
         font-weight: bold;
 
         &:hover {
-          color: $color__01--05;
+          color: $color__01--06;
           cursor: default;
         }
 

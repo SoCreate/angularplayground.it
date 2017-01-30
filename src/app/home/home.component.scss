@@ -1,3 +1,4 @@
+@import '../scss/colors';
 @import '../scss/visually-hidden';
 
 
@@ -5,6 +6,8 @@
 
 :host {
     font-size: 1rem;
+    flex: 1;
+    max-width: 100%;
 }
 
 .title {
@@ -26,8 +29,16 @@
 }
 
 .subTitle {
+    color: $color__01--06;
     text-align: center;
     padding-bottom: 1em;
+
+    &__note {
+        display: block;
+        font-size: 70%;
+        color: $color__01--04;
+    }
+
 }
 
 .demo {
