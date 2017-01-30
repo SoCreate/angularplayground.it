@@ -1,4 +1,7 @@
 @import '../../scss/colors';
+@import '../../scss/mediaqueries';
+
+$nav__size: 12.5em;
 
 
 
@@ -9,9 +12,8 @@
 }
 
 .nav {
-  $size: 12.5em;
-  max-width: $size;
-  min-width: $size;
+  max-width: $nav__size;
+  min-width: $nav__size;
   padding: 0 1em 2em 0;
   border-right: 1px solid $color__01--03;
 
@@ -79,6 +81,8 @@
 
 .content {
   flex: 1;
+  max-width: calc(100% - #{$nav__size});
+  min-width: calc(100% - #{$nav__size});
   padding-left: 2em;
 
   /deep/ {
@@ -104,17 +108,80 @@
 
     }
 
+    blockquote {
+      background-color: rgba($color__01--03, 0.25);
+      border-left: 0.3334em solid $color__03--01;
+      border-bottom-right-radius: 0.4em;
+      border-top-right-radius: 0.4em;
+      margin: 1.6em 0;
+      padding: 1em 1.25em;
+    }
+
+    // Lists
+    ol {
+      list-style: none;
+      margin: 0 0 1.6rem;
+      padding: 0;
+
+      li {
+        counter-increment: step-counter;
+        line-height: 1.6;
+        padding-left: 2.8rem;
+        position: relative;
+
+        &::before {
+          content: counter(step-counter) ".)";
+          display: block;
+          left: 0;
+          padding-right: .6em;
+          text-align: right;
+          position: absolute;
+          width: 2.25rem;
+        }
+
+      }
+
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 1.6rem;
+      padding: 0;
+
+      li {
+        line-height: 1.6;
+        padding-left: 2.8rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          border-left: 0.5em solid $color__02--01;
+          border-bottom: 0.3em solid transparent;
+          border-top: 0.3em solid transparent;
+          height: 0;
+          position: absolute;
+          left: 0.75rem;
+          top: 0.65em;
+          width: 0;
+        }
+
+      }
+
+    }
 
     // Pre and Code
     code {
       background-color: rgba($color__01--03, 0.5);
       border-radius: 0.4em;
-      padding: 0 0.5em;
+      color: $color__01--05;
+      padding: 0.15em 0.5em;
     }
 
     pre {
       background-color: rgba($color__01--03, 0.5);
       border-radius: 0.4em;
+      color: $color__01--05;
       margin-bottom: 1.6em;
 
       &:not([class*="language"]) {
@@ -123,12 +190,96 @@
     
       code {
         background: none transparent;
+        color: $color__01--05;
         display: block;
         padding: 0;
       }
 
     }
 
+  }
+
+}
+
+
+
+
+// Mediaqueries
+// _________________________________________________________________________________________
+@media (min-width: $mediaquery__appNav--hidden) {
+  
+  .navToggle {
+
+    &,
+    &__shield {
+      display: none;
+    }
+
+  }
+
+}
+
+@media (max-width: $mediaquery__appNav--hidden) {
+  
+  .navToggle {
+    display: block;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .navToggle__shield--open {
+    background: rgba($color__01--01, 0.75);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9;
+  }
+
+  .nav {
+    background: $color__03--02;
+    border: none;
+    height: 100%;
+    left: 0;
+    padding-left: 1.5em;
+    padding-top: 2em;
+    position: fixed;
+    top: 0;
+    transition: transform 0.3s;
+    width: $nav__size;
+    z-index: 10;
+
+    &--open {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &--close {
+      transform: translate3d(-#{$nav__size}, 0, 0);
+    }
+
+    h5 {
+      color: $color__01--01;
+    }
+
+    &__item--active {
+
+      &,
+      &:hover {
+        color: $color__01--01;
+      }
+      
+    }
+
+  }
+
+  .content {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0;
   }
 
 }

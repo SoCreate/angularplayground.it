@@ -1,4 +1,4 @@
-*environment.playground.ts*
+###### environment.playground.ts
 ```typescript
 export { PlaygroundModule as AppModule } from 'angular-playground';
 import { initializePlayground } from 'angular-playground';

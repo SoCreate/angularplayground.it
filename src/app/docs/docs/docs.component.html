@@ -1,6 +1,22 @@
-<aside class="nav">
+<a
+  (click)="setShowNav(true)"
+  class="navToggle">
+    Toggle Nav
+</a>
+<div
+  (click)="setShowNav(false)"
+  [ngClass]="{
+    'navToggle__shield--open': !navClosed, 
+    'navToggle__shield--close': navClosed}"
+  class="navToggle__shield">
+</div>
+<aside 
+  [ngClass]="{
+    'nav--open': !navClosed, 
+    'nav--close': navClosed}"
+  class="nav">
   <div class="nav__block">
-  <h5>Getting Started</h5>
+    <h5>Getting Started</h5>
     <a
       routerLink="/docs/getting-started/introduction"
       routerLinkActive="nav__item--active"

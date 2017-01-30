@@ -1,4 +1,4 @@
-*main.ts*
+###### main.ts
 ```typescript
 import './polyfills.ts';
 
