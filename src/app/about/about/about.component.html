@@ -1,3 +1,44 @@
-<p>
-  about works!
-</p>
+<div class="content">
+  <h1 class="content__title">
+    About
+  </h1>
+  <p>
+    The earliest known appearance of the phrase is from the Boston Journal newspaper. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet: 'A quick brown fox jumps over the lazy dog.'" Dozens of other newspapers published the phrase over the next few months, all using the version of the sentence starting with "A" rather than "The". The earliest known use of the phrase in its modern form (starting with "The") is from the 1888 book Illustrative Shorthand by Linda Bronson
+  </p>
+</div>
+<ul class="items">
+  <li
+    *ngFor="let item of items" 
+    class="item">
+    <div class="item__avatar">
+      <a 
+        href="item.githubUrl" 
+        class="item__avatarLink">
+        <img 
+          [src]="item.avatarUrl" 
+          [alt]="item.name">
+      </a>
+    </div>    
+    <div class="item__content">
+      <h5 class="item__title">
+        <a 
+          [href]="item.githubUrl"
+          class="item__titleLink">
+          {{item.name}}
+        </a>
+      </h5>
+      <a 
+        [href]="item.githubUrl"
+        class="item__github">
+        <span class="item__githubLine01">Github</span>      
+        <span class="item__githubLine02">{{item.githubHandle}}</span>      
+      </a>
+      <a 
+        [href]="item.twitterUrl"
+        class="item__twitter">
+        <span class="item__twitterLine01">Twitter</span>      
+        <span class="item__twitterLine02">{{item.twitterHandle}}</span>      
+      </a>
+    </div>
+  </li>
+</ul>
