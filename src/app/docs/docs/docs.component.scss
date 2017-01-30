@@ -10,6 +10,7 @@ $nav__size: 12.5em;
 :host {
   display: flex;
   font-size: 1rem;
+  max-width: 100%;
 }
 
 .navShow {
@@ -28,6 +29,10 @@ $nav__size: 12.5em;
 
   &__block {
     padding-bottom: 2em;
+  }
+
+  &__title {
+    color: $color__01--05;
   }
 
   &__item {
@@ -87,7 +92,6 @@ $nav__size: 12.5em;
 
 }
 
-
 .content {
   flex: 1;
   max-width: calc(100% - #{$nav__size});
@@ -97,6 +101,15 @@ $nav__size: 12.5em;
   /deep/ {
 
     // Formatting
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $color__01--05;
+    }
+
     p {
       line-height: 1.6;
       margin-bottom: 1.6em;
@@ -219,6 +232,10 @@ $nav__size: 12.5em;
 @media (max-width: $mediaquery__appNav--hidden) {
 
   $iconOffset: 0.7em;
+
+  :host {
+    min-width: 100%;
+  }
   
   .navShow {
     background: $color__03--01;
@@ -228,10 +245,10 @@ $nav__size: 12.5em;
     height: 2.7em;
     overflow: hidden;
     position: absolute;
-    right: 2.5em;
+    right: 0;
     padding: $iconOffset;
     text-align: center;
-    top: 1.5em;
+    top: -2px;
     width: 3em;
 
     &::before {

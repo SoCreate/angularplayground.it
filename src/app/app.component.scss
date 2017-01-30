@@ -154,6 +154,11 @@ $app__spacing: 2.5em;
     padding-top: 2.5em;
     text-align: center;
 
+    &::before {
+      left: 0;
+      right: 0;
+    }
+
     &__logo {
       margin: 0 auto;
     }
@@ -162,6 +167,10 @@ $app__spacing: 2.5em;
       padding-top: 1.5em;
     }
 
+  }
+
+  .content {
+    padding-top: 3.2em;
   }
 
 }

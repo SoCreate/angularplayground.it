@@ -1,4 +1,5 @@
 @import '../../app/scss/colors';
+@import '../../app/scss/mediaqueries';
 
 
 
@@ -8,10 +9,24 @@ html {
     font-family: 'Open sans', sans-serif;
     font-size: 100%;
     margin: 0;
+    min-width: 320px;
     overflow-x: hidden;
     padding: 0;
 }
 
 * {
     box-sizing: border-box;
+}
+
+
+
+
+// Mediaqueries
+// _________________________________________________________________________________________
+@media (max-width: $mediaquery__content--reduce) {
+
+    html {
+        font-size: 80%;
+    }
+
 }
