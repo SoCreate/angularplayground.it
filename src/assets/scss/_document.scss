@@ -8,11 +8,8 @@ html {
     font-family: 'Open sans', sans-serif;
     font-size: 100%;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
-}
-
-body {
-    min-width: 20em;
 }
 
 * {
