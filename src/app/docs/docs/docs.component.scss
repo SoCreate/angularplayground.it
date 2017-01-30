@@ -32,7 +32,7 @@ $nav__size: 12.5em;
   }
 
   &__title {
-    color: $color__01--05;
+    color: $color__01--06;
   }
 
   &__item {
@@ -67,7 +67,7 @@ $nav__size: 12.5em;
 
     // Active
     &--active {
-      color: $color__01--05;
+      color: $color__01--06;
       font-weight: bold;
 
       &::before {
@@ -76,7 +76,7 @@ $nav__size: 12.5em;
       }
 
       &:hover {
-        color: $color__01--05;
+        color: $color__01--06;
         cursor: default;
         text-decoration: none;
 
@@ -107,7 +107,7 @@ $nav__size: 12.5em;
     h4,
     h5,
     h6 {
-      color: $color__01--05;
+      color: $color__01--06;
     }
 
     p {
@@ -116,7 +116,7 @@ $nav__size: 12.5em;
     }
 
     strong {
-      color: $color__01--05;
+      color: $color__01--06;
     }
 
     a {
@@ -135,7 +135,7 @@ $nav__size: 12.5em;
       border-left: 0.3334em solid $color__03--01;
       border-bottom-right-radius: 0.4em;
       border-top-right-radius: 0.4em;
-      color: $color__01--05;
+      color: $color__01--06;
       margin: 1.6em 0;
       padding: 1em 1.25em;
     }
@@ -197,14 +197,14 @@ $nav__size: 12.5em;
     code {
       background-color: rgba($color__01--03, 0.5);
       border-radius: 0.4em;
-      color: $color__01--05;
+      color: $color__01--06;
       padding: 0.15em 0.5em;
     }
 
     pre {
       background-color: rgba($color__01--03, 0.5);
       border-radius: 0.4em;
-      color: $color__01--05;
+      color: $color__01--06;
       margin-bottom: 1.6em;
 
       &:not([class*="language"]) {
@@ -213,7 +213,7 @@ $nav__size: 12.5em;
     
       code {
         background: none transparent;
-        color: $color__01--05;
+        color: $color__01--06;
         display: block;
         padding: 0;
       }
