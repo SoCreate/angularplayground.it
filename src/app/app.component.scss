@@ -174,3 +174,19 @@ $app__spacing: 2.5em;
   }
 
 }
+
+@media (max-width: $mediaquery__content--reduce) {
+
+  app-github-corner {
+    display: block;
+    min-width: 320px;
+    position: relative;
+
+    /deep/ svg {
+      height: 50px;
+      width: 50px;
+    }
+
+  }
+
+}

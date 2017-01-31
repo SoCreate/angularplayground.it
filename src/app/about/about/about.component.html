@@ -3,7 +3,7 @@
     About
   </h1>
   <p>
-    The earliest known appearance of the phrase is from the Boston Journal newspaper. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet: 'A quick brown fox jumps over the lazy dog.'" Dozens of other newspapers published the phrase over the next few months, all using the version of the sentence starting with "A" rather than "The". The earliest known use of the phrase in its modern form (starting with "The") is from the 1888 book Illustrative Shorthand by Linda Bronson
+    Angular Playground is maintained by a small group of invaluable core contributors, with the massive support and involvement of our community.
   </p>
 </div>
 <ul class="items">
@@ -12,7 +12,7 @@
     class="item">
     <div class="item__avatar">
       <a 
-        href="item.githubUrl" 
+        [href]="item.twitterUrl" 
         class="item__avatarLink">
         <img 
           [src]="item.avatarUrl" 
@@ -22,7 +22,7 @@
     <div class="item__content">
       <h5 class="item__title">
         <a 
-          [href]="item.githubUrl"
+          [href]="item.twitterUrl"
           class="item__titleLink">
           {{item.firstName}} {{item.lastName}}
         </a>
