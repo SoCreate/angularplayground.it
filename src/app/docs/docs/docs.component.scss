@@ -105,8 +105,7 @@ $nav__size: 12.5em;
     h2,
     h3,
     h4,
-    h5,
-    h6 {
+    h5{
       color: $color__01--06;
     }
 
@@ -173,7 +172,7 @@ $nav__size: 12.5em;
 
       li {
         line-height: 1.6;
-        padding-left: 2.8rem;
+        padding-left: 1.9rem;
         position: relative;
 
         &::before {
@@ -218,6 +217,24 @@ $nav__size: 12.5em;
         padding: 0;
       }
 
+    }
+
+    h6 {
+      background: $color__02--01;
+      border-top-left-radius: 0.4em;
+      border-top-right-radius: 0.4em;
+      color: $color__01--01;
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      font-size: 1em;
+      line-height: 1.2;
+      margin-bottom: -0.5em;
+      padding: 0.5em 1em;
+
+      & + pre {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      
     }
 
   }
