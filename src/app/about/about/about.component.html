@@ -1,3 +1,69 @@
-<p>
-  about works!
-</p>
+<div class="content">
+  <h1 class="content__title">
+    About
+  </h1>
+  <p>
+    The earliest known appearance of the phrase is from the Boston Journal newspaper. In an article titled "Current Notes" in the February 10, 1885 morning edition, the phrase is mentioned as a good practice sentence for writing students: "A favorite copy set by writing teachers for their pupils is the following, because it contains every letter of the alphabet: 'A quick brown fox jumps over the lazy dog.'" Dozens of other newspapers published the phrase over the next few months, all using the version of the sentence starting with "A" rather than "The". The earliest known use of the phrase in its modern form (starting with "The") is from the 1888 book Illustrative Shorthand by Linda Bronson
+  </p>
+</div>
+<ul class="items">
+  <li
+    *ngFor="let item of items" 
+    class="item">
+    <div class="item__avatar">
+      <a 
+        href="item.githubUrl" 
+        class="item__avatarLink">
+        <img 
+          [src]="item.avatarUrl" 
+          [alt]="item.firstName + ' ' + item.lastName">
+      </a>
+    </div>    
+    <div class="item__content">
+      <h5 class="item__title">
+        <a 
+          [href]="item.githubUrl"
+          class="item__titleLink">
+          {{item.firstName}} {{item.lastName}}
+        </a>
+      </h5>
+      <ul class="item__contacts">
+        <li class="item__contact">
+          <a 
+            [href]="item.githubUrl"
+            class="item__link">
+            <svg 
+              viewBox="0 0 200 200"
+              class="item__icon">
+              <path d="M100.4,3C45.4,3,1,47.3,1,102.3c0,43.7,28.5,80.8,68.2,94.1c5.3,0.7,6.6-2,6.6-4.6v-17.2c-27.8,6-33.8-13.2-33.8-13.2
+                c-4.6-11.3-11.3-14.6-11.3-14.6c-9.3-6,0.7-6,0.7-6c9.9,0.7,15.2,9.9,15.2,9.9c8.6,15.2,23.2,10.6,29.1,7.9
+                c0.7-6.6,3.3-10.6,6.6-13.2c-21.9-2.6-45-11.3-45-49c0-10.6,4-19.9,9.9-26.5c-1.3-2.6-4.6-12.6,0.7-26.5c0,0,8.6-2.6,27.2,9.9
+                c7.9-2,16.6-3.3,25.2-3.3s17.2,1.3,25.2,3.3c19.2-12.6,27.2-9.9,27.2-9.9c5.3,13.9,2,23.8,0.7,26.5c6.6,6.6,9.9,15.9,9.9,26.5
+                c0,38.4-23.2,46.4-45,49c3.3,3.3,6.6,9.3,6.6,18.5v27.2c0,2.6,2,6,6.6,4.6c39.7-13.2,67.6-50.3,67.6-94.1
+                C199.7,47.3,155.4,3,100.4,3z"/>
+            </svg>
+            <span class="item__label">Follow {{item.firstName}} on Github</span>
+          </a>
+        </li>
+        <li class="item__contact">
+          <a 
+            [href]="item.twitterUrl"
+            class="item__link">
+            <svg 
+              viewBox="0 0 200 200"
+              class="item__icon">
+              <g transform="translate(-539.18 -568.86)">
+                <path d="M602.1,750.1c75.5,0,116.8-62.5,116.8-116.8c0-1.8,0-3.5-0.1-5.3c8-5.8,15-13,20.5-21.2c-7.4,3.3-15.3,5.5-23.6,6.5
+                  c8.5-5.1,15-13.1,18-22.7c-7.9,4.7-16.7,8.1-26.1,10c-7.5-8-18.1-13-30-13c-22.7,0-41,18.4-41,41c0,3.2,0.4,6.4,1.1,9.4
+                  c-34.1-1.7-64.3-18-84.6-42.9c-3.5,6.1-5.6,13.1-5.6,20.6c0,14.2,7.2,26.8,18.3,34.2c-6.7-0.2-13.1-2.1-18.6-5.1c0,0.2,0,0.3,0,0.5
+                  c0,19.9,14.1,36.5,32.9,40.2c-3.4,0.9-7.1,1.4-10.8,1.4c-2.6,0-5.2-0.3-7.7-0.7c5.2,16.3,20.4,28.2,38.3,28.5
+                  c-14,11-31.7,17.6-51,17.6c-3.3,0-6.6-0.2-9.8-0.6C557.3,743.3,578.9,750.1,602.1,750.1"/>
+              </g>
+            </svg>
+            <span class="item__label">Follow {{item.firstName}} on Twitter</span>     
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>

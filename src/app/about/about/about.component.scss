@@ -1,0 +1,155 @@
+@import '../../scss/colors';
+@import '../../scss/mediaqueries';
+
+
+
+
+:host {
+    font-size: 1rem;
+}
+
+.content {
+
+    h1 {
+        color: $color__01--06;
+    }
+
+    p {
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+    }
+
+}
+
+.items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    align-items: center;
+    border-top: solid 1px $color__01--02;
+    display: flex;
+    padding-bottom: 1.25em;
+    padding-top: 1.25em;
+    
+    &__avatar {
+        max-width: 6.2em;
+        min-width: 6.2em;
+
+        img {
+            border: solid 2px $color__03--01;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+
+        &:hover img {
+            border-color: $color__02--01;
+        }
+
+    }
+
+    &__content {
+        flex: 1;
+        padding-left: 1em;
+    }
+
+    &__title {
+        margin-bottom: 0;
+
+        &Link {
+            color: $color__03--01;
+            text-decoration: none;
+
+            &:hover {
+                color: $color__02--01;
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+    &__contacts {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__contact {
+        padding: 0.25em 0;
+    }
+
+    &__link {
+        align-items: center;
+        color:  $color__03--01;
+        display: inline-flex;
+        font-size: 80%;
+        text-decoration: none;
+    }
+
+    &__icon {
+        $size: 1.4em;
+        height: $size;
+        fill: $color__03--02;
+        max-width: $size;
+        min-width: $size;
+    }
+
+    &__label {
+        padding-left: 0.5em;
+    }
+
+    // Hover
+    &__link:hover {
+        color: $color__02--01;
+        text-decoration: underline;
+
+        .item__icon {
+            fill: currentColor;
+        }
+        
+    }
+
+}
+
+
+
+
+// Mediaqueries
+// _________________________________________________________________________________________
+@media (min-width: #{$mediaquery__appNav--hidden} + 1px) {
+
+    :host {
+        display: flex;
+    }
+
+    .content {
+        flex: 1;
+        max-width: 50%;
+        min-width: 50%;
+        padding-right: 1.75em;
+    }
+
+    .items {
+        flex: 1;
+        max-width: 50%;
+        min-width: 50%;
+        padding-left: 1.75em;
+    }
+
+    .item:first-child {
+        border: none;
+    }
+
+}
+
+@media (max-width: $mediaquery__appNav--hidden) {
+
+    :host {
+        display: block;
+    }
+
+}
