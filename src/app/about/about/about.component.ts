@@ -10,47 +10,43 @@ export class AboutComponent implements OnInit {
     {
       firstName: 'Justin',
       lastName: 'Schwartzenberger',
-      avatarUrl: 'https://avatars1.githubusercontent.com/u/1243236?v=3&s=460',
-      githubHandle: '@jschwarty',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/664117369535488000/KT3wsR_4_400x400.jpg',
       githubUrl: 'https://github.com/jschwarty',
-      twitterHandle: '@schwarty',
       twitterUrl: 'https://twitter.com/schwarty'
     },
     {
       firstName: 'Jami',
       lastName: 'Lurock',
-      avatarUrl: 'https://avatars1.githubusercontent.com/u/12436542?v=3&s=460',
-      githubHandle: '@lurock',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/479643327441018880/z9boZ906_400x400.jpeg',
       githubUrl: 'https://github.com/lurock',
-      twitterHandle: '@maindg',
       twitterUrl: 'https://twitter.com/maindg'
     },
     {
       firstName: 'Justin',
       lastName: 'Couto',
-      avatarUrl: 'https://avatars2.githubusercontent.com/u/5085199?v=3&s=460',
-      githubHandle: '@JustinCouto',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/2386859991/jsdc3mjhahaqbqssmldl_400x400.jpeg',
       githubUrl: 'https://github.com/JustinCouto',
-      twitterHandle: '@JustinCouto',
       twitterUrl: 'https://twitter.com/justincouto'
     },
     {
       firstName: 'Greg',
       lastName: 'Arroyo',
-      avatarUrl: 'https://avatars3.githubusercontent.com/u/3469592?v=3&s=460',
-      githubHandle: '@arroyocode',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/759169296677294080/k_-y-6R0_400x400.jpg',
       githubUrl: 'https://github.com/arroyocode',
-      twitterHandle: '@arroyocode',
       twitterUrl: 'https://twitter.com/arroyocode'
-    }
-    ,
+    },
+    {
+      firstName: 'Richard',
+      lastName: 'McCluskey',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/599667236136030208/wOx67Uzo_400x400.jpg',
+      githubUrl: 'https://github.com/rjmccluskey',
+      twitterUrl: 'https://twitter.com/rich_code'
+    },
     {
       firstName: 'Brian',
       lastName: 'Treese',
-      avatarUrl: 'https://avatars3.githubusercontent.com/u/9142917?v=3&s=460',
-      githubHandle: 'brianmtreese',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/766150298549252096/PXESHOSy_400x400.jpg',
       githubUrl: 'https://github.com/brianmtreese',
-      twitterHandle: '@brianmtreese',
       twitterUrl: 'https://twitter.com/brianmtreese'
     }
   ];
