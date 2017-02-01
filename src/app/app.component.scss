@@ -86,8 +86,9 @@ $app__spacing: 2.5em;
 .content {
   display: flex;
   flex: 1;
-  margin: 0 auto;
+  margin: -1px auto 0 auto;
   max-width: $app__width;
+  overflow-x: hidden;
   padding: $app__spacing;
   position: relative;
   width: 100%;
