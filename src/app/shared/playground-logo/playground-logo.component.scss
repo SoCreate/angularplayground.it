@@ -1,4 +1,5 @@
 @import '../../scss/colors';
+@import '../../scss/visually-hidden';
 
 
 
@@ -35,6 +36,10 @@
             fill: $color__04--02;
         }
 
+    }
+
+    &__label {
+        @include mixin__visuallyHidden;
     }
 
 }
