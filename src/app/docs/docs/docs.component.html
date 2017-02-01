@@ -4,13 +4,13 @@
   class="navShow">
     <span class="navShow__label">Menu</span>
 </a>
-<aside 
+<aside
   [ngClass]="{
-    'nav--open': !navClosed, 
+    'nav--open': !navClosed,
     'nav--close': navClosed}"
   class="nav">
   <div class="nav__block">
-    <a 
+    <a
       (click)="setShowNav(false)"
        title="Close Menu"
       class="nav__close">
@@ -20,31 +20,36 @@
     <a
       routerLink="/docs/getting-started/introduction"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Introduction
     </a>
     <a
       routerLink="/docs/getting-started/installing"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Installing
     </a>
     <a
       routerLink="/docs/getting-started/cli"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Angular Playground CLI
     </a>
     <a
       routerLink="/docs/getting-started/bootstrapping"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Bootstrapping Angular Playground
     </a>
     <a
       routerLink="/docs/getting-started/angular-cli"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Setup With Angular CLI
     </a>
   </div>
@@ -53,13 +58,15 @@
     <a
       routerLink="/docs/sandboxing/sandboxing-components"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Sandboxing Components
     </a>
     <a
       routerLink="/docs/sandboxing/api"
       routerLinkActive="nav__item--active"
-      class="nav__item">
+      class="nav__item"
+      (click)="setShowNav(false)">
       Sandbox API
     </a>
   </div>
