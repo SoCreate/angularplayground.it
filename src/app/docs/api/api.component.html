@@ -1,1 +1,36 @@
+<h1>Sandbox API</h1>
+<section markdown>
+  All of the sandbox API functions/classes/interfaces are exported from the `angular-playground`
+  module. If you are using TypeScript you can do an import statement to get access to them.
 
+  The `sandboxOf` function and `SandboxBuilder` are *"TypeScripted"* out so you can discover
+  the different parameters/options/etc within your IDE/editor (if it has TypeScript support).
+  Or you can always explore the [source code](https://github.com/socreate/angular-playground)!
+</section>
+<h5>Function</h5>
+<div markdown path="content/docs/api/api.md"></div>
+<section markdown>
+  The `sandboxOf` function returns an instance of a `SandboxBuilder` that has a fluent
+  api allowing for method chaining via it's `add` method. The `add` method is used to add
+  scenarios for your sandboxed component. Each scenario needs a `description` (the first parameter),
+  and a `scenarioConfig` object (the second parameter). The `scenarioConfig` object requires a
+  `template` property at a minimum.
+</section>
+<h5>Class</h5>
+<div markdown path="content/docs/api/api2.md"></div>
+<h5>Interfaces</h5>
+<div markdown path="content/docs/api/api3.md"></div>
+<section markdown>
+  The `SandboxOfConfig` gives you a way to set dependencies for the sandboxed component. This creates
+  a dynamic `NgModule` around the sandboxed component. So these config properties are the same ones you
+  are used to using for an `NgModule` decorator. This also has a `prependText` property that allows you to
+  put text in front of the component type name that gets rendered in the Angular Playground UI. So if you
+  have 2 components in your app named `InfoBlock` that lived in different features, you could use the `prependText`
+  to make those unique for readability in the UI (something like `prependText: 'featureA.'` and `prependText: 'featureB.'`).
+
+  The `ScenarioConfig` gives you a way to set dependencies at the component level. These are used as the
+  `Component` decorator metadata for a host component that renders your sandboxed component as well as the
+  host component context (i.e. - any type of class properties on the host component that you want to be able
+  to feed to your sandboxed component). So these config properties are the same ones you are used to using for
+  a parent component.
+</section>
