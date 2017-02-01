@@ -1,4 +1,5 @@
 @import '../../scss/colors';
+@import '../../scss/visually-hidden';
 
 
 
@@ -9,6 +10,10 @@
 
     &__letter02 {
         fill: $color__01--01;
+    }
+
+    &__label {
+        @include mixin__visuallyHidden;
     }
 
     &:hover {
