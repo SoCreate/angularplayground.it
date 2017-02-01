@@ -19,6 +19,17 @@
         margin-bottom: 1.6em;
     }
 
+    a {
+      color: $color__03--01;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color__02--01;
+        text-decoration: none;
+      }
+
+    }
+
 }
 
 .items {
