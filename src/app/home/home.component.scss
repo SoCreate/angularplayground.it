@@ -1,4 +1,5 @@
 @import '../scss/colors';
+@import '../scss/mediaqueries';
 @import '../scss/visually-hidden';
 
 
@@ -8,8 +9,10 @@
     font-size: 1rem;
     flex: 1;
     max-width: 100%;
+    text-align: center;
 }
 
+// Titles
 .title {
     font-size: 1em;
     margin: 0;
@@ -30,7 +33,6 @@
 
 .subTitle {
     color: $color__01--06;
-    text-align: center;
     padding-bottom: 1em;
 
     &__note {
@@ -41,14 +43,79 @@
 
 }
 
+// Demo
 .demo {
-    background: black;
-    height: 0;
+    border: solid 0.5em $color__03--02;
+    height: auto;
     margin: 0 auto;
-    padding-top: 56%;
+    width: 100%;
 }
 
+// Message
 .message {
-    text-align: center;
     padding-top: 2em;
+}
+
+// Highlights
+.highlights {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.highlight {
+    border: solid 1px $color__01--02;
+    flex: 1;
+    justify-content: center;
+    margin: 2em 1em 3em;
+    max-width: 33%;
+    min-width: 33%;
+
+    &__link {
+        color: $color__03--01;
+        display: block;
+        text-decoration: none;
+        padding: 2em 3em;
+
+        &:hover {
+            color: $color__02--01;
+        }
+
+    }
+
+    &__label {
+        display: block;
+        font-size: 130%;
+        padding-bottom: 1em;
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        fill: currentColor;
+        height: 4em;
+        width: 4em;
+    }
+
+}
+
+
+
+
+// Mediaqueries
+// _________________________________________________________________________________________
+@media (max-width: $mediaquery__appNav--hidden) {
+
+    .highlights {
+        flex-wrap: wrap;
+        padding: 1em 0;
+    }
+
+    .highlight {
+        margin: 1em 0;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
 }
