@@ -108,7 +108,7 @@
 @media (max-width: $mediaquery__appNav--hidden) {
 
     .highlights {
-        flex-wrap: wrap;
+        display: block;
         padding: 1em 0;
     }
 
