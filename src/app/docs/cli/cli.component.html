@@ -12,6 +12,11 @@
 angular-playground [config-file]
 ```
 
+  The `angular-playground` command will look for a file named `angular-playground.json` 
+  next to your `package.json` file by default. The `config-file` argument is optional
+  and provides a way for you to point to the config file if you want to put it in a different
+  location or name it something else.
+
   So, you will need a config file! Create an **angular-playground.json** file in
   your project (typically next to your package.json file) with the following content:
 </p>
@@ -42,6 +47,26 @@ npm run playground
   This will build your `sandboxes.ts` file and will start a watch that will handle
   re-running the file build as you modify/add files with the `*.sandbox.ts` extension
   in your project.
+
+  #### The angular-playground command
+
+  The `angular-playground` command has the following arguments/flags:  
+
+```
+[config-file]
+    The path to the config file (including file name) relative to 
+    the package.json file location. This is optional. The command
+    will auto-look for a config file named angular-playground.json
+    next to the package.json when this argument is left off.
+
+-no-watch
+    Disables the watch call so only the sandboxes.ts file build is run.
+    Useful for when you want to build Playground and serve it up somewhere.
+
+-no-serve
+    Disables the Angular CLI integrated ng serve call.
+    Useful for when you want to build Playground and serve it up somewhere.
+```
 
   Next you need to serve up the Playground within your environment. Check out how you can:
 </p>
