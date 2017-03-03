@@ -1,5 +1,5 @@
-  ```typescript
-  SandboxBuilder {
-    add(description: string, config: ScenarioConfig): SandboxBuilder;
-  }
-  ```
+```typescript
+SandboxBuilder {
+  add(description: string, config: ScenarioConfig): SandboxBuilder;
+}
+```

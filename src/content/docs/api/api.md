@@ -1,3 +1,3 @@
-  ```typescript
-  sandboxOf(type: any, config?: SandboxOfConfig): SandboxBuilder
-  ```
+```typescript
+sandboxOf(type: any, config?: SandboxOfConfig): SandboxBuilder
+```

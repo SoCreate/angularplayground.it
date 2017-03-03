@@ -1,12 +1,8 @@
-###### environment.playground.ts
+###### main.playground.ts
 ```typescript
-export { PlaygroundModule as AppModule } from 'angular-playground';
-import { initializePlayground } from 'angular-playground';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { initializePlayground, PlaygroundModule } from 'angular-playground';
 
-export const environment = {
-  production: false
-};
-
-initializePlayground('app-root');
-
+initializePlayground('ng-app');
+platformBrowserDynamic().bootstrapModule(PlaygroundModule);
 ```
