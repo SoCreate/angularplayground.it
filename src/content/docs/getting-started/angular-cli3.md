@@ -17,6 +17,7 @@
       ],
       "index": "index.html",
       "main": "main.playground.ts",
+      "polyfills": "polyfills.ts",
       "tsconfig": "tsconfig.app.json",
       "environmentSource": "environments/environment.ts",
       "environments": {
