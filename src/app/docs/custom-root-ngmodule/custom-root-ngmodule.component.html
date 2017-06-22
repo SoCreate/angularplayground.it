@@ -1,0 +1,38 @@
+<h1>Custom Root NgModule</h1>
+<p markdown>
+  The `PlaygroundModule` that is exported from `angular-playground` is created to be
+  used as the root NgModule. It is configured with the core browser app stuff for
+  an Angular app, primarily what is needed for the Playground app itself. In most cases
+  when your app code needs other imports, providers, etc you are able to bring these
+  in at a child NgModule level and get them incorporated into a sandbox of.
+</p>
+<p markdown>
+  But there are some things that need to be brought in at the root NgModule level. Things
+  like `BrowserAnimationsModule` and overriding default providers like `ErrorHandler`. To
+  do this we need to be able to control what goes into that root NgModule. Luckily, we have
+  a `PlaygroundCommonModule` that allows us to create our own root NgModule and then import
+  what we need for Playground.
+</p>
+<p markdown>
+  So in the case where we have app code that uses the `BrowserAnimationsModule`, we would
+  create our own root NgModule for Playground like so:
+</p>
+<div markdown path="content/docs/custom-root-ngmodule/root-ngmodule.md"></div>
+<p markdown>
+  Note that we import `PlaygroundCommonModule` and add that to the imports list, and we
+  import `AppComponent` from Playground and add that to the bootstrap list. These are the
+  things we need to do to get Playground to work in our custom root NgModule. The rest of
+  the stuff is wide open for us to add whatever we need to make our app code work in
+  the Playground!
+</p>
+<p>
+  With the custom root NgModule created, we can bootstrap that module in the main entry
+  file we use for Playground:
+</p>
+<div markdown path="content/docs/custom-root-ngmodule/main.md"></div>
+<p>
+  One final thing to note on this...whatever we put in here is going to be available
+  to all of the sandbox scenarios we have, because we are doing this at the root level of
+  the Playground app itself. This can be a good thing and a challenging thing. We'll
+  leave that up to you to decide. 😎
+</p>

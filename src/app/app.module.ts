@@ -19,6 +19,7 @@ import { CliComponent } from './docs/cli/cli.component';
 import { AngularCliComponent } from './docs/angular-cli/angular-cli.component';
 import { SandboxingComponent } from './docs/sandboxing/sandboxing.component';
 import { ApiComponent } from './docs/api/api.component';
+import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-root-ngmodule.component';
 
 const appRoutes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
       {path: 'getting-started/angular-cli', component: AngularCliComponent},
       {path: 'sandboxing/sandboxing-components', component: SandboxingComponent},
       {path: 'sandboxing/api', component: ApiComponent},
+      {path: 'sandboxing/custom-root-ngmodule', component: CustomRootNgmoduleComponent},
       {path: '', redirectTo: 'getting-started/introduction', pathMatch: 'full'}
     ]
   },
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     CliComponent,
     AngularCliComponent,
     SandboxingComponent,
-    ApiComponent
+    ApiComponent,
+    CustomRootNgmoduleComponent
   ],
   imports: [
     BrowserModule,
