@@ -1,0 +1,16 @@
+###### tsconfig.json or tsconfig.app.json
+```json
+{ 
+  "extends": "../tsconfig.json", 
+  "compilerOptions": { 
+    "outDir": "../out-tsc/app", 
+    "baseUrl": "./", 
+    "module": "esnext", 
+    "types": [] }, 
+    "exclude": [ 
+      "test.ts", 
+      "**/*.spec.ts" 
+    ] 
+  }
+}
+```
