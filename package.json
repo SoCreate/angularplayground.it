@@ -6,8 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:aot": "ng serve --aot --prod --port 4202",
-    "site:deploy": "ng github-pages:deploy -bh / -cd www.angularplayground.it --aot",
+    "start:aot": "npm run ng serve --aot --prod --port 4202",
+    "site:deploy": "npm run ng build --prod --output-path docs --base-href http://www.angularplayground.it",
     "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check"
   },
   "private": true,
