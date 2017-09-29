@@ -29,11 +29,11 @@ export class AboutComponent implements OnInit {
       twitterUrl: 'https://twitter.com/arroyocode'
     },
     {
-      firstName: 'Richard',
-      lastName: 'McCluskey',
-      avatarUrl: 'https://pbs.twimg.com/profile_images/599667236136030208/wOx67Uzo_400x400.jpg',
-      githubUrl: 'https://github.com/rjmccluskey',
-      twitterUrl: 'https://twitter.com/rich_code'
+      firstName: 'Graham',
+      lastName: 'Marlow',
+      avatarUrl: 'https://pbs.twimg.com/profile_images/882651324894007296/2yiOQyJk_400x400.jpg',
+      githubUrl: 'https://github.com/mgmarlow',
+      twitterUrl: 'https://twitter.com/mgmarlow'
     },
     {
       firstName: 'Brian',

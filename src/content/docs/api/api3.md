@@ -3,7 +3,7 @@ SandboxOfConfig {
   imports?: any[];
   declarations?: any[];
   providers?: any[];
-  prependText?: string;
+  label?: string;
   declareComponent?: boolean;
 }
 ```

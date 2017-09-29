@@ -1,15 +1,16 @@
 <h1>Setting up an Angular CLI Powered Project</h1>
 
-<blockquote>For Angular CLI <code>1.0.0-rc.0</code> and above</blockquote>
+<blockquote>For Angular CLI <code>1.0.0</code> and above</blockquote>
 
 <section markdown>
   Playground ❤️'s Angular CLI and has built in support for integrating with it.
   If your app is using the **Angular CLI** you can set up a new app in Angular CLI
-  to run Playground from it. The most minimal setup involves the following three steps:
+  to run Playground from it. The most minimal setup involves the following four steps:
 
   1. Create a new main entry script.
   2. Add an app entry to the `.angular-cli.json` file.
   3. Configure the `angular-playground.json` file.
+  4. Update tsconfig Compiler Options
 </section>
 <h4>A new main entry file</h4>
 <div markdown path="content/docs/getting-started/angular-cli2.md"></div>
@@ -51,6 +52,11 @@
   An array of strings that will get passed through as options to the `ng serve` command. Useful
   if you want to pass things like `-o` to tell the Angular CLI to auto open the serve in a browser.
 </p>
+<h4>Update tsconfig Compiler Options</h4>
+<p markdown>
+  Change the compilerOptions -> module option in your `tsconfig.json` or `tsconfig.app.json` to be set to <em>"esnext"</em>.
+</p>
+<div markdown path="content/docs/getting-started/angular-cli5.md"></div>
 <p>
   The Playground CLI will handle running the sandbox file build and watch and
   will also kick off `ng serve` and target your environment configured for the playground.
