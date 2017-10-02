@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-installing',
-  templateUrl: './installing.component.html'
+  selector: 'app-requirements',
+  templateUrl: './requirements.component.html'
 })
-export class InstallingComponent implements OnInit {
+export class RequirementsComponent implements OnInit {
 
   constructor() { }
 

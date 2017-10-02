@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-non-angular-cli',
-  templateUrl: './non-angular-cli.component.html',
-  styleUrls: ['./non-angular-cli.component.scss']
+  templateUrl: './non-angular-cli.component.html'
 })
 export class NonAngularCliComponent implements OnInit {
 

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cli',
-  templateUrl: './cli.component.html',
-  styleUrls: ['./cli.component.scss']
+  templateUrl: './cli.component.html'
 })
 export class CliComponent implements OnInit {
 

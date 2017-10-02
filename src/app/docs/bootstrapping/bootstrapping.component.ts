@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bootstrapping',
-  templateUrl: './bootstrapping.component.html',
-  styleUrls: ['./bootstrapping.component.scss']
+  templateUrl: './bootstrapping.component.html'
 })
 export class BootstrappingComponent implements OnInit {
 

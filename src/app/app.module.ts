@@ -1,3 +1,4 @@
+import { RequirementsComponent } from './docs/requirements/requirements.component';
 import { NonAngularCliComponent } from './docs/non-angular-cli/non-angular-cli.component';
 import { SoCreateLogoComponent } from './shared/socreate-logo/socreate-logo.component';
 import { PlaygroundLogoComponent } from './shared/playground-logo/playground-logo.component';
@@ -8,7 +9,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MarkdownComponent } from './shared/markdown.component';
-import { AboutComponent } from './about/about/about.component';
+import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { DocsComponent } from './docs/docs/docs.component';
 import { GithubCornerComponent } from './shared/github-corner.component';
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     component: DocsComponent,
     children: [
       { path: 'getting-started/introduction', component: IntroductionComponent },
+      { path: 'getting-started/requirements', component: RequirementsComponent },
       { path: 'getting-started/installing', component: InstallingComponent },
       { path: 'getting-started/bootstrapping', component: BootstrappingComponent },
       { path: 'getting-started/cli', component: CliComponent },
@@ -39,7 +41,7 @@ const appRoutes: Routes = [
       { path: '', redirectTo: 'getting-started/introduction', pathMatch: 'full' }
     ]
   },
-  {path: '', component: HomeComponent}
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     NonAngularCliComponent,
     SandboxingComponent,
     ApiComponent,
-    CustomRootNgmoduleComponent
+    CustomRootNgmoduleComponent,
+    RequirementsComponent
   ],
   imports: [
     BrowserModule,
