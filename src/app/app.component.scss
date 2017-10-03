@@ -54,7 +54,7 @@ $app__spacing: 2.5em;
     &Item {
       color: $color__01--06;
       font-size: 80%;
-      margin-left: 1em;
+      margin-left: 1.375em;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
@@ -68,6 +68,7 @@ $app__spacing: 2.5em;
 
       // Active
       &--active {
+        border-bottom: solid 2px $color__02--01;
         font-weight: bold;
 
         &:hover {

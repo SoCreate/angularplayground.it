@@ -1,7 +1,5 @@
 <h1>Setting up an Angular CLI Powered Project</h1>
-
 <blockquote>For Angular CLI <code>1.2.0</code> and above</blockquote>
-
 <section markdown>
   Playground's Angular CLI and has built in support for integrating with it.
   If your app is using the **Angular CLI** you can set up a new app in Angular CLI
@@ -34,7 +32,7 @@
 </section>
 <h4>Update the Angular Playground Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli.md"></div>
-<p markdown>
+<section markdown>
   When the `angularCli` property is present the `ng serve` command will be used when you
   run the `angular-playground` cli command. Below is a description of the properties of that
   object:
@@ -51,19 +49,19 @@
   + `args` *(optional)*
   An array of strings that will get passed through as options to the `ng serve` command. Useful
   if you want to pass things like `-o` to tell the Angular CLI to auto open the serve in a browser.
-</p>
+</section>
 <h4 id="compiler-options">Update tsconfig Compiler Options</h4>
-<p markdown>
+<section markdown>
   Change the compilerOptions -> module option in your `tsconfig.app.json` to be set to <em>"esnext"</em>.
-</p>
+</section>
 <div markdown path="content/docs/getting-started/angular-cli5.md"></div>
-<p>
+<section>
   The Playground CLI will handle running the sandbox file build and watch and
   will also kick off <code>ng serve</code> and target your environment configured for the playground.
   Check out the docs on the <a routerLink="/docs/getting-started/cli">Playground CLI</a>
   for more info.
-</p>
-<p>
+</section>
+<section>
   With the setup in place it's time to <a routerLink="/docs/sandboxing/sandboxing-components">start sandboxing</a>
   components, directives and pipes!
-</p>
+</section>

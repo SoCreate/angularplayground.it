@@ -1,3 +1,9 @@
+import { QuickToggleComponent } from './how-to/quick-toggle/quick-toggle.component';
+import { EmbeddingSandboxesComponent } from './how-to/embedding-sandboxes/embedding-sandboxes.component';
+import { CommandBarOpenComponent } from './how-to/command-bar-open/command-bar-open.component';
+import { CommandBarNavigationComponent } from './how-to/command-bar-navigation/command-bar-navigation.component';
+import { CommandBarCloseComponent } from './how-to/command-bar-close/command-bar-close.component';
+import { HowToComponent } from './how-to/how-to/how-to.component';
 import { RequirementsComponent } from './docs/requirements/requirements.component';
 import { NonAngularCliComponent } from './docs/non-angular-cli/non-angular-cli.component';
 import { SoCreateLogoComponent } from './shared/socreate-logo/socreate-logo.component';
@@ -21,6 +27,7 @@ import { AngularCliComponent } from './docs/angular-cli/angular-cli.component';
 import { SandboxingComponent } from './docs/sandboxing/sandboxing.component';
 import { ApiComponent } from './docs/api/api.component';
 import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-root-ngmodule.component';
+import { SearchingForSandboxesComponent } from './how-to/searching-for-sandboxes/searching-for-sandboxes.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -39,6 +46,19 @@ const appRoutes: Routes = [
       { path: 'sandboxing/api', component: ApiComponent },
       { path: 'sandboxing/custom-root-ngmodule', component: CustomRootNgmoduleComponent },
       { path: '', redirectTo: 'getting-started/introduction', pathMatch: 'full' }
+    ]
+  },
+  {
+    path: 'how-to',
+    component: HowToComponent,
+    children: [
+      { path: 'command-bar-close', component: CommandBarCloseComponent },
+      { path: 'command-bar-navigation', component: CommandBarNavigationComponent },
+      { path: 'command-bar-open', component: CommandBarOpenComponent },
+      { path: 'embedding-sandboxes', component: EmbeddingSandboxesComponent },
+      { path: 'quick-toggle', component: QuickToggleComponent },
+      { path: 'searching-for-sandboxes', component: SearchingForSandboxesComponent },
+      { path: '', redirectTo: 'command-bar-open', pathMatch: 'full' }
     ]
   },
   { path: '', component: HomeComponent }
@@ -63,7 +83,14 @@ const appRoutes: Routes = [
     SandboxingComponent,
     ApiComponent,
     CustomRootNgmoduleComponent,
-    RequirementsComponent
+    RequirementsComponent,
+    HowToComponent,
+    CommandBarCloseComponent,
+    CommandBarNavigationComponent,
+    CommandBarOpenComponent,
+    EmbeddingSandboxesComponent,
+    QuickToggleComponent,
+    SearchingForSandboxesComponent
   ],
   imports: [
     BrowserModule,
