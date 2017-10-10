@@ -1,4 +1,4 @@
-prismjs@1.8.1
+prismjs@1.6.0
 MIT
 MIT LICENSE
 
@@ -26,9 +26,9 @@ THE SOFTWARE.
 MIT
 MIT
 
-core-js@2.5.1
+core-js@2.4.1
 MIT
-Copyright (c) 2014-2017 Denis Pushkarev
+Copyright (c) 2014-2016 Denis Pushkarev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -93,7 +93,7 @@ MIT
 MIT
 MIT
 
-zone.js@0.7.8
+zone.js@0.7.6
 MIT
 The MIT License
 
