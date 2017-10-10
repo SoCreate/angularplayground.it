@@ -40,7 +40,7 @@ $nav__size: 12.5em;
     text-decoration: none;
     margin-bottom: 0.5em;
     color: $color__03--01;
-    font-size: 80%;  
+    font-size: 80%;
     position: relative;
 
     &::before {
@@ -52,9 +52,9 @@ $nav__size: 12.5em;
       position: absolute;
       top: 0.2em;
       width: 0.25em;
-    }  
+    }
 
-    &:hover {      
+    &:hover {
       color: $color__02--01;
       text-decoration: underline;
 
@@ -139,6 +139,12 @@ $nav__size: 12.5em;
       padding: 1em 1.25em;
     }
 
+    img {
+      border: solid 2px $color__01--02;
+      height: auto;
+      width: 100%;
+    }
+
     // Lists
     ol {
       list-style: none;
@@ -209,7 +215,7 @@ $nav__size: 12.5em;
       &:not([class*="language"]) {
         padding: 1em;
       }
-    
+
       code {
         background: none transparent;
         color: $color__01--06;
@@ -234,7 +240,7 @@ $nav__size: 12.5em;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
-      
+
     }
 
   }
@@ -253,7 +259,7 @@ $nav__size: 12.5em;
   :host {
     min-width: 100%;
   }
-  
+
   .navShow {
     background: $color__03--01;
     border: solid 1px white;
@@ -270,11 +276,11 @@ $nav__size: 12.5em;
 
     &::before {
       background: linear-gradient(
-        to bottom, 
-        white, white 17%, 
-        transparent 17%, transparent 41.5%, 
-        white 41.5%, white 58.5%, 
-        transparent 58.5%, transparent 83%, 
+        to bottom,
+        white, white 17%,
+        transparent 17%, transparent 41.5%,
+        white 41.5%, white 58.5%,
+        transparent 58.5%, transparent 83%,
         white 83%, white 100%
       );
       bottom: $iconOffset;
@@ -368,7 +374,7 @@ $nav__size: 12.5em;
       &:hover {
         color: $color__01--01;
       }
-      
+
     }
 
     // Opened
