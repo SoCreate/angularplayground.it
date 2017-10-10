@@ -1,7 +1,6 @@
-###### tsconfig.app.json
+###### tsconfig.json
 ```json
 { 
-  "extends": "../tsconfig.json", 
   "compilerOptions": {
 
     . . .
