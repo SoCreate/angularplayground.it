@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-installing',
-  templateUrl: './installing.component.html'
+  selector: 'app-quick-toggle',
+  templateUrl: './quick-toggle.component.html'
 })
-export class InstallingComponent implements OnInit {
+export class QuickToggleComponent implements OnInit {
 
   constructor() { }
 

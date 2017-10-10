@@ -1,0 +1,69 @@
+<a
+  (click)="setShowNav(true)"
+  title="Menu"
+  class="navShow">
+    <span class="navShow__label">Menu</span>
+</a>
+<aside
+  [ngClass]="{
+    'nav--open': !navClosed,
+    'nav--close': navClosed}"
+  class="nav">
+  <div class="nav__block">
+    <a
+      (click)="setShowNav(false)"
+      title="Close Menu"
+      class="nav__close">
+      <span class="nav__closeLabel">Close Menu</span>
+    </a>
+    <h5 class="nav__title">The Basics</h5>
+    <a
+      routerLink="/how-to/command-bar-open"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Opening the Command Bar
+    </a>
+    <a
+      routerLink="/how-to/searching-for-sandboxes"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Searching for Component Sandboxes
+    </a>
+    <a
+      routerLink="/how-to/command-bar-close"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Closing the Command Bar
+    </a>
+  </div>
+  <div class="nav__block">
+    <h5 class="nav__title">Advanced Features</h5>
+    <a
+      routerLink="/how-to/command-bar-navigation"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Switching Sandboxes from Keyboard
+    </a>
+    <a
+      routerLink="/how-to/quick-toggle"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Sandbox Quick Toggle
+    </a>
+    <a
+      routerLink="/how-to/embedding-sandboxes"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Embedding Sandboxes
+    </a>
+  </div>
+</aside>
+<article class="content">
+  <router-outlet></router-outlet>
+</article>

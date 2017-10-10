@@ -25,6 +25,13 @@
       Introduction
     </a>
     <a
+      routerLink="/docs/getting-started/requirements"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Requirements
+    </a>
+    <a
       routerLink="/docs/getting-started/installing"
       routerLinkActive="nav__item--active"
       class="nav__item"
@@ -51,6 +58,13 @@
       class="nav__item"
       (click)="setShowNav(false)">
       Setup With Angular CLI
+    </a>
+    <a
+      routerLink="/docs/getting-started/non-angular-cli"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Setup Without Angular CLI
     </a>
   </div>
   <div class="nav__block">
