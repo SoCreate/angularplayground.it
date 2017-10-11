@@ -22,13 +22,6 @@ export class AboutComponent implements OnInit {
       twitterUrl: 'https://twitter.com/maindg'
     },
     {
-      firstName: 'Greg',
-      lastName: 'Arroyo',
-      avatarUrl: 'https://pbs.twimg.com/profile_images/759169296677294080/k_-y-6R0_400x400.jpg',
-      githubUrl: 'https://github.com/arroyocode',
-      twitterUrl: 'https://twitter.com/arroyocode'
-    },
-    {
       firstName: 'Graham',
       lastName: 'Marlow',
       avatarUrl: 'https://pbs.twimg.com/profile_images/882651324894007296/2yiOQyJk_400x400.jpg',
