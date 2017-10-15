@@ -1,0 +1,28 @@
+<img
+  [src]="image.src" 
+  [alt]="image.alt"
+  class="image" />
+<a 
+  (click)="prev()"
+  (mouseenter)="pause()"
+  (mouseleave)="resume()"
+  title="Previous Screen"
+  class="
+    navigate
+    navigate--prev">
+  <span class="navigate__label">
+    Previous Screen
+  </span>
+</a>
+<a
+  (click)="next()"
+  (mouseenter)="pause()"
+  (mouseleave)="resume()"
+  title="Next Screen"
+  class="
+    navigate
+    navigate--next">
+  <span class="navigate__label">
+    Next Screen
+  </span>
+</a>
