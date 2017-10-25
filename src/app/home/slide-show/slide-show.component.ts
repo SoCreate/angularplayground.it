@@ -199,63 +199,21 @@ export class SlideShowComponent {
     }
   ];
 
-  imagesLoaded = [];
-  image;
-  index = -1;
   increment;
-  isIncrementing = false;
+  index = 0;
+  image = this.images[0];
+  imageCount = this.images.length;
 
   ngOnInit() {
-    this.preload(this.images, this.imagesLoaded, this.rotate());
-    this.isIncrementing = true;
-  }
-
-  preload(images, imagesLoaded, callback) {
-    let img;
-    let remainingImgs = images.length;
-    for (let i = 0; i < images.length; i++) {
-        img = new Image();
-        img.onload = function() {
-            --remainingImgs;
-            if (remainingImgs <= 0) {
-                callback();
-            }
-        };
-        img.src = images[i];
-        imagesLoaded.push(img);
-    }
-  }
-
-  rotate() {
-    this.index = this.index + 1;
-    if (this.index >= this.images.length ) {
-      this.index = 0;
-    } else if (this.index < 0) {
-      this.index = this.images.length - 1;
-    }
-    this.image = this.images[this.index];
-    this.increment = setTimeout(() => {
-      this.rotate();
-    }, this.image.duration);
-  }
-
-  resume() {
-    if (!this.isIncrementing) {
-      this.isIncrementing = true;
-      this.increment = setTimeout(() => {
-        this.rotate();
-      }, this.image.duration);
-    }
+    this.rotate();
   }
 
   pause() {
     clearTimeout(this.increment);
-    this.isIncrementing = false;
   }
 
   next() {
-    this.pause();
-    if (this.index > this.images.length - 2) {
+    if (this.index > this.imageCount - 2) {
       this.index = 0;
     } else {
       this.index = this.index + 1;
@@ -264,13 +222,23 @@ export class SlideShowComponent {
   }
 
   prev() {
-    this.pause();
     if (this.index > 0) {
       this.index = this.index - 1;
     } else {
-      this.index = this.images.length - 1;
+      this.index = this.imageCount - 1;
     }
     this.image = this.images[this.index];
   }
 
+  rotate() {
+    this.increment = setTimeout(() => {
+      if (this.index > this.imageCount - 2) {
+        this.index = 0;
+      } else {
+        this.index = this.index + 1;
+      }
+      this.image = this.images[this.index];
+      this.rotate();
+    }, this.image.duration);
+  }
 }
