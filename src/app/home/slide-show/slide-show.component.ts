@@ -230,7 +230,7 @@ export class SlideShowComponent {
     this.image = this.images[this.index];
   }
 
-  private rotate() {
+  rotate() {
     this.increment = setTimeout(() => {
       if (this.index >= this.imageCount - 1) {
         this.index = 0;
