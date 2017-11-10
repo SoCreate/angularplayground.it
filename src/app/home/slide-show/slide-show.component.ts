@@ -9,7 +9,7 @@ export class SlideShowComponent {
   images = [
     {
       src: '/assets/slider/01.png',
-      duration: '5000',
+      duration: '3500',
       alt: ''
     },
     {
@@ -29,7 +29,7 @@ export class SlideShowComponent {
     },
     {
       src: '/assets/slider/05.png',
-      duration: '500',
+      duration: '2000',
       alt: ''
     },
     {
@@ -39,12 +39,12 @@ export class SlideShowComponent {
     },
     {
       src: '/assets/slider/07.png',
-      duration: '2000',
+      duration: '1000',
       alt: ''
     },
     {
       src: '/assets/slider/08.png',
-      duration: '500',
+      duration: '2000',
       alt: ''
     },
     {
@@ -54,12 +54,12 @@ export class SlideShowComponent {
     },
     {
       src: '/assets/slider/10.png',
-      duration: '500',
+      duration: '1000',
       alt: ''
     },
     {
       src: '/assets/slider/11.png',
-      duration: '4000',
+      duration: '2000',
       alt: ''
     },
     {
@@ -213,7 +213,7 @@ export class SlideShowComponent {
   }
 
   next() {
-    if (this.index > this.imageCount - 2) {
+    if (this.index >= this.imageCount - 1) {
       this.index = 0;
     } else {
       this.index = this.index + 1;
@@ -230,9 +230,9 @@ export class SlideShowComponent {
     this.image = this.images[this.index];
   }
 
-  rotate() {
+  private rotate() {
     this.increment = setTimeout(() => {
-      if (this.index > this.imageCount - 2) {
+      if (this.index >= this.imageCount - 1) {
         this.index = 0;
       } else {
         this.index = this.index + 1;
