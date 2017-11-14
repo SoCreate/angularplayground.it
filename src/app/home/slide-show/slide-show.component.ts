@@ -9,7 +9,7 @@ export class SlideShowComponent {
   images = [
     {
       src: '/assets/slider/01.png',
-      duration: '3500',
+      duration: '2000',
       alt: 'Playin\' with the Playground'
     },
     {
