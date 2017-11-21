@@ -28,6 +28,7 @@ import { SandboxingComponent } from './docs/sandboxing/sandboxing.component';
 import { ApiComponent } from './docs/api/api.component';
 import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-root-ngmodule.component';
 import { SearchingForSandboxesComponent } from './how-to/searching-for-sandboxes/searching-for-sandboxes.component';
+import { SlideShowComponent } from './home/slide-show/slide-show.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -90,7 +91,8 @@ const appRoutes: Routes = [
     CommandBarOpenComponent,
     EmbeddingSandboxesComponent,
     QuickToggleComponent,
-    SearchingForSandboxesComponent
+    SearchingForSandboxesComponent,
+    SlideShowComponent
   ],
   imports: [
     BrowserModule,
