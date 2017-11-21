@@ -9,11 +9,17 @@
   4. Update tsconfig compiler options (`tsconfig.app.json`)
   5. Add a scripts entry to `package.json`
 </section>
+<h4>Install Angular Playground</h4>
+<section markdown>
+  ```
+  npm install --save-dev angular-playground
+  ```
+</section>
 <h4>A New Main Entry File</h4>
 <div markdown path="content/docs/getting-started/angular-cli2.md"></div>
 <section markdown>
   You need to call `initializePlayground()` with the appropriate selector string
-  for your `AppComponent` (internally, Playground will make use of your existing `index.html` file).
+  for your `AppComponent` (internally, Playground will set up shop in your existing `index.html`).
 </section>
 <h4>Add an App to the Angular CLI Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli3.md"></div>
