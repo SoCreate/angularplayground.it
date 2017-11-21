@@ -1,38 +1,27 @@
 <h1>Setting up an Angular CLI Powered Project</h1>
-<blockquote>For Angular CLI <code>1.2.0</code> and above</blockquote>
-<blockquote markdown>
-  **Note:** As of this writing, Angular CLI (`1.4.5`) does not provide a version of TypeScript
-  compatible with Playground. Please update TypeScript within your app to `2.4.0+` as per the 
-  <a routerLink="/docs/getting-started/requirements">requirements</a> page.
-  ```
-  npm install typescript@2.4.0 --save-dev
-  ```
-</blockquote>
+<blockquote>For Angular CLI <code>1.5.0</code> and above</blockquote>
 <section markdown>
-  Playground's Angular CLI and has built in support for integrating with it.
-  If your app is using the **Angular CLI** you can set up a new app in Angular CLI
-  to run Playground from it. The most minimal setup involves the following four steps:
+  Setting up an existing [Angular CLI](https://cli.angular.io/) application to use Playground requires a few steps:
 
-  1. Create a new main entry script.
-  2. Add an app entry to the `.angular-cli.json` file.
-  3. Configure the `angular-playground.json` file.
-  4. Update tsconfig Compiler Options
+  1. Create an entry point for Playground: `main.playground.ts`
+  2. Add another app configuration object to `.angular-cli.json`
+  3. Configure a new `angular-playground.json` file
+  4. Update tsconfig compiler options (`tsconfig.app.json`)
+  5. Add a scripts entry to `package.json`
 </section>
 <h4>A New Main Entry File</h4>
 <div markdown path="content/docs/getting-started/angular-cli2.md"></div>
 <section markdown>
-  You need to call `initializePlayground()` and pass it in the selector string
-  for your `AppComponent` (you will be making use of your existing `index.html` file).
-
-  And you want to bootstrap the `PlaygroundModule`.
+  You need to call `initializePlayground()` with the appropriate selector string
+  for your `AppComponent` (internally, Playground will make use of your existing `index.html` file).
 </section>
 <h4>Add an App to the Angular CLI Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli3.md"></div>
 <section markdown>
-  The following properties are the ones you will want to configure for Playground:
+  You will want to configure the following properties:
 
   - `name` The name of your Playground app ("playground" is a good name for that 😎)
-  - `outDir` A build dir (in case you want to build Playground)
+  - `outDir` A build directory (in case you want to build Playground)
   - `main` Point to the new entry script you created above
 
 
@@ -41,35 +30,54 @@
 <h4>Update the Angular Playground Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli.md"></div>
 <section markdown>
-  When the `angularCli` property is present the `ng serve` command will be used when you
-  run the `angular-playground` cli command. Below is a description of the properties of that
-  object:
+  The `angularCli` property tells our `angular-playground` CLI to use `ng serve` as its build tool. We
+  offer a few extra properties within `angularCli` to configure your application:
 
   + `appName`
   The name of the app from the `.angular-cli.json` config file.
+  ```
+  e.g. "appName": "playground"
+  ```
 
   + `port` *(optional)*
-  The port to tell `ng serve` to use. Defaults to `4201`.
+  The port specified for `ng serve`. Defaults to `4201`.
+  ```
+  e.g. "port": 8000
+  ```
 
-  + `envionment` *(optional)*
-  The environment to target for serving up Playground (will tell Angular CLI to use this instead of its default)
+  + `environment` *(optional)*
+  The targeted environment Playground will serve (overrides Angular CLI's default).
+  ```
+  e.g. "environment": "environments/environment.prod.ts"
+  ```
 
   + `args` *(optional)*
-  An array of strings that will get passed through as options to the `ng serve` command. Useful
+  An array of strings that will get passed through as options to the `ng serve` command. This is useful
   if you want to pass things like `-o` to tell the Angular CLI to auto open the serve in a browser.
+  ```
+  e.g. "args": [ "--ssl" ]
+  ```
 </section>
 <h4 id="compiler-options">Update tsconfig Compiler Options</h4>
 <section markdown>
-  Change the compilerOptions -> module option in your `tsconfig.app.json` to be set to <em>"esnext"</em>.
+  Change the `compilerOptions.module` option in your `tsconfig.app.json` to <em>"esnext"</em>.
 </section>
 <div markdown path="content/docs/getting-started/angular-cli5.md"></div>
-<section>
-  The Playground CLI will handle running the sandbox file build and watch and
-  will also kick off <code>ng serve</code> and target your environment configured for the playground.
-  Check out the docs on the <a routerLink="/docs/getting-started/cli">Playground CLI</a>
-  for more info.
+<h4>Add Playground to Package.json</h4>
+<div markdown path="content/docs/getting-started/angular-cli7.md"></div>
+<section markdown>
+  Add the entry `"playground": "angular-playground"` to the scripts listing in your `package.json`. From here
+  on out, running Playground is as easy as calling:
+
+  ```
+  npm run playground
+  ```
+
+  Navigate to `localhost:4201` (or your own port, as outlined above) and start sandboxing components!
 </section>
-<section>
-  With the setup in place it's time to <a routerLink="/docs/sandboxing/sandboxing-components">start sandboxing</a>
-  components, directives and pipes!
+<h4>Next Steps</h4>
+<section markdown>
+  * <a routerLink="/docs/sandboxing/sandboxing-components">Start sandboxing components</a>
+  * <a routerLink="/how-to/">Learn how to navigate Playground</a>
+  * [Check out a working example](https://github.com/DanWahlin/Angular-JumpStart)
 </section>
