@@ -1,4 +1,4 @@
-###### .angular-cli.json
+###### ./.angular-cli.json
 ```json
 {
   . . .
