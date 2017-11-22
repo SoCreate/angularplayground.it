@@ -1,54 +1,32 @@
 <h1>Introduction</h1>
 <section markdown>
   The component architecture of [Angular](https://angular.io) allows for modularity, which can be glorious!
-  You can break down your application into smaller chunks, contain logic and data,
-  and create re-usability. But working on those chunks in the scope of your application
-  can become cumbersome.
+  You can break down your application into smaller chunks, encapsulate logic and data,
+  and capitalize on re-usability. However, working on those chunks in the scope of your application
+  can easily become cumbersome.
 
-  For example, being able to create a component that just focuses on rendering
-  a shipment line item is great, but to see that component in action typically requires
-  you to launch the full app, find a customer that has an order that has a shipment that
-  has line items so that you can see your component rendered. Development of modular
-  components would be much more efficient if you could work on those in isolation...
+  Take, for example, a component that renders a shipment line item. To see that component in action
+  requires you to launch your app, locate a customer with a proper order, ensure
+  that order contains a shipment, and ensure that shipment contains line items.
+  Now imagine needing to step through that whole workflow with every change to your component.
+  Development of modular components would be much more efficient if you could work on
+  them in isolation...
 
-  ##### Welcome to the Angular Playground!
+  ##### Welcome to Angular Playground!
 
-  Angular Playground is a drop in entry module that provides a UI development
-  environment for building and maintaining Angular application components,
-  directives and pipes in isolation. It is an entry point module designed to be dropped
-  in and run within your existing application, and takes advantage of your build
-  system to build your components, directives and pipes.
-</section>
-<blockquote>
-  You can bootstrap the PlaygroundModule the same way you bootstrap your AppModule.
-</blockquote>
-<section markdown>
-  There is a CLI provided with Playground that handles watching your filesystem
-  and building a reference file for files in your project written to sandbox components
-  and directives. You write sandbox code and then run the CLI command to start your
-  build and watch.
-</section>
-<blockquote>
-  You can create a sandbox for a component and set up multiple scenarios for the dependencies
-  it uses.
-</blockquote>
-<section markdown>
-  Playground is a micro-app designed to dynamically render components, directives and
-  pipes from your application. It is contained within the `PlaygroundModule` and comes ready
-  to be bootstrapped. You actually set up your app and your build pipeline to launch an instance
-  of your environment with the `PlaygroundModule` as the entry module. This allows Playground to be able to
-  render your components, directives and pipes while making use of whatever custom stuff
-  you do in your app.
-</section>
-<blockquote>
-  You leverage your build pipeline and serve, Playground runs like an instance of your app.
-</blockquote>
-<section markdown>
-  Setting up an alternative bootstrap should be pretty straight forward. If you are using
-  the Angular CLI you can take advantage of the built in support in Playground
-  for hooking into `ng serve`.
-</section>
-<p>
+  Playground is a drop-in module that provides a development environment for building
+  and maintaining isolated Angular components, directives, and pipes. It uses your existing
+  source code to bootstrap "scenarios" around components, allowing you the flexibity to develop
+  and test components without the weight of your entire application.
+
+  <blockquote>
+    Leveraging your build pipeline, Playground runs like an instance of your app.
+  </blockquote>
+
+  The Playground CLI watches your filesystem so every time you change a component
+  in your source code, affected scenarios are immediately updated. After creating a few scenarios,
+  simply run `angular-playground` or `npm run playground` to start your build.
+
   Head over to the <a routerLink="/docs/getting-started/installing">installation guide</a> to
   get started.
-</p>
+</section>
