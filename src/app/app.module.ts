@@ -16,7 +16,6 @@ import { AppComponent } from './app.component';
 import { MarkdownComponent } from './shared/markdown.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import { DocsComponent } from './docs/docs/docs.component';
 import { GithubCornerComponent } from './shared/github-corner.component';
 import { IntroductionComponent } from './docs/introduction/introduction.component';
 import { InstallingComponent } from './docs/installing/installing.component';
@@ -29,6 +28,7 @@ import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-
 import { SearchingForSandboxesComponent } from './docs/how-to/searching-for-sandboxes/searching-for-sandboxes.component';
 import { SlideShowComponent } from './home/slide-show/slide-show.component';
 import { appRoutes } from './app.routes';
+import { DocsComponent } from 'app/docs/docs.component';
 
 @NgModule({
   declarations: [

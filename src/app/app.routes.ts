@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from 'app/about/about.component';
-import { DocsComponent } from 'app/docs/docs/docs.component';
 import { IntroductionComponent } from 'app/docs/introduction/introduction.component';
 import { RequirementsComponent } from 'app/docs/requirements/requirements.component';
 import { InstallingComponent } from 'app/docs/installing/installing.component';
@@ -18,6 +17,7 @@ import { EmbeddingSandboxesComponent } from 'app/docs/how-to/embedding-sandboxes
 import { QuickToggleComponent } from 'app/docs/how-to/quick-toggle/quick-toggle.component';
 import { SearchingForSandboxesComponent } from 'app/docs/how-to/searching-for-sandboxes/searching-for-sandboxes.component';
 import { HomeComponent } from 'app/home/home.component';
+import { DocsComponent } from 'app/docs/docs.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
