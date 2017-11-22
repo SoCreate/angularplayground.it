@@ -1,4 +1,4 @@
-###### tsconfig.app.json
+###### ./src/tsconfig.app.json
 ```json
 { 
   "extends": "../tsconfig.json", 
