@@ -153,7 +153,7 @@ $nav__size: 12.5em;
         position: relative;
 
         &::before {
-          content: counter(step-counter) ".)";
+          content: counter(step-counter) ".";
           display: block;
           left: 0;
           padding-right: .6em;

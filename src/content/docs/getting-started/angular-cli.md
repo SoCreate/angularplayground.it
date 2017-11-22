@@ -1,4 +1,4 @@
-###### angular-playground.json
+###### ./angular-playground.json
 ```json
 {
   "sourceRoot": "./src",
