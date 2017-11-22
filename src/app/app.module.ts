@@ -3,8 +3,6 @@ import { EmbeddingSandboxesComponent } from './docs/how-to/embedding-sandboxes/e
 import { CommandBarOpenComponent } from './docs/how-to/command-bar-open/command-bar-open.component';
 import { CommandBarNavigationComponent } from './docs/how-to/command-bar-navigation/command-bar-navigation.component';
 import { CommandBarCloseComponent } from './docs/how-to/command-bar-close/command-bar-close.component';
-import { RequirementsComponent } from './docs/requirements/requirements.component';
-import { NonAngularCliComponent } from './docs/non-angular-cli/non-angular-cli.component';
 import { SoCreateLogoComponent } from './shared/socreate-logo/socreate-logo.component';
 import { PlaygroundLogoComponent } from './shared/playground-logo/playground-logo.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,17 +15,20 @@ import { MarkdownComponent } from './shared/markdown.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { GithubCornerComponent } from './shared/github-corner.component';
-import { IntroductionComponent } from './docs/introduction/introduction.component';
-import { InstallingComponent } from './docs/installing/installing.component';
-import { AngularCliComponent } from './docs/angular-cli/angular-cli.component';
-import { SandboxingComponent } from './docs/sandboxing/sandboxing.component';
-import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-root-ngmodule.component';
 import { SearchingForSandboxesComponent } from './docs/how-to/searching-for-sandboxes/searching-for-sandboxes.component';
 import { SlideShowComponent } from './home/slide-show/slide-show.component';
 import { appRoutes } from './app.routes';
 import { DocsComponent } from 'app/docs/docs.component';
 import { CliApiComponent } from 'app/docs/api/cli/cli.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
+import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
+import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
+import { InstallingComponent } from 'app/docs/getting-started/installing/installing.component';
+import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angular-cli.component';
+import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
+import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
+import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
+
 
 @NgModule({
   declarations: [

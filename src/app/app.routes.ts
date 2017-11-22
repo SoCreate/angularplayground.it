@@ -1,12 +1,5 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from 'app/about/about.component';
-import { IntroductionComponent } from 'app/docs/introduction/introduction.component';
-import { RequirementsComponent } from 'app/docs/requirements/requirements.component';
-import { InstallingComponent } from 'app/docs/installing/installing.component';
-import { AngularCliComponent } from 'app/docs/angular-cli/angular-cli.component';
-import { NonAngularCliComponent } from 'app/docs/non-angular-cli/non-angular-cli.component';
-import { SandboxingComponent } from 'app/docs/sandboxing/sandboxing.component';
-import { CustomRootNgmoduleComponent } from 'app/docs/custom-root-ngmodule/custom-root-ngmodule.component';
 import { CommandBarCloseComponent } from 'app/docs/how-to/command-bar-close/command-bar-close.component';
 import { CommandBarNavigationComponent } from 'app/docs/how-to/command-bar-navigation/command-bar-navigation.component';
 import { CommandBarOpenComponent } from 'app/docs/how-to/command-bar-open/command-bar-open.component';
@@ -17,6 +10,13 @@ import { HomeComponent } from 'app/home/home.component';
 import { DocsComponent } from 'app/docs/docs.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
 import { CliApiComponent } from 'app/docs/api/cli/cli.component';
+import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
+import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
+import { InstallingComponent } from 'app/docs/getting-started/installing/installing.component';
+import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angular-cli.component';
+import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
+import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
+import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
