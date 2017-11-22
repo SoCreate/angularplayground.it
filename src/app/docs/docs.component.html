@@ -39,20 +39,6 @@
       Installing
     </a>
     <a
-      routerLink="/docs/getting-started/cli"
-      routerLinkActive="nav__item--active"
-      class="nav__item"
-      (click)="setShowNav(false)">
-      Playground CLI
-    </a>
-    <a
-      routerLink="/docs/getting-started/bootstrapping"
-      routerLinkActive="nav__item--active"
-      class="nav__item"
-      (click)="setShowNav(false)">
-      Bootstrapping Playground
-    </a>
-    <a
       routerLink="/docs/getting-started/angular-cli"
       routerLinkActive="nav__item--active"
       class="nav__item"
@@ -68,31 +54,14 @@
     </a>
   </div>
   <div class="nav__block">
-    <h5 class="nav__title">Sandboxing</h5>
-    <a
-      routerLink="/docs/sandboxing/sandboxing-components"
-      routerLinkActive="nav__item--active"
-      class="nav__item"
-      (click)="setShowNav(false)">
-      Sandboxing Components
-    </a>
-    <a
-      routerLink="/docs/sandboxing/api"
-      routerLinkActive="nav__item--active"
-      class="nav__item"
-      (click)="setShowNav(false)">
-      Sandbox API
-    </a>
-    <a
-      routerLink="/docs/sandboxing/custom-root-ngmodule"
-      routerLinkActive="nav__item--active"
-      class="nav__item"
-      (click)="setShowNav(false)">
-      Custom Root NgModule
-    </a>
-  </div>
-  <div class="nav__block">
     <h5 class="nav__title">How To</h5>
+    <a
+      routerLink="/docs/how-to/sandboxing-components"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Sandbox Components
+    </a>
     <a
       routerLink="/docs/how-to/command-bar-open"
       routerLinkActive="nav__item--active"
@@ -133,7 +102,31 @@
       routerLinkActive="nav__item--active"
       class="nav__item"
       (click)="setShowNav(false)">
-    Embed Sandboxes
+      Embed Sandboxes
+    </a>
+    <a
+      routerLink="/docs/how-to/custom-root-ngmodule"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Configure Animations
+    </a>
+  </div>
+  <div class="nav__block">
+    <h5 class="nav__title">API</h5>
+    <a
+      routerLink="/docs/api/sandbox"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Sandbox
+    </a>
+    <a
+      routerLink="/docs/api/cli"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Playground CLI
     </a>
   </div>
 </aside>

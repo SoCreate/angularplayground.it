@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-cli',
   templateUrl: './cli.component.html'
 })
-export class CliComponent implements OnInit {
+export class CliApiComponent implements OnInit {
 
   constructor() { }
 

@@ -20,15 +20,15 @@ import { GithubCornerComponent } from './shared/github-corner.component';
 import { IntroductionComponent } from './docs/introduction/introduction.component';
 import { InstallingComponent } from './docs/installing/installing.component';
 import { BootstrappingComponent } from './docs/bootstrapping/bootstrapping.component';
-import { CliComponent } from './docs/cli/cli.component';
 import { AngularCliComponent } from './docs/angular-cli/angular-cli.component';
 import { SandboxingComponent } from './docs/sandboxing/sandboxing.component';
-import { ApiComponent } from './docs/api/api.component';
 import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-root-ngmodule.component';
 import { SearchingForSandboxesComponent } from './docs/how-to/searching-for-sandboxes/searching-for-sandboxes.component';
 import { SlideShowComponent } from './home/slide-show/slide-show.component';
 import { appRoutes } from './app.routes';
 import { DocsComponent } from 'app/docs/docs.component';
+import { CliApiComponent } from 'app/docs/api/cli/cli.component';
+import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +43,11 @@ import { DocsComponent } from 'app/docs/docs.component';
     IntroductionComponent,
     InstallingComponent,
     BootstrappingComponent,
-    CliComponent,
+    CliApiComponent,
     AngularCliComponent,
     NonAngularCliComponent,
     SandboxingComponent,
-    ApiComponent,
+    SandboxApiComponent,
     CustomRootNgmoduleComponent,
     RequirementsComponent,
     CommandBarCloseComponent,
