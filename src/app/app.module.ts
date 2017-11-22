@@ -19,7 +19,6 @@ import { HomeComponent } from './home/home.component';
 import { GithubCornerComponent } from './shared/github-corner.component';
 import { IntroductionComponent } from './docs/introduction/introduction.component';
 import { InstallingComponent } from './docs/installing/installing.component';
-import { BootstrappingComponent } from './docs/bootstrapping/bootstrapping.component';
 import { AngularCliComponent } from './docs/angular-cli/angular-cli.component';
 import { SandboxingComponent } from './docs/sandboxing/sandboxing.component';
 import { CustomRootNgmoduleComponent } from './docs/custom-root-ngmodule/custom-root-ngmodule.component';
@@ -42,7 +41,6 @@ import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
     DocsComponent,
     IntroductionComponent,
     InstallingComponent,
-    BootstrappingComponent,
     CliApiComponent,
     AngularCliComponent,
     NonAngularCliComponent,

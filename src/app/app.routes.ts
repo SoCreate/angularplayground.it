@@ -3,7 +3,6 @@ import { AboutComponent } from 'app/about/about.component';
 import { IntroductionComponent } from 'app/docs/introduction/introduction.component';
 import { RequirementsComponent } from 'app/docs/requirements/requirements.component';
 import { InstallingComponent } from 'app/docs/installing/installing.component';
-import { BootstrappingComponent } from 'app/docs/bootstrapping/bootstrapping.component';
 import { AngularCliComponent } from 'app/docs/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from 'app/docs/non-angular-cli/non-angular-cli.component';
 import { SandboxingComponent } from 'app/docs/sandboxing/sandboxing.component';
@@ -28,7 +27,6 @@ export const appRoutes: Routes = [
       { path: 'getting-started/introduction', component: IntroductionComponent },
       { path: 'getting-started/requirements', component: RequirementsComponent },
       { path: 'getting-started/installing', component: InstallingComponent },
-      { path: 'getting-started/bootstrapping', component: BootstrappingComponent },
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
