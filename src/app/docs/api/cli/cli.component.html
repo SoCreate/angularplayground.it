@@ -1,0 +1,73 @@
+<h1>The Playground CLI</h1>
+<p markdown>
+  Playground is designed to find files in your existing app with
+  the `.sandbox.ts` extension that use the Playground API to set up sandboxes
+  of components. To do this, the Playground needs to
+  create a static file on the fly (`sandboxes.ts`) to have everything play nicely with
+  Angular's module system. Luckily we have a CLI that does this process for you: 
+
+  #### angular-playground
+
+  The `angular-playground` command has the following arguments/flags:  
+
+  ```
+  [config-file] - optional
+      The path to the config file (including file name) relative to 
+      the package.json file location. This is optional. The command
+      will auto-look for a config file named angular-playground.json
+      next to the package.json when this argument is left off.
+
+  -no-watch
+      Disables the watch call so only the sandboxes.ts file build is run.
+      Useful for when you want to build Playground and serve it up somewhere.
+
+  -no-serve
+      Disables the Angular CLI integrated ng serve call.
+      Useful for when you want to build Playground and serve it up somewhere.
+  ```
+
+  #### Running the CLI
+
+  By default, the CLI will assume that its configuration file lives at the root of the project
+  (where `package.json` is located) and is called `angular-playground.json`. If these conditions
+  are met, you can run the CLI like so:
+
+  ```
+  angular-playground
+  ```
+
+  Otherwise, a configuration file must be specified:
+
+  ```
+  angular-playground ./src/playground-options.json 
+  ```
+</p>
+<h4>Example Configuration File</h4>
+<div markdown path="content/docs/getting-started/cli.md"></div>
+<p markdown>
+  The `sourceRoot` value will be a path relative to the location of your **package.json**
+  file for your project. This will be the directory that will be looked at (it will go down recursively from there)
+  to find your **\*.sandbox.ts** files dynamically. It will also be the directory where the **sandboxes.ts**
+  file will get written to.
+
+  This means you will most likely want to add `sandboxes.ts` to your `.gitignore` file:
+
+```
+/src/sandboxes.ts
+```
+
+  You will also want to set up a script in your `package.json` file to handle running the
+  cli command:
+</p>
+<div markdown path="content/docs/getting-started/cli2.md"></div>
+<p markdown>
+  From there you can call:
+
+```
+npm run playground
+```
+
+  This will build your `sandboxes.ts` file and will start a watch that will handle
+  re-running the file build as you modify/add files with the `*.sandbox.ts` extension
+  in your project.
+</p>

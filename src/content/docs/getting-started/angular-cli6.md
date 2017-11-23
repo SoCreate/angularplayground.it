@@ -1,4 +1,4 @@
-###### tsconfig.json
+###### ./tsconfig.json
 ```json
 { 
   "compilerOptions": {

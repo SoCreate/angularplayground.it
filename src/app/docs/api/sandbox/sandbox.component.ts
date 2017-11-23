@@ -2,10 +2,10 @@ import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-api',
-  templateUrl: './api.component.html'
+  selector: 'app-sandbox',
+  templateUrl: './sandbox.component.html'
 })
-export class ApiComponent implements OnInit, AfterViewChecked {
+export class SandboxApiComponent implements OnInit, AfterViewChecked {
   private fragment: string;
   constructor(private route: ActivatedRoute) { }
 
