@@ -1,4 +1,4 @@
-###### main.playground.ts
+###### ./src/main.playground.ts
 ```typescript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { initializePlayground, PlaygroundModule } from 'angular-playground';
