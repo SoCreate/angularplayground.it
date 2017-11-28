@@ -1,0 +1,35 @@
+<h1>Introduction</h1>
+<section markdown>
+  <blockquote>Using the Angular CLI? Jump right into <a routerLink="/docs/getting-started/angular-cli">getting set up</a>.</blockquote>
+  The component architecture of [Angular](https://angular.io) allows for modularity, which can be glorious!
+  You can break down your application into smaller chunks, encapsulate logic and data,
+  and capitalize on re-usability. However, working on those chunks in the scope of your application
+  can easily become cumbersome.
+
+  Take, for example, a component that renders a shipment line item. To see that component in action
+  requires you to launch your app, locate a customer with a proper order, ensure
+  that order contains a shipment, and ensure that shipment contains line items.
+  Now imagine needing to step through that whole workflow with every change to your component.
+  Development of modular components would be much more efficient if you could work on
+  them in isolation...
+
+  ##### Welcome to Angular Playground!
+
+  Playground is a drop-in module that provides a development environment for building
+  and maintaining isolated Angular components, directives, and pipes. It uses your existing
+  source code to bootstrap "scenarios" around components, allowing you the flexibility to develop
+  and test components without the weight of your entire application.
+
+  </section>
+  <blockquote>
+    Leveraging your build pipeline, Playground runs like an instance of your app.
+  </blockquote>
+  <section markdown>
+
+  The Playground CLI watches your filesystem so every time you change a component
+  in your source code, affected scenarios are immediately updated. After creating a few scenarios,
+  simply run `angular-playground` or `npm run playground` to start your build.
+
+  Head over to the <a routerLink="/docs/getting-started/installing">installation guide</a> to
+  get started.
+</section>

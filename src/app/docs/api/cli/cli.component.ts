@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrapping',
-  templateUrl: './bootstrapping.component.html'
+  selector: 'app-cli',
+  templateUrl: './cli.component.html'
 })
-export class BootstrappingComponent implements OnInit {
+export class CliApiComponent implements OnInit {
 
   constructor() { }
 
