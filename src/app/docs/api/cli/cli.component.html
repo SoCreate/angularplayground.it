@@ -1,29 +1,44 @@
 <h1>The Playground CLI</h1>
-<p markdown>
-  Playground is designed to find files in your existing app with
-  the `.sandbox.ts` extension that use the Playground API to set up sandboxes
-  of components. To do this, the Playground needs to
-  create a static file on the fly (`sandboxes.ts`) to have everything play nicely with
-  Angular's module system. Luckily we have a CLI that does this process for you: 
+<div markdown>
+  Playground ships with a CLI that sets up sandboxes for components at
+  runtime. All developers need to do is define component sandboxes in
+  files ending with the extension: `.sandbox.ts`. The CLI will take
+  these "sandbox files" and compile them into a single file, `./src/sandboxes.ts`,
+  which is used to bootstrap the Angular Playground application.
 
   #### angular-playground
 
   The `angular-playground` command has the following arguments/flags:  
 
-  ```
-  [config-file] - optional
-      The path to the config file (including file name) relative to 
-      the package.json file location. This is optional. The command
-      will auto-look for a config file named angular-playground.json
-      next to the package.json when this argument is left off.
+  </div>
+  <div markdown>
 
-  -no-watch
+  ```
+  --config
+      (default: angular-playground.json)
+      The path to the config file (including file name) relative to 
+      the package.json file location.
+
+  --no-watch
       Disables the watch call so only the sandboxes.ts file build is run.
       Useful for when you want to build Playground and serve it up somewhere.
 
-  -no-serve
+  --no-serve
       Disables the Angular CLI integrated ng serve call.
       Useful for when you want to build Playground and serve it up somewhere.
+
+  --check-errors
+      Starts Angular Playground and checks all component scenarios for console
+      errors. All erroring scenarios will be reported and the process will be
+      killed, allowing this command to be run as a build step.
+
+  --random-scenario
+      Instead of running through all scenarios when checking for console
+      errors, will run through all components, picking one random
+      scenario for each. Useful if your system has many scenarios
+      per component.
+      
+  (Angular CLI)
   ```
 
   #### Running the CLI
@@ -41,9 +56,9 @@
   ```
   angular-playground ./src/playground-options.json 
   ```
-</p>
+</div>
 <h4>Example Configuration File</h4>
-<div markdown path="content/docs/getting-started/cli.md"></div>
+<div markdown path="content/docs/api/cli.md"></div>
 <p markdown>
   The `sourceRoot` value will be a path relative to the location of your **package.json**
   file for your project. This will be the directory that will be looked at (it will go down recursively from there)
@@ -59,7 +74,7 @@
   You will also want to set up a script in your `package.json` file to handle running the
   cli command:
 </p>
-<div markdown path="content/docs/getting-started/cli2.md"></div>
+<div markdown path="content/docs/api/cli2.md"></div>
 <p markdown>
   From there you can call:
 

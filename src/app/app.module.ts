@@ -28,6 +28,7 @@ import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angula
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
 import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
+import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodul
     NonAngularCliComponent,
     SandboxingComponent,
     SandboxApiComponent,
+    ConfigurationComponent,
     CustomRootNgmoduleComponent,
     RequirementsComponent,
     CommandBarCloseComponent,

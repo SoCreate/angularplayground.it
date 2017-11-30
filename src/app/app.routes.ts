@@ -17,6 +17,7 @@ import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angula
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
 import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
+import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -31,6 +32,7 @@ export const appRoutes: Routes = [
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
       { path: 'api/cli', component: CliApiComponent },
+      { path: 'api/configuration', component: ConfigurationComponent },
       { path: 'how-to/sandboxing-components', component: SandboxingComponent },
       { path: 'how-to/command-bar-close', component: CommandBarCloseComponent },
       { path: 'how-to/command-bar-navigation', component: CommandBarNavigationComponent },
