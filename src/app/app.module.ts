@@ -19,7 +19,6 @@ import { SearchingForSandboxesComponent } from './docs/how-to/searching-for-sand
 import { SlideShowComponent } from './home/slide-show/slide-show.component';
 import { appRoutes } from './app.routes';
 import { DocsComponent } from 'app/docs/docs.component';
-import { CliApiComponent } from 'app/docs/api/cli/cli.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
 import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
 import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
@@ -29,6 +28,7 @@ import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli
 import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
+import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 
 
 @NgModule({
@@ -43,7 +43,7 @@ import { ConfigurationComponent } from 'app/docs/api/configuration/configuration
     DocsComponent,
     IntroductionComponent,
     InstallingComponent,
-    CliApiComponent,
+    RunTheCliComponent,
     AngularCliComponent,
     NonAngularCliComponent,
     SandboxingComponent,

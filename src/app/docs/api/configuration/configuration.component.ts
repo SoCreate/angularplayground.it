@@ -100,12 +100,12 @@ export class ConfigurationComponent {
             label: '@angular/cli only'
         },
         {
-            name: 'angularCli.args (Not available in CLI)',
+            name: 'angularCli.args',
             type: 'string[ ]',
             default: '[ ]',
             cli: null,
             description: `Additional arguments that can be provided to @angular/cli.`,
-            label: '@angular/cli only'
+            label: '@angular/cli only, not available as a CLI command'
         }
     ];
 }

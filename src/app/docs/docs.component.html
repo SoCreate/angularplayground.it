@@ -63,6 +63,13 @@
       Sandbox Components
     </a>
     <a
+      routerLink="/docs/how-to/run-the-cli"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Run the CLI
+    </a>
+    <a
       routerLink="/docs/how-to/command-bar-open"
       routerLinkActive="nav__item--active"
       class="nav__item"
@@ -122,18 +129,11 @@
       Sandbox
     </a>
     <a
-      routerLink="/docs/api/cli"
-      routerLinkActive="nav__item--active"
-      class="nav__item"
-      (click)="setShowNav(false)">
-      Playground CLI
-    </a>
-    <a
       routerLink="/docs/api/configuration"
       routerLinkActive="nav__item--active"
       class="nav__item"
       (click)="setShowNav(false)">
-      Configuration
+      CLI/Configuration
     </a>
   </div>
 </aside>
