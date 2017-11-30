@@ -1,6 +1,9 @@
 ###### angular-playground.json
 ```json
 {
-  "sourceRoot": "./src"
+  "sourceRoot": "./src",
+  "angularCli": {
+    "appName": "playground"
+  }
 }
 ```

@@ -11,7 +11,7 @@
   Otherwise, a configuration file must be specified:
 
   ```
-  angular-playground ./src/playground-options.json 
+  angular-playground --config ./src/playground-options.json 
   ```
 </div>
 <h4>Example Configuration File</h4>
@@ -24,9 +24,9 @@
 
   This means you will most likely want to add `sandboxes.ts` to your `.gitignore` file:
 
-```
-/src/sandboxes.ts
-```
+  ```
+  /src/sandboxes.ts
+  ```
 
   You will also want to set up a script in your `package.json` file to handle running the
   cli command:
@@ -42,4 +42,20 @@ npm run playground
   This will build your `sandboxes.ts` file and will start a watch that will handle
   re-running the file build as you modify/add files with the `*.sandbox.ts` extension
   in your project.
+</p>
+<h4>Cli Commands</h4>
+<p markdown>
+  Almost all of the configuration file options are also available as CLI commands. For more details,
+  visit the <a routerLink="/docs/api/configuration">CLI API documentation</a>.
+
+  ```
+  angular-playground --src ./src/ --config ./angular-playground.json
+  ```
+
+  You can also add Playground as a build step to check your sandboxed components for errors
+  with the `--check-errors` flag.
+
+  ```
+  angular-playground --check-errors
+  ```
 </p>
