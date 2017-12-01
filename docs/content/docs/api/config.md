@@ -11,6 +11,8 @@
   },
   "checkErrors": false,
   "randomScenario": false,
+  "reportPath": "./sandbox.report.json",
+  "reportType": "log",
   "timeout": 90,
   "noWatch": false,
   "noServe": false
