@@ -33,36 +33,18 @@
 
   The rest of the properties can be the same as your main app.
 </section>
-<h4>Update the Angular Playground Config</h4>
+<h4>Add the Angular Playground Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli.md"></div>
 <section markdown>
-  The `angularCli` property tells our `angular-playground` CLI to use `ng serve` as its build tool. We
-  offer a few extra properties within `angularCli` to configure your application:
+  The above file needs to be added to the root of your application (at the same level as `package.json`).
 
-  + `appName`
-  The name of the app from the `.angular-cli.json` config file.
-  ```
-  e.g. "appName": "playground"
-  ```
-
-  + `port` *(optional)*
-  The port specified for `ng serve`. Defaults to `4201`.
-  ```
-  e.g. "port": 8000
-  ```
-
-  + `environment` *(optional)*
-  The targeted environment Playground will serve (overrides Angular CLI's default).
-  ```
-  e.g. "environment": "environments/environment.prod.ts"
-  ```
-
-  + `args` *(optional)*
-  An array of strings that will get passed through as options to the `ng serve` command. This is useful
-  if you want to pass things like `-o` to tell the Angular CLI to auto open the serve in a browser.
-  ```
-  e.g. "args": [ "--ssl" ]
-  ```
+  `sourceRoot` points at the source of your Angular application. In this example, we're using the
+  [@angular/cli](https://cli.angular.io/), so the `sourceRoot` is `./src/`. Additionally, we need to 
+  provide the name of our Angular application, as specified in our `.angular-cli.json`.
+  
+  If you'd like to configure @angular/cli to run a different port, or would like to take a look
+  at the other options available for this configuration file, see the
+  <a routerLink="/docs/api/configuration">API documentation</a>.
 </section>
 <h4 id="compiler-options">Update tsconfig Compiler Options</h4>
 <section markdown>
