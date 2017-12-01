@@ -29,8 +29,8 @@ import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.compo
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
-import { RunTestSuiteComponent } from 'app/docs/how-to/run-the-test-suite/run-the-test-suite.component';
 import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
+import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
 
 
 @NgModule({
@@ -46,8 +46,8 @@ import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter
     IntroductionComponent,
     InstallingComponent,
     RunTheCliComponent,
-    RunTestSuiteComponent,
     ReporterFormatsComponent,
+    CheckingUtilityComponent,
     AngularCliComponent,
     NonAngularCliComponent,
     SandboxingComponent,
