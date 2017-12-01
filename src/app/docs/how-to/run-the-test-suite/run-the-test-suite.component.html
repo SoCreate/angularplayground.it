@@ -25,6 +25,19 @@ the scenario will also error.
 <div markdown path="/content/docs/check-errors/scenario.md"></div>
 <section markdown>
 
+#### Build Output
+
+The Playground checking utility supports the ability to publish JSON reports for build systems. To do this,
+you can use the `reportType` configuration parameter. For example, the following will publish a build to
+the provided file in JSON format when running the checking utility:
+
+```
+angular-playground --check-errors --report-path ./sandbox.report.json --report-type json
+```
+
+You can read more about report formats in the <a routerLink="/docs/api/reporter-formats">API documentation</a>.
+</section>
+<section markdown>
 #### Configuration
 
 There are additional configuration options that can be applied to `checkErrors`. You can read about them

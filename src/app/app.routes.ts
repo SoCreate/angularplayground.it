@@ -19,6 +19,7 @@ import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodul
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 import { RunTestSuiteComponent } from 'app/docs/how-to/run-the-test-suite/run-the-test-suite.component';
+import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -33,6 +34,7 @@ export const appRoutes: Routes = [
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
       { path: 'api/configuration', component: ConfigurationComponent },
+      { path: 'api/reporter-formats', component: ReporterFormatsComponent },
       { path: 'how-to/sandboxing-components', component: SandboxingComponent },
       { path: 'how-to/run-the-cli', component: RunTheCliComponent },
       { path: 'how-to/run-the-test-suite', component: RunTestSuiteComponent },

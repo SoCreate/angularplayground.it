@@ -67,6 +67,23 @@ export class ConfigurationComponent {
                           script to connect to a Playground instance before timing out.`
         },
         {
+            name: 'reportPath',
+            type: 'string',
+            default: './sandbox.report.json',
+            cli: '--report-path',
+            description: `Used with checkErrors. Publishes to the provided path, if a valid report
+                          type is also provided.`
+        },
+        {
+            name: 'reportType',
+            type: 'string',
+            default: 'log',
+            cli: '--report-type',
+            possibleValues: ['log', 'json'],
+            description: `Used with checkErrors. Compiles the checkErrors script into a build-ready
+                          report.`
+        },
+        {
             name: 'angularCli.appName',
             type: 'string',
             default: 'playground',

@@ -1,0 +1,17 @@
+<h1>Reporter Formats</h1>
+<section markdown>
+Playground currently supports two report formats:
+
+1. `log`: Console log, no report file published
+2. `json`: JSON output, defaults output file to `./sandbox.report.json`
+
+Specify a type with the `reportType` configuration flag.
+
+```
+angular-playground --check-errors --report-type json
+```
+
+Below is an example output file provided by the `JSONReporter`. It is based on mocha's JSON
+format, so you should be able to integrate it into your build process with the same parser.
+</section>
+<div markdown path="/content/docs/check-errors/report-json.md"></div>

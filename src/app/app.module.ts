@@ -30,6 +30,7 @@ import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodul
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 import { RunTestSuiteComponent } from 'app/docs/how-to/run-the-test-suite/run-the-test-suite.component';
+import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { RunTestSuiteComponent } from 'app/docs/how-to/run-the-test-suite/run-th
     InstallingComponent,
     RunTheCliComponent,
     RunTestSuiteComponent,
+    ReporterFormatsComponent,
     AngularCliComponent,
     NonAngularCliComponent,
     SandboxingComponent,
