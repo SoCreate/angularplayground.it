@@ -29,6 +29,7 @@ import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.compo
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
+import { RunTestSuiteComponent } from 'app/docs/how-to/run-the-test-suite/run-the-test-suite.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.comp
     IntroductionComponent,
     InstallingComponent,
     RunTheCliComponent,
+    RunTestSuiteComponent,
     AngularCliComponent,
     NonAngularCliComponent,
     SandboxingComponent,

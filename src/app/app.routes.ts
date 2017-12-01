@@ -18,6 +18,7 @@ import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.compo
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
+import { RunTestSuiteComponent } from 'app/docs/how-to/run-the-test-suite/run-the-test-suite.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -34,6 +35,7 @@ export const appRoutes: Routes = [
       { path: 'api/configuration', component: ConfigurationComponent },
       { path: 'how-to/sandboxing-components', component: SandboxingComponent },
       { path: 'how-to/run-the-cli', component: RunTheCliComponent },
+      { path: 'how-to/run-the-test-suite', component: RunTestSuiteComponent },
       { path: 'how-to/command-bar-close', component: CommandBarCloseComponent },
       { path: 'how-to/command-bar-navigation', component: CommandBarNavigationComponent },
       { path: 'how-to/command-bar-open', component: CommandBarOpenComponent },
