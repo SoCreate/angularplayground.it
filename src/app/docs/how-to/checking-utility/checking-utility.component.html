@@ -26,19 +26,22 @@ the scenario will also error.
 
 #### Build Output
 
+By default, Playground will only log build output to the console. However, if
+your build system allows for more granularity, you can specify a report format with `reportType`.
+
 The Playground checking utility supports the ability to publish JSON reports for build systems. To do this,
 you can use the `reportType` configuration parameter. For example, the following will publish a build to
 the provided file in JSON format when running the checking utility:
 
 ```
-angular-playground --check-errors --report-path ./sandbox.report.json --report-type json
+angular-playground --check-errors --report-path ./report.json --report-type json
 ```
 
-You can read more about report formats in the <a routerLink="/docs/api/reporter-formats">API documentation</a>.
+You can read more about <a routerLink="/docs/api/reporter-formats">report formats</a> in our API docs.
 </section>
 <section markdown>
 #### Configuration
 
 There are additional configuration options that can be applied to `checkErrors`. You can read about them
-in our <a routerLink="/docs/api/configuration">API documentation</a>.
+in our <a routerLink="/docs/api/configuration">configuration documentation</a>.
 </section>
