@@ -9,7 +9,6 @@ import { SearchingForSandboxesComponent } from 'app/docs/how-to/searching-for-sa
 import { HomeComponent } from 'app/home/home.component';
 import { DocsComponent } from 'app/docs/docs.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
-import { CliApiComponent } from 'app/docs/api/cli/cli.component';
 import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
 import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
 import { InstallingComponent } from 'app/docs/getting-started/installing/installing.component';
@@ -17,6 +16,10 @@ import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angula
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
 import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
 import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
+import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
+import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
+import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
+import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -30,8 +33,11 @@ export const appRoutes: Routes = [
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
-      { path: 'api/cli', component: CliApiComponent },
+      { path: 'api/configuration', component: ConfigurationComponent },
+      { path: 'api/reporter-formats', component: ReporterFormatsComponent },
       { path: 'how-to/sandboxing-components', component: SandboxingComponent },
+      { path: 'how-to/run-the-cli', component: RunTheCliComponent },
+      { path: 'how-to/checking-utility', component: CheckingUtilityComponent },
       { path: 'how-to/command-bar-close', component: CommandBarCloseComponent },
       { path: 'how-to/command-bar-navigation', component: CommandBarNavigationComponent },
       { path: 'how-to/command-bar-open', component: CommandBarOpenComponent },

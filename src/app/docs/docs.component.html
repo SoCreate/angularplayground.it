@@ -63,6 +63,13 @@
       Sandbox Components
     </a>
     <a
+      routerLink="/docs/how-to/run-the-cli"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Run the CLI
+    </a>
+    <a
       routerLink="/docs/how-to/command-bar-open"
       routerLinkActive="nav__item--active"
       class="nav__item"
@@ -111,6 +118,13 @@
       (click)="setShowNav(false)">
       Configure Animations
     </a>
+    <a
+      routerLink="/docs/how-to/checking-utility"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Error Checking Utility
+    </a>
   </div>
   <div class="nav__block">
     <h5 class="nav__title">API</h5>
@@ -122,11 +136,18 @@
       Sandbox
     </a>
     <a
-      routerLink="/docs/api/cli"
+      routerLink="/docs/api/configuration"
       routerLinkActive="nav__item--active"
       class="nav__item"
       (click)="setShowNav(false)">
-      Playground CLI
+      CLI/Configuration
+    </a>
+    <a
+      routerLink="/docs/api/reporter-formats"
+      routerLinkActive="nav__item--active"
+      class="nav__item"
+      (click)="setShowNav(false)">
+      Reporter Formats
     </a>
   </div>
 </aside>
