@@ -1,0 +1,18 @@
+<h1>Configuration and CLI</h1>
+<p>Example configuration file:</p>
+<div markdown path="content/docs/api/config.md"></div>
+<div *ngFor="let conf of configurations">
+    <h5>{{ conf.name }} <small *ngIf="conf.label">({{ conf.label }})</small></h5>
+    <ul>
+        <li><b>Type: </b>{{ conf.type }}</li>
+        <li><b>Default: </b>{{ conf.default }}</li>
+        <li *ngIf="conf.cli"><b>CLI: </b><code>{{ conf.cli }}</code></li>
+        <li *ngIf="conf.possibleValues">
+            <b>Possible Values: </b>
+            <span *ngFor="let val of conf.possibleValues">
+                <code>{{ val }}</code>&nbsp;
+            </span>
+        </li>
+        <li><b>Description: </b>{{ conf.description }}</li>
+    </ul>
+</div>

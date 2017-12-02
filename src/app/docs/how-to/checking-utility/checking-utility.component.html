@@ -1,0 +1,47 @@
+<h1>Running the Error Checking Utility</h1>
+<section markdown>
+Playground ships with a checking utility that will open all of your sandboxed scenarios and visit them on a
+page-by-page basis, logging whether there are console errors on that page.
+
+```
+angular-playground --check-errors
+```
+
+This can be useful for integration with a build system to ensure that when components are updated with new dependencies
+the scenarios are also updated with mocks.
+
+For exmaple, take a component that has a new dependency on a service, `MyService`.
+
+</section>
+<div markdown path="/content/docs/check-errors/component.md"></div>
+<section markdown>
+Since `MyService` is run during the component's `ngOnInit` lifecycle hook, the service must be present
+when the component is initialized. Otherwise, Angular will throw a runtime error.
+
+This means that if the sandbox for this scenario is missing a mock for the `myService.doStuff` method,
+the scenario will also error.
+</section>
+<div markdown path="/content/docs/check-errors/scenario.md"></div>
+<section markdown>
+
+#### Build Output
+
+By default, Playground will only log build output to the console. However, if
+your build system allows for more granularity, you can specify a report format with `reportType`.
+
+The Playground checking utility supports the ability to publish JSON reports for build systems. To do this,
+you can use the `reportType` configuration parameter. For example, the following will publish a build to
+the provided file in JSON format when running the checking utility:
+
+```
+angular-playground --check-errors --report-path ./report.json --report-type json
+```
+
+You can read more about <a routerLink="/docs/api/reporter-formats">report formats</a> in our API docs.
+</section>
+<section markdown>
+#### Configuration
+
+There are additional configuration options that can be applied to `checkErrors`. You can read about them
+in our <a routerLink="/docs/api/configuration">configuration documentation</a>.
+</section>
