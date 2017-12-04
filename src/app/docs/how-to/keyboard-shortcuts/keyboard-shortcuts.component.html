@@ -1,16 +1,14 @@
 <h1>Keyboard Shortcuts</h1>
 <section id="shortcuts">
-    <div class="shortcut-menu">
-        <div class="content__shortcut" *ngFor="let shortcut of shortcuts">
-            <div class="content__shortcut-label">
-                <ng-container *ngFor="let key of shortcut.keys; let i = index">
-                    <code>{{key}}</code>
-                    <ng-container *ngIf="shortcut.keys.length > 1 && i < shortcut.keys.length - 1">&nbsp;&nbsp;/&nbsp;&nbsp;</ng-container>
-                </ng-container>
-            </div>
-            <div class="content__shortcut-value">
-                {{shortcut.description}}
-            </div>
+    <div class="content__shortcut" *ngFor="let shortcut of shortcuts">
+        <div class="content__shortcut-label">
+            <ng-container *ngFor="let key of shortcut.keys; let i = index">
+                <code>{{key}}</code>
+                <ng-container *ngIf="shortcut.keys.length > 1 && i < shortcut.keys.length - 1">&nbsp;&nbsp;/&nbsp;&nbsp;</ng-container>
+            </ng-container>
+        </div>
+        <div class="content__shortcut-value">
+            {{shortcut.description}}
         </div>
     </div>
 </section>
