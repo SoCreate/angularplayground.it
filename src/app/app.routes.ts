@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from 'app/about/about.component';
-import { CommandBarCloseComponent } from 'app/docs/how-to/command-bar-close/command-bar-close.component';
-import { CommandBarNavigationComponent } from 'app/docs/how-to/command-bar-navigation/command-bar-navigation.component';
-import { CommandBarOpenComponent } from 'app/docs/how-to/command-bar-open/command-bar-open.component';
+import { CommandBarCloseComponent } from 'app/docs/how-to/keyboard-shortcuts/command-bar-close/command-bar-close.component';
+import { CommandBarNavigationComponent } from 'app/docs/how-to/keyboard-shortcuts/command-bar-navigation/command-bar-navigation.component';
+import { CommandBarOpenComponent } from 'app/docs/how-to/keyboard-shortcuts/command-bar-open/command-bar-open.component';
 import { EmbeddingSandboxesComponent } from 'app/docs/how-to/embedding-sandboxes/embedding-sandboxes.component';
-import { QuickToggleComponent } from 'app/docs/how-to/quick-toggle/quick-toggle.component';
-import { SearchingForSandboxesComponent } from 'app/docs/how-to/searching-for-sandboxes/searching-for-sandboxes.component';
+import { QuickToggleComponent } from 'app/docs/how-to/keyboard-shortcuts/quick-toggle/quick-toggle.component';
+import { SearchingForSandboxesComponent } from 'app/docs/how-to/keyboard-shortcuts/searching-for-sandboxes/searching-for-sandboxes.component';
 import { HomeComponent } from 'app/home/home.component';
 import { DocsComponent } from 'app/docs/docs.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
@@ -20,6 +20,7 @@ import { ConfigurationComponent } from 'app/docs/api/configuration/configuration
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
+import { KeyboardShortcutsComponent } from 'app/docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -37,14 +38,10 @@ export const appRoutes: Routes = [
       { path: 'api/reporter-formats', component: ReporterFormatsComponent },
       { path: 'how-to/sandboxing-components', component: SandboxingComponent },
       { path: 'how-to/run-the-cli', component: RunTheCliComponent },
+      { path: 'how-to/keyboard-shortcuts', component: KeyboardShortcutsComponent },
       { path: 'how-to/checking-utility', component: CheckingUtilityComponent },
-      { path: 'how-to/command-bar-close', component: CommandBarCloseComponent },
-      { path: 'how-to/command-bar-navigation', component: CommandBarNavigationComponent },
-      { path: 'how-to/command-bar-open', component: CommandBarOpenComponent },
       { path: 'how-to/embedding-sandboxes', component: EmbeddingSandboxesComponent },
       { path: 'how-to/custom-root-ngmodule', component: CustomRootNgmoduleComponent },
-      { path: 'how-to/quick-toggle', component: QuickToggleComponent },
-      { path: 'how-to/searching-for-sandboxes', component: SearchingForSandboxesComponent },
       { path: '', redirectTo: 'getting-started/introduction', pathMatch: 'full' }
     ]
   },
