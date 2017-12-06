@@ -1,8 +1,9 @@
-import { QuickToggleComponent } from './docs/how-to/quick-toggle/quick-toggle.component';
+import { SearchingForSandboxesComponent } from './docs/how-to/keyboard-shortcuts/searching-for-sandboxes/searching-for-sandboxes.component';
+import { QuickToggleComponent } from './docs/how-to/keyboard-shortcuts/quick-toggle/quick-toggle.component';
 import { EmbeddingSandboxesComponent } from './docs/how-to/embedding-sandboxes/embedding-sandboxes.component';
-import { CommandBarOpenComponent } from './docs/how-to/command-bar-open/command-bar-open.component';
-import { CommandBarNavigationComponent } from './docs/how-to/command-bar-navigation/command-bar-navigation.component';
-import { CommandBarCloseComponent } from './docs/how-to/command-bar-close/command-bar-close.component';
+import { CommandBarOpenComponent } from './docs/how-to/keyboard-shortcuts/command-bar-open/command-bar-open.component';
+import { CommandBarNavigationComponent } from './docs/how-to/keyboard-shortcuts/command-bar-navigation/command-bar-navigation.component';
+import { CommandBarCloseComponent } from './docs/how-to/keyboard-shortcuts/command-bar-close/command-bar-close.component';
 import { SoCreateLogoComponent } from './shared/socreate-logo/socreate-logo.component';
 import { PlaygroundLogoComponent } from './shared/playground-logo/playground-logo.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,6 @@ import { MarkdownComponent } from './shared/markdown.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { GithubCornerComponent } from './shared/github-corner.component';
-import { SearchingForSandboxesComponent } from './docs/how-to/searching-for-sandboxes/searching-for-sandboxes.component';
 import { SlideShowComponent } from './home/slide-show/slide-show.component';
 import { appRoutes } from './app.routes';
 import { DocsComponent } from 'app/docs/docs.component';
@@ -31,6 +31,7 @@ import { ConfigurationComponent } from 'app/docs/api/configuration/configuration
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
+import { KeyboardShortcutsComponent } from 'app/docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/check
     CheckingUtilityComponent,
     AngularCliComponent,
     NonAngularCliComponent,
+    KeyboardShortcutsComponent,
     SandboxingComponent,
     SandboxApiComponent,
     ConfigurationComponent,
