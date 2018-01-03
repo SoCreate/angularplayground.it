@@ -1,0 +1,39 @@
+<h1>Keyboard Shortcuts</h1>
+<section id="shortcuts">
+    <div class="content__shortcut" *ngFor="let shortcut of shortcuts">
+        <div class="content__shortcut-label">
+            <ng-container *ngFor="let key of shortcut.keys; let i = index">
+                <code>{{key}}</code>
+                <ng-container *ngIf="shortcut.keys.length > 1 && i < shortcut.keys.length - 1">&nbsp;&nbsp;/&nbsp;&nbsp;</ng-container>
+            </ng-container>
+        </div>
+        <div class="content__shortcut-value">
+            {{shortcut.description}}
+        </div>
+    </div>
+</section>
+<section>
+    <h4>Contents</h4>
+    <ul>
+        <li><a (click)="goTo('open')">Open Command Bar</a></li>
+        <li><a (click)="goTo('navigate')">Navigate Command Bar</a></li>
+        <li><a (click)="goTo('close')">Close Command Bar</a></li>
+        <li><a (click)="goTo('search')">Search For Sandboxes</a></li>
+        <li><a (click)="goTo('quick-toggle')">Quick Toggle</a></li>
+    </ul>
+</section>
+<section id="open">
+    <app-command-bar-open></app-command-bar-open>
+</section>  
+<section id="navigate">
+    <app-command-bar-navigation></app-command-bar-navigation>
+</section>
+<section id="close">
+    <app-command-bar-close></app-command-bar-close>
+</section>
+<section id="search">
+    <app-searching-for-sandboxes></app-searching-for-sandboxes>
+</section>
+<section id="quick-toggle">
+    <app-quick-toggle></app-quick-toggle>
+</section>
