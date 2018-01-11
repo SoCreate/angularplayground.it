@@ -44,20 +44,6 @@
   tests, integration with @angular/cli, etc.). See the <a routerLink="/docs/api/configuration">API documentation</a>
   for more information.
 </section>
-<h4>Update tsconfig Compiler Options</h4>
-<section markdown>
-  Change the `compilerOptions.module` option in your `tsconfig.json` to <em>"esnext"</em>.
-</section>
-<div markdown path="content/docs/getting-started/angular-cli6.md"></div>
-<h4>Resolving the sandboxes.ts File</h4>
-<section markdown>
-  The `PlaygroundModule` will load the sandboxes.ts file that the CLI generates via a `require('sandboxes')` call.
-  For that to work you need to support module resolution of that **sandboxes** path to the sandboxes.ts
-  file.
-
-  If you are using Webpack, this can be accomplished with a `resolve.alias`:
-</section>
-<section markdown path="content/docs/bootstrapping/webpack.md"></section>
 <section markdown>
   [Here's an example webpack configuration.](https://github.com/SoCreate/angular-playground/tree/master/examples/example-app-webpack/config)
 </section>
