@@ -1,0 +1,47 @@
+<h1>Building for Production</h1>
+<blockquote>
+    <b>Note:</b> This feature is highly reliant on @angular/cli and therefore is subject to change.
+</blockquote>
+<section markdown>
+You can build Playground into a production application with the `--build` flag.
+
+#### Prerequisites
+* `@angular/cli`
+* `@angular/service-worker`
+
+#### Configuration
+
+Additionally, in order for Playground to use the `ServiceWorkerModule`, you'll need to create a
+custom Playground module with the following contents:
+</section>
+<div markdown path="/content/how-to/service-worker-module.md"></div>
+<section markdown>
+When bootstrapping Playground, use your custom module instead to enable Service Workers.
+</section>
+<div markdown path="/content/how-to/service-worker-main.md"></div>
+<section markdown>
+Finally, make sure that you have a valid `ngsw-config.json` provided within your project's `src`.
+</section>
+<div markdown path="/content/how-to/ngsw-config.md"></div>
+<section>
+<h4>Build with a Service Worker</h4>
+<p>
+    Assuming Playground is <a routerLink="/docs/getting-started/angular-cli">configured correctly</a>,
+    the following commands will build Playground with a service worker, navigate to the build output,
+    and start serving content.
+</p>
+<section>
+<section markdown>
+```
+angular-playground --build
+cd ./dist/
+http-server
+```
+</section>
+<blockquote>
+Any http server application will do. This guide uses <a href="https://github.com/indexzero/http-server">http-server</a>.
+</blockquote>
+<section markdown>
+Navigate to `127.0.0.1:8080` and open the "Applications" tab in Chrome Developer Tools to see the
+service worker in action.
+</section>
