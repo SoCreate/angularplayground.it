@@ -41,6 +41,15 @@ export class ConfigurationComponent {
                           conjunction with noWatch).`
         },
         {
+            name: 'build',
+            type: 'boolean',
+            default: 'false',
+            cli: '--build',
+            description: `Builds Playground in production mode with a service worker. Please
+                          refer to docs/how-to/build-prod for more information.`,
+            label: 'Requires @angular/cli and @angular/service-worker'
+        },
+        {
             name: 'checkErrors',
             type: 'boolean',
             default: 'false',
