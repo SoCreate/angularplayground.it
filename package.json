@@ -8,6 +8,7 @@
     "start": "ng serve",
     "start:aot": "ng serve --aot --prod --port 4202",
     "site:deploy": "ng build --prod --output-path docs --base-href /",
+    "deploy": "sh ./scripts/deploy.sh",
     "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check"
   },
   "private": true,

@@ -32,6 +32,7 @@ import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.comp
 import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
 import { KeyboardShortcutsComponent } from 'app/docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
+import { BuildProdComponent } from 'app/docs/how-to/build-prod/build-prod.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { KeyboardShortcutsComponent } from 'app/docs/how-to/keyboard-shortcuts/k
     EmbeddingSandboxesComponent,
     QuickToggleComponent,
     SearchingForSandboxesComponent,
-    SlideShowComponent
+    SlideShowComponent,
+    BuildProdComponent
   ],
   imports: [
     BrowserModule,
