@@ -51,7 +51,7 @@ PlaygroundModule
   root Playground application module, allowing them to work as intended.
 
   <blockquote>
-    Note: all modules added at this level will be available for all sandboxes.
+    Note: modules added at this level will be available globally, accessible from all sandboxes.
   </blockquote>
 </section>
 <section markdown>
@@ -63,7 +63,8 @@ PlaygroundModule
   1. Omit the `selector` property in configuration
   2. Add the &lt;ap-root&gt;&lt;/ap-root&gt; element to your custom HTML page (e.g. `index.playground.html`)
 
-  This will allow Playground to bootstrap itself on your custom HTML page. Here's an example:
+
+  This will allow Playground to bootstrap itself onto the HTML page. Here's an example:
 </section>
 <div markdown path="content/how-to/configuration-plugins/custom-html.md"></div>
 <section markdown>
