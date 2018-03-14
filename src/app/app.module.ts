@@ -25,13 +25,13 @@ import { InstallingComponent } from 'app/docs/getting-started/installing/install
 import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
 import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
-import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
 import { KeyboardShortcutsComponent } from 'app/docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 import { BuildProdComponent } from 'app/docs/how-to/build-prod/build-prod.component';
+import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/configuration-plugins.component';
 
 
 @NgModule({
@@ -55,7 +55,7 @@ import { BuildProdComponent } from 'app/docs/how-to/build-prod/build-prod.compon
     SandboxingComponent,
     SandboxApiComponent,
     ConfigurationComponent,
-    CustomRootNgmoduleComponent,
+    ConfigurationPluginsComponent,
     CommandBarCloseComponent,
     CommandBarNavigationComponent,
     CommandBarOpenComponent,

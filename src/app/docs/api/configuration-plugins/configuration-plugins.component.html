@@ -1,0 +1,70 @@
+<h1>Configuration and Plugins</h1>
+<section markdown>
+  Playground supports several configuration options that allow you to provide modules
+  to all of your sandboxes or opt-in to different UI features within the
+  application itself. We plan on extending this system with a plugin API that
+  will allow developers to extend the Playground UI however they so wish.
+
+  All configuration and plugins will be provided through the `.configure()` method of the
+  `PlaygroundModule`. For example, the following configuration provides the
+  `BrowserAnimationsModule` to all sandboxes:
+</section>
+<div markdown path="content/how-to/configuration-plugins/all-options.md"></div>
+<h4>Overlay</h4>
+<section markdown>
+  For devices without keyboard access, enable Playground's overlay to control
+  the command bar: 
+
+  ```typescript
+PlaygroundModule
+  .configure({{ '{' }}
+    selector: 'app-root',
+    // Enable overlay for toggling command bar
+    overlay: true
+  {{ '}' }});
+  ```
+</section>
+<p markdown>
+</p>
+<h4>Modules</h4>
+<section markdown>
+  The `PlaygroundModule` is used as the root `NgModule` for the Playground application. Therefore,
+  user-specific modules that need to be provided at the root level, like `BrowserAnimationsModule`,
+  need to attach themselves to the `PlaygroundModule` in order to be registered for the application.
+  We can achieve this with the `modules` property.
+ 
+  ```typescript
+PlaygroundModule
+  .configure({{ '{' }}
+    selector: 'app-root',
+    // Provide modules to all sandboxes in your application
+    modules: [
+      BrowserAnimationsModule,
+      // Register service workers for production builds
+      environment.production
+        ? ServiceWorkerModule.register('/ngsw-worker.js')
+        : []
+    ]
+  {{ '}' }});
+  ```
+
+  In the above snippet, `BrowserAnimationsModule` and `ServiceWorkerModule` are added to the
+  root Playground application module, allowing them to work as intended.
+
+  <blockquote>
+    Note: all modules added at this level will be available for all sandboxes.
+  </blockquote>
+</section>
+<h4>Custom HTML Page</h4>
+<section markdown>
+If you'd like to run Playground in a custom HTML page (other than the one you're serving your
+regular app on), do the following.
+
+1. Omit the `selector` property in configuration
+2. Add the &lt;ap-root&gt;&lt;/ap-root&gt; element to your custom HTML page (e.g. `index.playground.html`)
+
+This will allow Playground to bootstrap itself on your custom HTML page. Here's an example:
+</section>
+<div markdown path="content/how-to/configuration-plugins/custom-html.md"></div>
+<h4>Plugins</h4>
+Coming soon!
