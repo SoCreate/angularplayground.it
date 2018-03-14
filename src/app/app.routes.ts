@@ -10,7 +10,6 @@ import { HomeComponent } from 'app/home/home.component';
 import { DocsComponent } from 'app/docs/docs.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
 import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
-import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
 import { InstallingComponent } from 'app/docs/getting-started/installing/installing.component';
 import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
@@ -30,8 +29,7 @@ export const appRoutes: Routes = [
     component: DocsComponent,
     children: [
       { path: 'getting-started/introduction', component: IntroductionComponent },
-      { path: 'getting-started/requirements', component: RequirementsComponent },
-      { path: 'getting-started/installing', component: InstallingComponent },
+      { path: 'getting-started/installation', component: InstallingComponent },
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },

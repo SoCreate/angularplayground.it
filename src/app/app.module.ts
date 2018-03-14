@@ -21,7 +21,6 @@ import { appRoutes } from './app.routes';
 import { DocsComponent } from 'app/docs/docs.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
 import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
-import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
 import { InstallingComponent } from 'app/docs/getting-started/installing/installing.component';
 import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
@@ -57,7 +56,6 @@ import { BuildProdComponent } from 'app/docs/how-to/build-prod/build-prod.compon
     SandboxApiComponent,
     ConfigurationComponent,
     CustomRootNgmoduleComponent,
-    RequirementsComponent,
     CommandBarCloseComponent,
     CommandBarNavigationComponent,
     CommandBarOpenComponent,
