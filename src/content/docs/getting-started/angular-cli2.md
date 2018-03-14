@@ -3,6 +3,12 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { initializePlayground, PlaygroundModule } from 'angular-playground';
 
-initializePlayground('app-root');
+PlaygroundModule
+  .configure({
+      selector: 'app-root',
+      overlay: false,
+      modules: []
+  });
+
 platformBrowserDynamic().bootstrapModule(PlaygroundModule);
 ```

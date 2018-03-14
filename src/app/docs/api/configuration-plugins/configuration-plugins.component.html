@@ -10,8 +10,9 @@
   `BrowserAnimationsModule` to all sandboxes:
 </section>
 <div markdown path="content/how-to/configuration-plugins/all-options.md"></div>
-<h4>Overlay</h4>
 <section markdown>
+  #### <a name="overlay"></a>Overlay
+
   For devices without keyboard access, enable Playground's overlay to control
   the command bar: 
 
@@ -23,11 +24,9 @@ PlaygroundModule
     overlay: true
   {{ '}' }});
   ```
-</section>
-<p markdown>
-</p>
-<h4>Modules</h4>
-<section markdown>
+
+  #### <a name="modules"></a>Modules
+
   The `PlaygroundModule` is used as the root `NgModule` for the Playground application. Therefore,
   user-specific modules that need to be provided at the root level, like `BrowserAnimationsModule`,
   need to attach themselves to the `PlaygroundModule` in order to be registered for the application.
@@ -55,16 +54,20 @@ PlaygroundModule
     Note: all modules added at this level will be available for all sandboxes.
   </blockquote>
 </section>
-<h4>Custom HTML Page</h4>
 <section markdown>
-If you'd like to run Playground in a custom HTML page (other than the one you're serving your
-regular app on), do the following.
+  #### <a name="custom-html"></a>Custom HTML Page
 
-1. Omit the `selector` property in configuration
-2. Add the &lt;ap-root&gt;&lt;/ap-root&gt; element to your custom HTML page (e.g. `index.playground.html`)
+  If you'd like to run Playground in a custom HTML page (other than the one you're serving your
+  regular app on), do the following.
 
-This will allow Playground to bootstrap itself on your custom HTML page. Here's an example:
+  1. Omit the `selector` property in configuration
+  2. Add the &lt;ap-root&gt;&lt;/ap-root&gt; element to your custom HTML page (e.g. `index.playground.html`)
+
+  This will allow Playground to bootstrap itself on your custom HTML page. Here's an example:
 </section>
 <div markdown path="content/how-to/configuration-plugins/custom-html.md"></div>
-<h4>Plugins</h4>
+<section markdown>
+#### <a name="plugins"></a>Plugins
+
 Coming soon!
+</section>
