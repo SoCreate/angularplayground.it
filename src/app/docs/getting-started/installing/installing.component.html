@@ -14,6 +14,16 @@
 npm install --save-dev angular-playground
 ```
 
+</section>
+Angular Playground depends on <a href="https://github.com/GoogleChrome/puppeteer">puppeteer</a> to provide
+<a routerLink="/docs/how-to/checking-utility">error-checking</a> functionality for sandboxes. If you'd like
+to skip the automatic Chromium install, provide the following command before installing angular-playground:
+<section markdown>
+```
+npm set PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+npm install --save-dev angular-playground
+```
+
 With Playground installed, your next step is to pick a guide based on your Angular setup.
 
 #### Pick a Guide:
