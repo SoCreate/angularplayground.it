@@ -10,18 +10,17 @@ import { HomeComponent } from 'app/home/home.component';
 import { DocsComponent } from 'app/docs/docs.component';
 import { SandboxApiComponent } from 'app/docs/api/sandbox/sandbox.component';
 import { IntroductionComponent } from 'app/docs/getting-started/introduction/introduction.component';
-import { RequirementsComponent } from 'app/docs/getting-started/requirements/requirements.component';
 import { InstallingComponent } from 'app/docs/getting-started/installing/installing.component';
 import { AngularCliComponent } from 'app/docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from 'app/docs/getting-started/non-angular-cli/non-angular-cli.component';
 import { SandboxingComponent } from 'app/docs/how-to/sandboxing/sandboxing.component';
-import { CustomRootNgmoduleComponent } from 'app/docs/how-to/custom-root-ngmodule/custom-root-ngmodule.component';
 import { ConfigurationComponent } from 'app/docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from 'app/docs/how-to/run-the-cli/run-the-cli.component';
 import { ReporterFormatsComponent } from 'app/docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from 'app/docs/how-to/checking-utility/checking-utility.component';
 import { KeyboardShortcutsComponent } from 'app/docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 import { BuildProdComponent } from 'app/docs/how-to/build-prod/build-prod.component';
+import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/configuration-plugins.component';
 
 export const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -30,8 +29,7 @@ export const appRoutes: Routes = [
     component: DocsComponent,
     children: [
       { path: 'getting-started/introduction', component: IntroductionComponent },
-      { path: 'getting-started/requirements', component: RequirementsComponent },
-      { path: 'getting-started/installing', component: InstallingComponent },
+      { path: 'getting-started/installation', component: InstallingComponent },
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
@@ -42,7 +40,7 @@ export const appRoutes: Routes = [
       { path: 'how-to/keyboard-shortcuts', component: KeyboardShortcutsComponent },
       { path: 'how-to/checking-utility', component: CheckingUtilityComponent },
       { path: 'how-to/embedding-sandboxes', component: EmbeddingSandboxesComponent },
-      { path: 'how-to/custom-root-ngmodule', component: CustomRootNgmoduleComponent },
+      { path: 'how-to/configuration-plugins', component: ConfigurationPluginsComponent },
       { path: 'how-to/build-prod', component: BuildProdComponent },
       { path: '', redirectTo: 'getting-started/introduction', pathMatch: 'full' }
     ]

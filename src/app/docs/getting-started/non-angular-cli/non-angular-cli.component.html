@@ -1,16 +1,17 @@
 <h1>Setup without Angular CLI</h1>
 <section markdown>
-  Playground is designed to use your existing app as a host for
-  serving up a Playground application, which is nothing more
-  than an Angular entry module that can be bootstrapped.
+  This guide assumes you already have Angular configured to work
+  with Webpack.
+
+  <blockquote>
+    Ejected from @angular/cli? Check out a [working example](https://github.com/mgmarlow/ejected-playground).
+  </blockquote>
 
   Setting up an existing application without Angular CLI requires a few steps:
 
   1. Create an entry point for Playground: `main.playground.ts`
-  2. Configure a new `angular-playground.json` file
-  3. Update tsconfig compiler options (`tsconfig.json`)
-  4. Set up a resolve alias in your Webpack settings (`webpack.config.js`)
-  5. Add a scripts entry to `package.json`
+  2. Provide configuration: `angular-playground.json`
+  3. Configure a build script: `package.json`
 </section>
 <h4>Install Angular Playground</h4>
 <section markdown>
@@ -18,24 +19,15 @@
   npm install --save-dev angular-playground
   ```
 </section>
-<h4>A New Main Entry File</h4>
+<h4>Create an Entry Point</h4>
 <section markdown path="content/docs/getting-started/bootstrapping.md"></section>
 <section markdown>
-  You can use your existing `index.html` and whatever other build/serve scenario you
-  have in place for you app, you just need to change your entry point to be this
-  `main.playground.ts` file instead of your `main.ts` file, or you could do some other
-  type of logic to run the `initializePlayground` and bootstrap the `PlaygroundModule` conditionally.
-
-  ##### Entry HTML Page
-
-  The `initializePlayground` function takes in an element selector string. The element
-  selector is used to find your existing app element in your `index.html` DOM and
-  replace it with the element selector used by the Playground `AppComponent`.
+  Change the entry point of your webpack configuration to point at this file,
+  `main.playground.ts`. The `selector` property passed into `configure()` should
+  be the selector of your root component, `app.component.ts`.
 
   If you decide to set up a separate `index.html` file in your project for Playground
-  you would still need to call `initializePlayground()`, just with no
-  argument for the element selector. Instead, you can manually add the `ap-root` element in your
-  `index.html` file.
+  simply leave the selector property off of the `.configure()` call.
 </section>
 <h4>Add the Angular Playground Config</h4>
 <div markdown path="content/docs/getting-started/non-angular-cli.md"></div>
@@ -44,31 +36,18 @@
   tests, integration with @angular/cli, etc.). See the <a routerLink="/docs/api/configuration">API documentation</a>
   for more information.
 </section>
+<h4>Add Playground to package.json</h4>
+<div markdown path="content/docs/getting-started/non-angular-cli-package-json.md"></div>
 <section markdown>
-  [Here's an example webpack configuration.](https://github.com/SoCreate/angular-playground/tree/master/examples/example-app-webpack/config)
-</section>
-<h4>Add Playground to Package.json</h4>
-<div markdown path="content/docs/getting-started/angular-cli7.md"></div>
-<section markdown>
-  Add the entry `"playground": "angular-playground"` to the scripts listing in your `package.json`. 
-
-  ```
-  npm run playground
-  ```
-
   To run Playground, you will need to serve your application with your build system of choice while
-  running the Playground CLI.
+  running the Playground CLI. We recommend using [concurrently](https://github.com/kimmobrunfeldt/concurrently).
 
-  For example, the two commands below need to be ran simultaneously:
-
-  ```
-  npm run playground
-  webpack-dev-server --inline --port 8081 --config config/webpack.playground.js
-  ```
+  Additionally, the `--no-serve` flag is needed to prevent the Playground CLI from running an Angular
+  CLI `ng serve` behind the scenes.
 </section>
 <h4>Next Steps</h4>
 <section markdown>
   * <a routerLink="/docs/how-to/sandboxing-components">Start sandboxing components</a>
   * <a routerLink="/docs/how-to/keyboard-shortcuts">Learn how to navigate Playground</a>
-  * [Check out a working example](https://github.com/DanWahlin/Angular-JumpStart)
+  * [Check out a working example](https://github.com/mgmarlow/ejected-playground)
 </section>

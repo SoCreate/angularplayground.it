@@ -11,16 +11,12 @@ You can build Playground into a production application with the `--build` flag.
 
 #### Configuration
 
-Additionally, in order for Playground to use the `ServiceWorkerModule`, you'll need to create a
-custom Playground module with the following contents:
-</section>
-<div markdown path="/content/how-to/service-worker-module.md"></div>
-<section markdown>
-When bootstrapping Playground, use your custom module instead to enable Service Workers.
+In order for Playground to use the `ServiceWorkerModule`, you'll need to add
+the module to your `main.playground.ts`:
 </section>
 <div markdown path="/content/how-to/service-worker-main.md"></div>
 <section markdown>
-Finally, make sure that you have a valid `ngsw-config.json` provided within your project's `src`.
+Make sure that you have a valid `ngsw-config.json` provided within your project's `src`.
 </section>
 <div markdown path="/content/how-to/ngsw-config.md"></div>
 <section>
@@ -34,12 +30,12 @@ Finally, make sure that you have a valid `ngsw-config.json` provided within your
 <section markdown>
 ```
 angular-playground --build
-cd ./dist/
+cd ./dist-playground/
 http-server
 ```
 </section>
 <blockquote>
-Any http server application will do. This guide uses <a href="https://github.com/indexzero/http-server">http-server</a>.
+Any http server will do. This guide uses the npm package, <a href="https://github.com/indexzero/http-server">http-server</a>.
 </blockquote>
 <section markdown>
 Navigate to `127.0.0.1:8080` and open the "Applications" tab in Chrome Developer Tools to see the
