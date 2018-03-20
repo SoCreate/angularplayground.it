@@ -1,7 +1,7 @@
 ###### ./src/main.playground.ts
 ```typescript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { initializePlayground, PlaygroundModule } from 'angular-playground';
+import { PlaygroundModule } from 'angular-playground';
 
 PlaygroundModule
   .configure({
