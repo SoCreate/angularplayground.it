@@ -1,13 +1,12 @@
 <h1>Setup with Angular CLI</h1>
-<blockquote>For Angular CLI <code>1.5.0</code> and above</blockquote>
+<blockquote>For Angular CLI <code>6.0.0</code> and above</blockquote>
 <section markdown>
   Setting up an existing [Angular CLI](https://cli.angular.io/) application to use Playground requires a few steps:
 
   1. Create an entry point for Playground: `main.playground.ts`
-  2. Add another app configuration object to `.angular-cli.json`
+  2. Add another project configuration object to `angular.json`
   3. Configure a new `angular-playground.json` file
-  4. Update tsconfig compiler options (`tsconfig.app.json`)
-  5. Add a scripts entry to `package.json`
+  4. Add a scripts entry to `package.json`
 </section>
 <h4>Install Angular Playground</h4>
 <section markdown>
@@ -21,17 +20,17 @@
   You need to call `initializePlayground()` with the appropriate selector string
   for your `AppComponent` (internally, Playground will set up shop in your existing `index.html`).
 </section>
-<h4>Add an App to the Angular CLI Config</h4>
+<h4>Add a project to the Angular CLI Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli3.md"></div>
 <section markdown>
   You will want to configure the following properties:
 
-  - `name` The name of your Playground app ("playground" is a good name for that 😎)
+  - Add a new project configuration and name it ("playground" is a good name for that 😎)
   - `outDir` A build directory (in case you want to build Playground)
   - `main` Point to the new entry script you created above
 
 
-  The rest of the properties can be the same as your main app.
+  The rest of the properties can be the same as your main project.
 </section>
 <h4>Add the Angular Playground Config</h4>
 <div markdown path="content/docs/getting-started/angular-cli.md"></div>
@@ -40,7 +39,7 @@
 
   `sourceRoot` points at the source of your Angular application. In this example, we're using the
   [@angular/cli](https://cli.angular.io/), so the `sourceRoot` is `./src/`. Additionally, we need to 
-  provide the name of our Angular application, as specified in our `.angular-cli.json`.
+  provide the name of our Angular application, as specified in our `angular.json`.
   
   If you'd like to configure @angular/cli to run a different port, or would like to take a look
   at the other options available for this configuration file, see the

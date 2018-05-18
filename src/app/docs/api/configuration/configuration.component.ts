@@ -97,7 +97,7 @@ export class ConfigurationComponent {
             type: 'string',
             default: 'playground',
             cli: '--ng-cli-app',
-            description: `The name of the playground app as specified in .angular-cli.json.`,
+            description: `The name of the playground app as specified in angular.json.`,
             label: '@angular/cli only'
         },
         {
@@ -106,14 +106,6 @@ export class ConfigurationComponent {
             default: '4201',
             cli: '--ng-cli-port',
             description: `The port number @angular/cli uses when serving Playground.`,
-            label: '@angular/cli only'
-        },
-        {
-            name: 'angularCli.environment',
-            type: 'string',
-            default: 'null',
-            cli: '--ng-cli-env',
-            description: `The environment @angular/cli uses when serving playground.`,
             label: '@angular/cli only'
         },
         {

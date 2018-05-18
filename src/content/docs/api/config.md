@@ -5,7 +5,6 @@
   "angularCli": {
     "appName": "my-playground-app",
     "port": 9876,
-    "environment": "./environments/environment.prod.ts",
     "cmdPath": "./node-modules/@angular/cli/bin/ng",
     "args": [ "-ssl", "www.place.com" ]
   },
