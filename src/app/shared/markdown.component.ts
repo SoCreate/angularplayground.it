@@ -3,7 +3,6 @@ import * as marked from 'marked';
 import 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
 
 declare var Prism: any;
 
