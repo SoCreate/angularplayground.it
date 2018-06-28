@@ -21,8 +21,19 @@
   a dynamic `NgModule` around the sandboxed component. So these config properties are the same ones you
   are used to using for an `NgModule` decorator.
 </section>
-<section markdown id="label">
-  This also has a `label` property that allows you to label your sandboxes. This value gets rendered next to the
+<section markdown>
+  The `entryComponents` property is used to define components that are not found in template markup
+  and created dynamically (i.e.: overlays, panels, modals).
+
+  The `schemas` property defines schemas for use in sandboxes, such as:
+  <ul>
+    <li>`NO_ERRORS_SCHEMA` - allow any
+      property on any element</li>
+    <li>`CUSTOM_ELEMENTS_SCHEMA` - allow NgModule to contain non-Angular elements or
+      element properties named with dash case (-)</li>
+  </ul>
+
+  The `label` property allows you to label your sandboxes. This value gets rendered next to the
   component name in the Playground UI. So if you have 2 components in your app named `InfoBlock` that lived
   in different features, you could use the `label` to make those unique for readability in the UI (something
   like `label: 'featureA.'` and `label: 'featureB.'`).
