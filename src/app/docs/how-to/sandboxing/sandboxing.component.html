@@ -8,6 +8,24 @@
 </p>
 <div markdown path="content/docs/sandboxing/sandboxing-components.md"></div>
 <p markdown>
-  You can create a file next to it named `notice.component.sandbox.ts` with the following content:
+  You can then create a sandbox file using the CLI with the following command:
+
+  ```
+  ng generate angular-playground:sandbox [path]/[component name]
+  ```
+
+  In our example, from the `/notice` directory (where the NoticeComponent lives), we would run:
+
+  ```
+  ng generate angular-playground:sandbox notice
+  ```
+
+  This generate command comes with the following config setting:
+
+  * `--flat` (optional, defaults to false): indicate whether a new directory should be created to hold the generated sandbox file
+</p>
+<p markdown>
+  You can also create sandbox files manually.
+  For our example, create a new file next to the existing component file named `notice.component.sandbox.ts` with the following content:
 </p>
 <div markdown path="content/docs/sandboxing/sandboxing-components2.md"></div>
