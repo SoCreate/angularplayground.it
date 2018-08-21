@@ -1,62 +1,55 @@
 <h1>Setup with Angular CLI</h1>
 <blockquote>For Angular CLI <code>6.0.0</code> and above</blockquote>
 <section markdown>
-  Setting up an existing [Angular CLI](https://cli.angular.io/) application to use Playground requires a few steps:
+  Setting up an existing [Angular CLI](https://cli.angular.io/) application to use Playground requires one simple step:
 
-  1. Create an entry point for Playground: `main.playground.ts`
-  2. Add another project configuration object to `angular.json`
-  3. Configure a new `angular-playground.json` file
-  4. Add a scripts entry to `package.json`
-</section>
-<h4>Install Angular Playground</h4>
-<section markdown>
-  ```
-  npm install --save-dev angular-playground
-  ```
-</section>
-<h4>A New Main Entry File</h4>
-<div markdown path="content/docs/getting-started/angular-cli2.md"></div>
-<section markdown>
-  You need to call `initializePlayground()` with the appropriate selector string
-  for your `AppComponent` (internally, Playground will set up shop in your existing `index.html`).
-</section>
-<h4>Add a project to the Angular CLI Config</h4>
-<div markdown path="content/docs/getting-started/angular-cli3.md"></div>
-<section markdown>
-  Add the new project configuration and name it ("playground" is a good name for that 😎)
+  1. run `ng add angular-playground`
 
-  You will want to configure the following properties:
-
-  - `outDir` A build directory (in case you want to build Playground)
-  - `main` Point to the new entry script you created above
-
-
-  The rest of the properties can be the same as your main project.
-</section>
-<h4>Add the Angular Playground Config</h4>
-<div markdown path="content/docs/getting-started/angular-cli.md"></div>
-<section markdown>
-  The above file needs to be added to the root of your application (at the same level as `package.json`).
-
-  `sourceRoot` points at the source of your Angular application. In this example, we're using the
-  [@angular/cli](https://cli.angular.io/), so the `sourceRoot` is `./src/`. Additionally, we need to 
-  provide the name of our Angular application, as specified in our `angular.json`.
-  
-  If you'd like to configure @angular/cli to run a different port, or would like to take a look
-  at the other options available for this configuration file, see the
-  <a routerLink="/docs/api/configuration">API documentation</a>.
-</section>
-<h4>Add Playground to Package.json</h4>
-<div markdown path="content/docs/getting-started/angular-cli7.md"></div>
-<section markdown>
-  Add the entry `"playground": "angular-playground"` to the scripts listing in your `package.json`. From here
-  on out, running Playground is as easy as calling:
+  This will install the angular-playground package as well as set up the necessary config files for you to start developing with Playground!
+  From here on out, running Playground is as easy as calling:
 
   ```
   npm run playground
   ```
 
-  Navigate to `localhost:4201` (or your own port, as outlined above) and start sandboxing components!
+  Navigate to `localhost:4201` and start sandboxing components!
+</section>
+<h4>Overview of New/Modified Files</h4>
+<section markdown>
+  Playground needs some new configuration files in order to work properly.
+  Follow along to see what's been added!
+</section>
+<h4>A New Main Entry File</h4>
+<div markdown path="content/docs/getting-started/angular-cli2.md"></div>
+<section markdown>
+  You need to pass in the appropriate selector string
+  for your `AppComponent` (internally, Playground will set up shop in your existing `index.html`).
+</section>
+<h4>A New Project in the Angular CLI Config</h4>
+<div markdown path="content/docs/getting-started/angular-cli3.md"></div>
+<section markdown>
+  You may want to configure the following properties:
+
+  - `outputPath` A build directory (in case you want to build Playground)
+  - `main` Points to the new `main.playground.ts` file
+
+  The rest of the properties can be the same as your main project.
+</section>
+<h4>A Config File for Angular Playground</h4>
+<div markdown path="content/docs/getting-started/angular-cli.md"></div>
+<section markdown>
+  `sourceRoot` points at the source of your Angular application. In this example, we're using the
+  [@angular/cli](https://cli.angular.io/), so the `sourceRoot` is `./src/`. Additionally, we need to 
+  use the name of our Angular application, as specified in our `angular.json`.
+  
+  If you'd like to configure @angular/cli to run on a different port, or would like to take a look
+  at the other options available for this configuration file, see the
+  <a routerLink="/docs/api/configuration">API documentation</a>.
+</section>
+<h4>A Playground Script in Package.json</h4>
+<div markdown path="content/docs/api/cli2.md"></div>
+<section markdown>
+  An npm command to run playground has been added to the scripts listing in your `package.json`.
 </section>
 <h4>Next Steps</h4>
 <section markdown>
