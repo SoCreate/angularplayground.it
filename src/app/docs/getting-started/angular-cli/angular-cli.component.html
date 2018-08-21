@@ -14,6 +14,17 @@
 
   Navigate to `localhost:4201` and start sandboxing components!
 </section>
+<section>
+  <p>
+    <a
+      routerLink="/docs/getting-started/angular-cli"
+      [fragment]="getFragment()">
+      Click here to {{ showingExtraContent ? 'hide' : 'show' }} the in-depth explanation of what's new!
+    </a>
+  </p>
+</section>
+<div *ngIf="showingExtraContent">
+<!-- this extra content needs to be not indented in order for markdown formatting to work -->
 <h4>Overview of New/Modified Files</h4>
 <section markdown>
   Playground needs some new configuration files in order to work properly.
@@ -39,9 +50,9 @@
 <div markdown path="content/docs/getting-started/angular-cli.md"></div>
 <section markdown>
   `sourceRoot` points at the source of your Angular application. In this example, we're using the
-  [@angular/cli](https://cli.angular.io/), so the `sourceRoot` is `./src/`. Additionally, we need to 
+  [@angular/cli](https://cli.angular.io/), so the `sourceRoot` is `./src/`. Additionally, we need to
   use the name of our Angular application, as specified in our `angular.json`.
-  
+
   If you'd like to configure @angular/cli to run on a different port, or would like to take a look
   at the other options available for this configuration file, see the
   <a routerLink="/docs/api/configuration">API documentation</a>.
@@ -51,6 +62,7 @@
 <section markdown>
   An npm command to run playground has been added to the scripts listing in your `package.json`.
 </section>
+</div>
 <h4>Next Steps</h4>
 <section markdown>
   * <a routerLink="/docs/how-to/sandboxing-components">Start sandboxing components</a>
