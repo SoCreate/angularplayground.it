@@ -24,9 +24,8 @@ export class AboutComponent implements OnInit {
     {
       firstName: 'Graham',
       lastName: 'Marlow',
-      avatarUrl: 'https://pbs.twimg.com/profile_images/882651324894007296/2yiOQyJk_400x400.jpg',
-      githubUrl: 'https://github.com/mgmarlow',
-      twitterUrl: 'https://twitter.com/mgmarlow'
+      avatarUrl: 'https://avatars3.githubusercontent.com/u/3778552?s=460&v=4',
+      githubUrl: 'https://github.com/mgmarlow'
     },
     {
       firstName: 'Brian',
