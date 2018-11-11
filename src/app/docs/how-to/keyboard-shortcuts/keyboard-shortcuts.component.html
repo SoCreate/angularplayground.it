@@ -1,25 +1,60 @@
 <h1>Keyboard Shortcuts</h1>
 <section id="shortcuts">
-    <div class="content__shortcut" *ngFor="let shortcut of shortcuts">
-        <div class="content__shortcut-label">
+    <dl class="shortcut" *ngFor="let shortcut of shortcuts">
+        <dt class="shortcut__label">
             <ng-container *ngFor="let key of shortcut.keys; let i = index">
-                <code>{{key}}</code>
+                <code class="shortcut__key">{{key}}</code>
                 <ng-container *ngIf="shortcut.keys.length > 1 && i < shortcut.keys.length - 1">&nbsp;&nbsp;/&nbsp;&nbsp;</ng-container>
             </ng-container>
-        </div>
-        <div class="content__shortcut-value">
+        </dt>
+        <dd class="shortcut__value">
             {{shortcut.description}}
-        </div>
-    </div>
+        </dd>
+    </dl>
 </section>
 <section>
     <h4>Contents</h4>
     <ul>
-        <li><a (click)="goTo('open')">Open Command Bar</a></li>
-        <li><a (click)="goTo('navigate')">Navigate Command Bar</a></li>
-        <li><a (click)="goTo('close')">Close Command Bar</a></li>
-        <li><a (click)="goTo('search')">Search For Sandboxes</a></li>
-        <li><a (click)="goTo('quick-toggle')">Quick Toggle</a></li>
+        <li>
+            <a 
+                tabindex="0"
+                (click)="goTo('open')"
+                (keyup.enter)="goTo('open')">
+                Open Command Bar
+            </a>
+        </li>
+        <li>
+            <a
+                tabindex="0"
+                (click)="goTo('navigate')"
+                (keyup.enter)="goTo('navigate')">
+                Navigate Command Bar
+            </a>
+        </li>
+        <li>
+            <a
+                tabindex="0"
+                (click)="goTo('close')"
+                (keyup.enter)="goTo('close')">
+                Close Command Bar
+            </a>
+        </li>
+        <li>
+            <a
+                tabindex="0"
+                (click)="goTo('search')"
+                (keyup.enter)="goTo('search')">
+                Search For Sandboxes
+            </a>
+        </li>
+        <li>
+            <a
+                tabindex="0"
+                (click)="goTo('quick-toggle')"
+                (keyup.enter)="goTo('quick-toggle')">
+                Quick Toggle
+            </a>
+        </li>
     </ul>
 </section>
 <section id="open">

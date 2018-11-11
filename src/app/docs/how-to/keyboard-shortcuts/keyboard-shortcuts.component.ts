@@ -20,7 +20,7 @@ export class KeyboardShortcutsComponent {
             description: 'Navigate up or down in command bar list',
         },
         {
-            keys: ['alt + \u2191', 'alt + \u2193'],
+            keys: ['ctrl + \u2191', 'ctrl + \u2193'],
             description: 'Switch scenarios while navigating up or down in command bar list',
         }
     ];
