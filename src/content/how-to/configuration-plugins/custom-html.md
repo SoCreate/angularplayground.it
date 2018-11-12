@@ -10,7 +10,7 @@
 </head>
 <body>
   <!-- Angular Playground Root Element -->
-  <ap-root></app-root>
+  <ap-root></ap-root>
 </body>
 </html>
 ```
