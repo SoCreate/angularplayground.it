@@ -18,6 +18,15 @@ html {
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    border: solid 1px $color__01--02;
+}
+
+a {
+  cursor: pointer;
+}
+
 
 
 
