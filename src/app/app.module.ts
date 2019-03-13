@@ -69,7 +69,9 @@ import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {
+      anchorScrolling: 'enabled'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

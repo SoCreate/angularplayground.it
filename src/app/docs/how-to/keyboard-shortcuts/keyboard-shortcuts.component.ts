@@ -24,9 +24,4 @@ export class KeyboardShortcutsComponent {
             description: 'Switch scenarios while navigating up or down in command bar list',
         }
     ];
-
-    // Internal anchor links
-    goTo(dest: string) {
-        window.location.hash = dest;
-    }
 }

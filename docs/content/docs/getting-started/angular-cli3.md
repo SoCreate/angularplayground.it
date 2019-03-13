@@ -2,11 +2,8 @@
 ```json
 {
   . . .
-  
   "projects": {
-    
     . . .
-    
     "playground": {
       "root": "",
       "sourceRoot": "src",
@@ -60,7 +57,6 @@
     
 
   },
-   
-   . . .
+  . . .
 }
 ```

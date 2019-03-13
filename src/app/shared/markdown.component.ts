@@ -2,6 +2,7 @@ import { Component, ElementRef, Input } from '@angular/core';
 import * as marked from 'marked';
 import 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-json';
 import { Http } from '@angular/http';
 
 declare var Prism: any;

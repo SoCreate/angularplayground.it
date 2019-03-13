@@ -1,11 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { CommandBarCloseComponent } from './docs/how-to/keyboard-shortcuts/command-bar-close/command-bar-close.component';
-import { CommandBarNavigationComponent } from './docs/how-to/keyboard-shortcuts/command-bar-navigation/command-bar-navigation.component';
-import { CommandBarOpenComponent } from './docs/how-to/keyboard-shortcuts/command-bar-open/command-bar-open.component';
 import { EmbeddingSandboxesComponent } from './docs/how-to/embedding-sandboxes/embedding-sandboxes.component';
-import { QuickToggleComponent } from './docs/how-to/keyboard-shortcuts/quick-toggle/quick-toggle.component';
-import { SearchingForSandboxesComponent } from './docs/how-to/keyboard-shortcuts/searching-for-sandboxes/searching-for-sandboxes.component';
 import { HomeComponent } from './home/home.component';
 import { DocsComponent } from './docs/docs.component';
 import { SandboxApiComponent } from './docs/api/sandbox/sandbox.component';
