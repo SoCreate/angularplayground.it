@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
     {
       firstName: 'Justin',
       lastName: 'Schwartzenberger',
-      avatarUrl: 'https://pbs.twimg.com/profile_images/664117369535488000/KT3wsR_4_400x400.jpg',
+      avatarUrl: 'https://avatars0.githubusercontent.com/u/1243236?s=460&v=4',
       githubUrl: 'https://github.com/jschwarty',
       twitterUrl: 'https://twitter.com/schwarty'
     },

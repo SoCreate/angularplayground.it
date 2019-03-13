@@ -58,6 +58,17 @@
 // Message
 .message {
     padding-top: 2em;
+
+    &__link {
+        color: $color__03--01;
+
+        &:hover {
+            color: $color__02--01;
+            text-decoration: none;
+        }
+
+    }
+
 }
 
 // Highlights
