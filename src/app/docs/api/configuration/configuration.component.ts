@@ -11,7 +11,7 @@ export class ConfigurationComponent {
             type: 'string',
             default: 'angular-playground.json',
             cli: '--config, -C',
-            description: `The path to the config file (including file name) relative to 
+            description: `The path to the config file (including file name) relative to
                           the package.json file location.`,
             label: 'not available as a CLI command'
         },
@@ -36,7 +36,7 @@ export class ConfigurationComponent {
             type: 'boolean',
             default: 'false',
             cli: '--no-serve',
-            description: `Disables the Angular CLI-integrated ng serve call. Useful for when 
+            description: `Disables the Angular CLI-integrated ng serve call. Useful for when
                           you want to build Playground to serve it separately (use in
                           conjunction with noWatch).`
         },
@@ -88,7 +88,7 @@ export class ConfigurationComponent {
             type: 'string',
             default: 'log',
             cli: '--report-type',
-            possibleValues: ['log', 'json'],
+            possibleValues: ['log', 'json', 'xml'],
             description: `Used with checkErrors. Compiles the checkErrors script into a build-ready
                           report.`
         },
