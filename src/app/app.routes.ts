@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { FaqsComponent } from './docs/getting-started/faqs/faqs.component';
 import { EmbeddingSandboxesComponent } from './docs/how-to/embedding-sandboxes/embedding-sandboxes.component';
 import { HomeComponent } from './home/home.component';
 import { DocsComponent } from './docs/docs.component';
@@ -27,6 +28,7 @@ export const appRoutes: Routes = [
       { path: 'getting-started/installation', component: InstallingComponent },
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
+      { path: 'getting-started/faqs', component: FaqsComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
       { path: 'api/configuration', component: ConfigurationComponent },
       { path: 'api/reporter-formats', component: ReporterFormatsComponent },
