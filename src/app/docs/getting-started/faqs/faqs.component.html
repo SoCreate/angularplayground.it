@@ -1,0 +1,20 @@
+<h1>Frequently Asked Questions</h1>
+<section markdown>
+  <blockquote>
+    Why does Playground redirect away from my component on reload?
+  </blockquote>
+
+  Playground itself does not do any routing. If you encounter this issue, it is likely due to the
+  `RouterModule` being provided to your sandboxed component, leading it to perform routing as it
+  would in your app. In order to prevent this, you need to instead provide the `RouterTestingModule`
+  in your playground configuration.
+
+  ##### Do this...
+
+  `RouterTestingModule.withRoutes(YOUR_ROUTES)`
+
+  ##### ...not this
+
+  `RouterModule.forRoot(YOUR_ROUTES)`
+
+</section>
