@@ -1,7 +1,7 @@
 ###### angular-playground.json
 ```json
 {
-  "sourceRoot": "./src",
+  "sourceRoots": ["./src"],
   "angularCli": {
     "appName": "my-playground-app",
     "port": 9876,
