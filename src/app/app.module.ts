@@ -25,6 +25,7 @@ import { InstallingComponent } from './docs/getting-started/installing/installin
 import { AngularCliComponent } from './docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from './docs/getting-started/non-angular-cli/non-angular-cli.component';
 import { UseAngularLibrariesComponent } from './docs/getting-started/use-angular-libraries/use-angular-libraries.component';
+import { FaqsComponent } from './docs/getting-started/faqs/faqs.component';
 import { SandboxingComponent } from './docs/how-to/sandboxing/sandboxing.component';
 import { ConfigurationComponent } from './docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from './docs/how-to/run-the-cli/run-the-cli.component';
@@ -53,6 +54,7 @@ import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/
     AngularCliComponent,
     NonAngularCliComponent,
     UseAngularLibrariesComponent,
+    FaqsComponent,
     KeyboardShortcutsComponent,
     SandboxingComponent,
     SandboxApiComponent,
@@ -75,8 +77,6 @@ import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/
       anchorScrolling: 'enabled'
     })
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

@@ -88,7 +88,7 @@ export class ConfigurationComponent {
             type: 'string',
             default: 'log',
             cli: '--report-type',
-            possibleValues: ['log', 'json'],
+            possibleValues: ['log', 'json', 'xml'],
             description: `Used with checkErrors. Compiles the checkErrors script into a build-ready
                           report.`
         },

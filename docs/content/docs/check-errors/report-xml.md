@@ -1,4 +1,4 @@
-###### sandbox.report.json
+###### sandbox.report.xml
 ```xml
 <testsuite name="Check Sandbox Errors" tests="5" failures="1" skipped="0">
 <testcase classname="./app/feature1/person-bio.component.other.sandbox" name="a special case">
