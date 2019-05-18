@@ -22,7 +22,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/prismjs/themes/prism.css"
+              "node_modules/prismjs/themes/prism.css",
+              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css"
             ],
             "scripts": []
           },

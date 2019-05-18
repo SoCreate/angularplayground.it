@@ -1,27 +1,40 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, Renderer2 } from '@angular/core';
+import { Http } from '@angular/http';
 import * as marked from 'marked';
-import 'prismjs/prism';
+import * as Prism from 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-json';
-import { Http } from '@angular/http';
-
-declare var Prism: any;
+import 'prismjs/plugins/line-highlight/prism-line-highlight';
 
 @Component({
   selector: '[markdown]',
-  template: `<ng-content></ng-content>`
+  template: `<ng-content></ng-content>`,
+  styles: [`
+    /* hide line numbers for prism line highlighting */
+    ::ng-deep .line-highlight[data-start]:before,
+    ::ng-deep .line-highlight[data-start]:after,
+    ::ng-deep .line-highlight[data-end]:before,
+    ::ng-deep .line-highlight[data-end]:after {
+      content: '';
+    }
+  `]
 })
-export class MarkdownComponent {
+export class MarkdownComponent implements AfterViewInit {
   _path;
   @Input() set path(value) {
     this._path = value;
-    if(this._path) {
+    if (this._path) {
       this.getContent();
     }
   }
+  // see example line number formats here: https://prismjs.com/plugins/line-highlight
+  @Input() lines: string;
   private md;
-  private ext;
-  constructor(private el: ElementRef, private http: Http) {}
+
+  constructor(
+    private el: ElementRef,
+    private http: Http,
+    private renderer: Renderer2) {}
 
   ngAfterViewInit() {
     if (!this._path) {
@@ -31,22 +44,25 @@ export class MarkdownComponent {
     }
   }
 
-  getContent() {
-    if (!!this._path) {
-      this.ext = this._path.split('.').splice(-1).join();
-    }
-
+  private getContent() {
     this.http.get(this._path)
       .toPromise()
-      .then(resp => {
-        this.md = resp.text();
+      .then(res => {
+        this.md = res.text();
+        // tokenize the content
         this.el.nativeElement.innerHTML = marked(this.prepare(this.md));
+        if (this.lines) {
+          // add line highlighting metadata
+          const pre = this.el.nativeElement.querySelector('pre');
+          this.renderer.setAttribute(pre, 'data-line', this.lines);
+        }
+        // prism does its magic
         Prism.highlightAll(false);
       })
       .catch(error => Promise.reject(error.message || error));
   }
 
-  prepare(raw: any) {
+  private prepare(raw: string) {
     return raw ? raw : '';
   }
 }
