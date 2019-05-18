@@ -1,0 +1,51 @@
+<h1>Use Your Angular Libraries in Playground</h1>
+<section markdown>
+  Playground supports sandboxing your Angular Libraries in addition to your main Angular app, so you can easily
+  work with all the sandboxed components in your Angular project.
+
+  Once you have Playground set up with your main app, you will need to update 2 files: the `tsconfig.json` that is
+  used with Playground, as well as `angular-playground.json`.
+
+  Let's say our project structure looks something like this:
+  ```
+  my-app
+  ├── angular.json
+  ├── angular-playground.json
+  ├── package.json
+  ├── tsconfig.json
+  ├── ...
+  ├── projects
+  │   ├── my-lib
+  │   │   ├── src
+  │   │   │   └── ...
+  │   │   └── ...
+  ├── src
+  │   ├── tsconfig.app.json
+  │   ├── main.ts
+  │   ├── main.playground.ts
+  │   └── ...
+  ```
+
+  First, you'll need to update `angular-playground.json` to include the source directory of your library.
+</section>
+<div
+  markdown
+  path="content/docs/getting-started/use-angular-libraries.md"
+  lines="4">
+</div>
+<section markdown>
+  Then, you'll need to update the tsconfig file (by default, this will be `src/tsconfig.app.json`) that Playground uses
+  to include the same source directory path that you just added to `angular-playground.json`. Note that since we are
+  now using the `includes` property, we need to include all the source files for the main app as well. The changes to
+  make are demonstrated below.
+
+  If your library contains unit tests, you will need to exclude those (also shown below).
+</section>
+<div
+  markdown
+  path="content/docs/getting-started/use-angular-libraries2.md"
+  lines="7-10,14">
+</div>
+<section markdown>
+  **That's all!** Run Playground and you should see sandboxes from both your app and your library.
+</section>

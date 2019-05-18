@@ -8,6 +8,7 @@ import { IntroductionComponent } from './docs/getting-started/introduction/intro
 import { InstallingComponent } from './docs/getting-started/installing/installing.component';
 import { AngularCliComponent } from './docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from './docs/getting-started/non-angular-cli/non-angular-cli.component';
+import { UseAngularLibrariesComponent } from './docs/getting-started/use-angular-libraries/use-angular-libraries.component';
 import { SandboxingComponent } from './docs/how-to/sandboxing/sandboxing.component';
 import { ConfigurationComponent } from './docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from './docs/how-to/run-the-cli/run-the-cli.component';
@@ -27,6 +28,7 @@ export const appRoutes: Routes = [
       { path: 'getting-started/installation', component: InstallingComponent },
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
+      { path: 'getting-started/use-angular-libraries', component: UseAngularLibrariesComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
       { path: 'api/configuration', component: ConfigurationComponent },
       { path: 'api/reporter-formats', component: ReporterFormatsComponent },

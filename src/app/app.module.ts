@@ -10,7 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MarkdownComponent } from './shared/markdown.component';
 import { AboutComponent } from './about/about.component';
@@ -24,6 +24,7 @@ import { IntroductionComponent } from './docs/getting-started/introduction/intro
 import { InstallingComponent } from './docs/getting-started/installing/installing.component';
 import { AngularCliComponent } from './docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from './docs/getting-started/non-angular-cli/non-angular-cli.component';
+import { UseAngularLibrariesComponent } from './docs/getting-started/use-angular-libraries/use-angular-libraries.component';
 import { SandboxingComponent } from './docs/how-to/sandboxing/sandboxing.component';
 import { ConfigurationComponent } from './docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from './docs/how-to/run-the-cli/run-the-cli.component';
@@ -51,6 +52,7 @@ import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/
     CheckingUtilityComponent,
     AngularCliComponent,
     NonAngularCliComponent,
+    UseAngularLibrariesComponent,
     KeyboardShortcutsComponent,
     SandboxingComponent,
     SandboxApiComponent,
