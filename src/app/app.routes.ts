@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { FaqsComponent } from './docs/getting-started/faqs/faqs.component';
 import { EmbeddingSandboxesComponent } from './docs/how-to/embedding-sandboxes/embedding-sandboxes.component';
 import { HomeComponent } from './home/home.component';
 import { DocsComponent } from './docs/docs.component';
@@ -9,6 +8,8 @@ import { IntroductionComponent } from './docs/getting-started/introduction/intro
 import { InstallingComponent } from './docs/getting-started/installing/installing.component';
 import { AngularCliComponent } from './docs/getting-started/angular-cli/angular-cli.component';
 import { NonAngularCliComponent } from './docs/getting-started/non-angular-cli/non-angular-cli.component';
+import { UseAngularLibrariesComponent } from './docs/getting-started/use-angular-libraries/use-angular-libraries.component';
+import { FaqsComponent } from './docs/getting-started/faqs/faqs.component';
 import { SandboxingComponent } from './docs/how-to/sandboxing/sandboxing.component';
 import { ConfigurationComponent } from './docs/api/configuration/configuration.component';
 import { RunTheCliComponent } from './docs/how-to/run-the-cli/run-the-cli.component';
@@ -28,6 +29,7 @@ export const appRoutes: Routes = [
       { path: 'getting-started/installation', component: InstallingComponent },
       { path: 'getting-started/angular-cli', component: AngularCliComponent },
       { path: 'getting-started/non-angular-cli', component: NonAngularCliComponent },
+      { path: 'getting-started/use-angular-libraries', component: UseAngularLibrariesComponent },
       { path: 'getting-started/faqs', component: FaqsComponent },
       { path: 'api/sandbox', component: SandboxApiComponent },
       { path: 'api/configuration', component: ConfigurationComponent },

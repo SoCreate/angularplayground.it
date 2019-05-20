@@ -1,6 +1,6 @@
 ###### ./angular-playground.json
 ```json
 {
-  "sourceRoot": "./src"
+  "sourceRoots": ["./src"]
 }
 ```

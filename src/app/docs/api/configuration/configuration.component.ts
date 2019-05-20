@@ -16,11 +16,11 @@ export class ConfigurationComponent {
             label: 'not available as a CLI command'
         },
         {
-            name: 'sourceRoot',
-            type: 'string',
-            default: './src',
+            name: 'sourceRoots',
+            type: 'string[ ]',
+            default: `['./src']`,
             cli: '--src, -S',
-            description: `The path to the directory of your Angular source code.`
+            description: `The path to the directory (or directories) of your Angular source code.`
         },
         {
             name: 'noWatch',
