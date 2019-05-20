@@ -34,16 +34,26 @@
   lines="4">
 </div>
 <section markdown>
-  Then, you'll need to update the tsconfig file (by default, this will be `src/tsconfig.app.json`) that Playground uses
-  to include the same source directory path that you just added to `angular-playground.json`. Note that since we are
-  now using the `includes` property, we need to include all the source files for the main app as well. The changes to
-  make are demonstrated below.
-
-  If your library contains unit tests, you will need to exclude those (also shown below).
+  Next, you'll need to configure a new tsconfig.json to compile everything you want to sandbox in Playground. We
+  recommend creating a file called `tsconfig.playground.json` that lives next to `tsconfig.app.json` in your app's
+  `/src` directory. Once this is done, update the `"playground"` entry in `angular.json` to use this new tsconfig file.
 </section>
 <div
   markdown
   path="content/docs/getting-started/use-angular-libraries2.md"
+  lines="13">
+</div>
+<section markdown>
+  Then, in `tsconfig.playground.json`, you can start by copy-pasting the contents of `tsconfig.app.json`. Then, you'll
+  need to include the same source directory path that you just added to `angular-playground.json`. Note that since we are
+  now using the `"includes"` property, we need to include all the source files for the main app as well. The changes to
+  make are demonstrated below.
+
+  Finally, if your library contains unit tests, you will need to exclude those (also shown below).
+</section>
+<div
+  markdown
+  path="content/docs/getting-started/use-angular-libraries3.md"
   lines="7-10,14">
 </div>
 <section markdown>
