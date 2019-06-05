@@ -101,6 +101,14 @@ export class ConfigurationComponent {
             label: '@angular/cli only'
         },
         {
+            name: 'angularCli.host',
+            type: 'string',
+            default: '127.0.0.1',
+            cli: '--ng-cli-host',
+            description: `The host @angular/cli uses when serving Playground.`,
+            label: '@angular/cli only'
+        },
+        {
             name: 'angularCli.port',
             type: 'number',
             default: '4201',
