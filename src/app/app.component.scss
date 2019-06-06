@@ -14,7 +14,7 @@ $app__spacing: 2.5em;
   flex-direction: column;
   min-height: 100vh;
 
-  app-github-corner /deep/ svg {
+  app-github-corner ::ng-deep svg {
     position: relative;
     z-index: 1;
   }
@@ -184,7 +184,7 @@ $app__spacing: 2.5em;
     min-width: 320px;
     position: relative;
 
-    /deep/ svg {
+    ::ng-deep svg {
       height: 50px;
       width: 50px;
     }

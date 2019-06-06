@@ -99,7 +99,7 @@ $nav__size: 12.5em;
   min-width: calc(100% - #{$nav__size});
   padding-left: 2em;
 
-  /deep/ {
+  ::ng-deep {
 
     // Formatting
     h1,
