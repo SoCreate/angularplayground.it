@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, Renderer2 } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import * as marked from 'marked';
 import * as Prism from 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
@@ -29,11 +29,11 @@ export class MarkdownComponent implements AfterViewInit {
   }
   // see example line number formats here: https://prismjs.com/plugins/line-highlight
   @Input() lines: string;
-  private md;
+  private md: string;
 
   constructor(
     private el: ElementRef,
-    private http: Http,
+    private httpClient: HttpClient,
     private renderer: Renderer2) {}
 
   ngAfterViewInit() {
@@ -45,10 +45,10 @@ export class MarkdownComponent implements AfterViewInit {
   }
 
   private getContent() {
-    this.http.get(this._path)
+    this.httpClient.get(this._path, { responseType: 'text' })
       .toPromise()
-      .then(res => {
-        this.md = res.text();
+      .then((res: string) => {
+        this.md = res;
         // tokenize the content
         this.el.nativeElement.innerHTML = marked(this.prepare(this.md));
         if (this.lines) {
