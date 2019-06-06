@@ -78,10 +78,12 @@ export class ConfigurationComponent {
         {
             name: 'reportPath',
             type: 'string',
-            default: './sandbox.report.json',
+            default: `' '`,
             cli: '--report-path',
             description: `Used with checkErrors. Publishes to the provided path, if a valid report
-                          type is also provided.`
+                          type is also provided. If reportType is provided and it is not log, and
+                          no value is provided for reportPath, reportPath will default to
+                          './sandbox.report.[reportType]'`
         },
         {
             name: 'reportType',
