@@ -1,0 +1,32 @@
+<h1>Running the Visual Regression Utility</h1>
+<section markdown>
+Playground ships with a visual regression utility that will open all of your sandboxed scenarios and visit them on a
+page-by-page basis, for each one taking a screenshot and checking if it matches the existing snapshot of that page.
+
+```
+angular-playground --check-visual-regressions
+```
+
+This can be useful for integration with a build system to ensure that components do not have unexpected visual
+regressions after changes are made.
+
+The image snapshots are stored in a directory specified by `--snapshot-directory [dir]`
+(src/\_\_images_snapshots__ by default). If there are differences found while testing, diff files will be generated
+for each screenshot that does not match. These diff files are stored in a directory specified by
+`--diff-directory [dir]` (src/\_\_diff_output__ by default).
+
+There is also a config option to update the snapshots instead of testing them, `--update-snapshots`. This is useful
+for when you make changes to a component's template so it intentionally looks different than the saved snapshot. When
+using this option, you can also set the `--update-snapshots-directory [dir]` option, which allows you to only
+update snapshots for the given directory, which should be in the format of a relative path from the /src directory.
+
+The matcher that we use has many configuration options, so if you would like to set those, you can do so via the
+`imageMatcherConfig` property in `angular-playground.json` (this is one of the few options that can only be set via
+json file). The full list of options can be found
+[here](https://github.com/americanexpress/jest-image-snapshot#optional-configuration).
+</section>
+<div
+  markdown
+  path="/content/docs/visual-regressions/angular-playground-json.md"
+  lines="6-12">
+</div>

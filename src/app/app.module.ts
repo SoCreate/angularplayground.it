@@ -30,6 +30,7 @@ import { ConfigurationComponent } from './docs/api/configuration/configuration.c
 import { RunTheCliComponent } from './docs/how-to/run-the-cli/run-the-cli.component';
 import { ReporterFormatsComponent } from './docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from './docs/how-to/checking-utility/checking-utility.component';
+import { VisualRegressionsUtilityComponent } from './docs/how-to/visual-regressions-utility/visual-regressions-utility.component';
 import { KeyboardShortcutsComponent } from './docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 import { BuildProdComponent } from './docs/how-to/build-prod/build-prod.component';
 import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/configuration-plugins.component';
@@ -50,6 +51,7 @@ import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/
     RunTheCliComponent,
     ReporterFormatsComponent,
     CheckingUtilityComponent,
+    VisualRegressionsUtilityComponent,
     AngularCliComponent,
     NonAngularCliComponent,
     UseAngularLibrariesComponent,

@@ -15,6 +15,7 @@ import { ConfigurationComponent } from './docs/api/configuration/configuration.c
 import { RunTheCliComponent } from './docs/how-to/run-the-cli/run-the-cli.component';
 import { ReporterFormatsComponent } from './docs/api/reporter-formats/reporter-formats.component';
 import { CheckingUtilityComponent } from './docs/how-to/checking-utility/checking-utility.component';
+import { VisualRegressionsUtilityComponent } from './docs/how-to/visual-regressions-utility/visual-regressions-utility.component';
 import { KeyboardShortcutsComponent } from './docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 import { BuildProdComponent } from './docs/how-to/build-prod/build-prod.component';
 import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/configuration-plugins.component';
@@ -37,6 +38,7 @@ export const appRoutes: Routes = [
       { path: 'how-to/sandboxing-components', component: SandboxingComponent },
       { path: 'how-to/run-the-cli', component: RunTheCliComponent },
       { path: 'how-to/keyboard-shortcuts', component: KeyboardShortcutsComponent },
+      { path: 'how-to/visual-regressions', component: VisualRegressionsUtilityComponent },
       { path: 'how-to/checking-utility', component: CheckingUtilityComponent },
       { path: 'how-to/embedding-sandboxes', component: EmbeddingSandboxesComponent },
       { path: 'how-to/configuration-plugins', component: ConfigurationPluginsComponent },
