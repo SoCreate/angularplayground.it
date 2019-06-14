@@ -95,6 +95,55 @@ export class ConfigurationComponent {
                           report.`
         },
         {
+            name: 'checkVisualRegressions',
+            type: 'boolean',
+            default: 'false',
+            cli: '--check-visual-regressions',
+            description: `Runs playground and takes a screenshot of each scenario, then compares
+                          the screenshot to the saved snapshot of that scenario. On first run, it
+                          simply populates the directory of image snapshots to compare against.`
+        },
+        {
+            name: 'snapshotDirectory',
+            type: 'string',
+            default: 'src/__images_snapshots__',
+            cli: '--snapshot-directory',
+            description: `The directory in which to store scenario image snapshots.`
+        },
+        {
+            name: 'diffDirectory',
+            type: 'string',
+            default: 'src/__diff_output__',
+            cli: '--diff-directory',
+            description: `The directory in which to store diffs (diffs are only generated if a
+                          difference exceeding the matcher threshold is found).`
+        },
+        {
+            name: 'updateSnapshots',
+            type: 'boolean',
+            default: 'false',
+            cli: '--update-snapshots',
+            description: `Runs playground and takes a screenshot of each scenario, saving them all
+                          in the snapshot directory, replacing any existing screenshots of those
+                          scenarios.`
+        },
+        {
+            name: 'updateSnapshotsDirectory',
+            type: 'string',
+            default: `' '`,
+            cli: '--update-snapshots-directory',
+            description: `For use with the --update-snapshots flag. Only updates snapshots for
+                          sandboxes within the given directory. Expects a relative path from the
+                          /src directory.`
+        },
+        {
+            name: 'imageMatcherConfig',
+            type: 'object',
+            default: `{ }`,
+            description: `Config options to be passed to the matcher. See full list at:
+                          https://github.com/americanexpress/jest-image-snapshot#optional-configuration`
+        },
+        {
             name: 'angularCli.appName',
             type: 'string',
             default: 'playground',
