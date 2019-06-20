@@ -33,6 +33,13 @@ export class AboutComponent implements OnInit {
       avatarUrl: 'https://pbs.twimg.com/profile_images/766150298549252096/PXESHOSy_400x400.jpg',
       githubUrl: 'https://github.com/brianmtreese',
       twitterUrl: 'https://twitter.com/brianmtreese'
+    },
+    {
+      firstName: 'Tim',
+      lastName: 'Stoddard',
+      avatarUrl: 'https://avatars0.githubusercontent.com/u/8732414',
+      githubUrl: 'https://github.com/timstoddard',
+      twitterUrl: 'https://twitter.com/tim_stoddard_'
     }
   ];
 
