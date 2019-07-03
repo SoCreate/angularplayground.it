@@ -128,11 +128,18 @@ export class ConfigurationComponent {
                           scenarios.`
         },
         {
-            name: 'updateSnapshotsDirectory',
+            name: 'deleteSnapshots',
+            type: 'boolean',
+            default: 'false',
+            cli: '--delete-snapshots',
+            description: `Delete snapshots of scenarios based on the sandboxes filtered down to using the --path-to-sandboxes flag.`
+        },
+        {
+            name: 'pathToSandboxes',
             type: 'string',
             default: `' '`,
-            cli: '--update-snapshots-directory',
-            description: `For use with the --update-snapshots flag. Only updates snapshots for
+            cli: '--path-to-sandboxes',
+            description: `For use with the --update-snapshots or --delete-snapshots flag. Only updates/deletes snapshots for
                           sandboxes within the given directory. Expects a relative path from the
                           /src directory.`
         },
