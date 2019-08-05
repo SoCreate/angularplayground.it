@@ -1,11 +1,10 @@
-<h1>Configuration and Plugins</h1>
+<h1>Configuration</h1>
 <section markdown>
   Playground supports several configuration options that allow you to provide modules
   to all of your sandboxes or opt-in to different UI features within the
-  application itself. We plan on extending this system with a plugin API that
-  will allow developers to extend the Playground UI however they so wish.
+  application itself.
 
-  All configuration and plugins will be provided through the `.configure()` method of the
+  Configuration is provided through the `.configure()` method of the
   `PlaygroundModule`. For example, the following configuration provides the
   `BrowserAnimationsModule` to all sandboxes:
 </section>
@@ -14,7 +13,7 @@
   #### <a name="overlay"></a>Overlay
 
   For devices without keyboard access, enable Playground's overlay to control
-  the command bar: 
+  the command bar:
 
   ```typescript
 PlaygroundModule
@@ -31,7 +30,7 @@ PlaygroundModule
   user-specific modules that need to be provided at the root level, like `BrowserAnimationsModule`,
   need to attach themselves to the `PlaygroundModule` in order to be registered for the application.
   We can achieve this with the `modules` property.
- 
+
   ```typescript
 PlaygroundModule
   .configure({{ '{' }}
@@ -68,7 +67,4 @@ PlaygroundModule
 </section>
 <div markdown path="content/how-to/configuration-plugins/custom-html.md"></div>
 <section markdown>
-#### <a name="plugins"></a>Plugins
-
-Coming soon!
 </section>
