@@ -1,0 +1,16 @@
+<h1>Mocking a Service</h1>
+<section markdown>
+Playground supports mocking service dependencies of application components. Take the following `MyComponent` example
+below that currently has a `LoadDataService` dependency (<i>service included below for brevity</i>).
+</section>
+<div markdown path="/content/docs/mock-service/component.md"></div>
+<section markdown>
+With `LoadDataService` called during the component's `ngOnInit` lifecycle hook (`this.dataService.loadData`), the
+service must be available when the component is initialized or Angular will throw a runtime error. The same occurs for
+sandboxes missing mocked service dependencies.
+
+An easy way to mock a service in a sandbox is to include a mock service class (`MockLoadDataService`) in your
+`*.sandbox.ts` file that returns mock data in the format you expect it and use Angular's alternative class provider
+syntax so your mock service class can provide for the service during the sanboxed component's `ngOnInit` lifecycle hook.
+</section>
+<div markdown path="/content/docs/mock-service/scenario.md"></div>

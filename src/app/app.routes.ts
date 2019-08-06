@@ -18,6 +18,7 @@ import { CheckingUtilityComponent } from './docs/how-to/checking-utility/checkin
 import { VisualRegressionsUtilityComponent } from './docs/how-to/visual-regressions-utility/visual-regressions-utility.component';
 import { KeyboardShortcutsComponent } from './docs/how-to/keyboard-shortcuts/keyboard-shortcuts.component';
 import { BuildProdComponent } from './docs/how-to/build-prod/build-prod.component';
+import { MockServiceComponent} from './docs/how-to/mock-service/mock-service.component';
 import { ConfigurationPluginsComponent } from './docs/api/configuration-plugins/configuration-plugins.component';
 
 export const appRoutes: Routes = [
@@ -43,6 +44,7 @@ export const appRoutes: Routes = [
       { path: 'how-to/embedding-sandboxes', component: EmbeddingSandboxesComponent },
       { path: 'how-to/configuration-plugins', component: ConfigurationPluginsComponent },
       { path: 'how-to/build-prod', component: BuildProdComponent },
+      { path: 'how-to/mock-service', component: MockServiceComponent },
       { path: '', redirectTo: 'getting-started/introduction', pathMatch: 'full' }
     ]
   },
