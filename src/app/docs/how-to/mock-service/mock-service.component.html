@@ -10,7 +10,11 @@ service must be available when the component is initialized or Angular will thro
 sandboxes missing mocked service dependencies.
 
 An easy way to mock a service in a sandbox is to include a mock service class (`MockLoadDataService`) in your
-`*.sandbox.ts` file that returns mock data in the format you expect it and use Angular's alternative class provider
-syntax so your mock service class can provide for the service during the sanboxed component's `ngOnInit` lifecycle hook.
+`*.sandbox.ts` file that returns mock data in the format you expect it. Then use Angular's dependency injection to swap
+out the `LoadDataService` with the `MockLoadDataService`.
+
+When the sandboxed component's `ngOnInit` lifecycle hook is
+called, the `MockLoadDataService` `loadData()` method will now be called instead of the `LoadDataService` `loadData()`
+method.
 </section>
 <div markdown path="/content/docs/mock-service/scenario.md"></div>
