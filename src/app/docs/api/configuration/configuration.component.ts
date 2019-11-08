@@ -99,8 +99,8 @@ export class ConfigurationComponent {
             type: 'boolean',
             default: 'false',
             cli: '--check-visual-regressions',
-            description: `Runs playground and takes a screenshot of each scenario, then compares
-                          the screenshot to the saved snapshot of that scenario. On first run, it
+            description: `Runs playground and takes a snapshot of each scenario, then compares
+                          the snapshot to the saved snapshot of that scenario. On first run, it
                           simply populates the directory of image snapshots to compare against.`
         },
         {
@@ -123,8 +123,8 @@ export class ConfigurationComponent {
             type: 'boolean',
             default: 'false',
             cli: '--update-snapshots',
-            description: `Runs playground and takes a screenshot of each scenario, saving them all
-                          in the snapshot directory, replacing any existing screenshots of those
+            description: `Runs playground and takes a snapshot of each scenario, saving them all
+                          in the snapshot directory, replacing any existing snapshot of those
                           scenarios.`
         },
         {
@@ -135,20 +135,34 @@ export class ConfigurationComponent {
             description: `Delete snapshots of scenarios based on the sandboxes filtered down to using the --path-to-sandboxes flag.`
         },
         {
-            name: 'pathToSandboxes',
-            type: 'string',
-            default: `' '`,
-            cli: '--path-to-sandboxes',
-            description: `For use with the --update-snapshots or --delete-snapshots flag. Only updates/deletes snapshots for
-                          sandboxes within the given directory. Expects a relative path from the
-                          /src directory.`
+          name: 'pathToSandboxes',
+          type: 'string',
+          default: `' '`,
+          cli: '--path-to-sandboxes',
+          description: `For use with the --update-snapshots or --delete-snapshots flag. Only updates/deletes snapshots
+                        for sandboxes within the given directory. Expects a relative path from the /src directory.`
         },
         {
-            name: 'imageMatcherConfig',
-            type: 'object',
-            default: `{ }`,
-            description: `Config options to be passed to the matcher. See full list at:
-                          https://github.com/americanexpress/jest-image-snapshot#optional-configuration`
+          name: 'imageSnapshotConfig',
+          type: 'object',
+          default: `{ }`,
+          description: `Config options to be passed to the matcher. See full list at:
+                        https://github.com/americanexpress/jest-image-snapshot#optional-configuration`
+        },
+        {
+            name: 'visualRegressionIgnore',
+            type: 'Array<{ re: string, flags: string }>',
+            default: `[ ]`,
+            description: `A list of RegExps to match paths of sandboxes to be excluded from visual regression testing.
+                          Pass in the regex pattern and flags as strings, just as in the RegExp constructor.`
+        },
+        {
+            name: 'visualRegressionMockDate',
+            type: 'number',
+            default: `Date.now()`,
+            cli: '--visual-regression-mock-date',
+            description: `The time (in ms from epoch) to set in the browser while running visual regression tests.
+                          Useful for components that render date/time info. Defaults to the current time.`
         },
         {
             name: 'angularCli.appName',

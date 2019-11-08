@@ -1,7 +1,8 @@
 <h1>Running the Visual Regression Utility</h1>
 <section markdown>
-Playground ships with a visual regression utility that will open all of your sandboxed scenarios and visit them on a
-page-by-page basis, for each one taking a screenshot and checking if it matches the existing snapshot of that page.
+Playground ships with a visual regression utility that will take a snapshot of all of your scenarios, and check each
+one for differences against the existing snapshot of that page. On the very first run, it will simply take snapshots to
+compare against in subsequent runs.
 
 ```
 angular-playground --check-visual-regressions
@@ -12,21 +13,34 @@ regressions after changes are made.
 
 The image snapshots are stored in a directory specified by `--snapshot-directory [dir]`
 (src/\_\_images_snapshots__ by default). If there are differences found while testing, diff files will be generated
-for each screenshot that does not match. These diff files are stored in a directory specified by
+for each snapshot that does not match. These diff files are stored in a directory specified by
 `--diff-directory [dir]` (src/\_\_diff_output__ by default).
 
 There is also a config option to update the snapshots instead of testing them, `--update-snapshots`. This is useful
-for when you make changes to a component's template so it intentionally looks different than the saved snapshot. When
-using this option, you can also set the `--path-to-sandboxes [dir]` option, which allows you to only
-update snapshots for the given directory, which should be in the format of a relative path from the /src directory.
+for when you make changes to a component's template so it intentionally looks different than the saved snapshot.
+Similarly, the `--delete-snapshots` config option deletes snapshots that are matched by a given path. When using either
+of these options, you can also set the `--path-to-sandboxes [dir]` option, which allows you to only update or delete
+snapshots for the given directory, which should be in the format of a relative path from the `/src` directory. If the
+path option is not set, all snapshots will be updated or deleted.
+
+There are several other options to help you control visual regression testing. `--visual-regression-mock-date` allows
+you to pass in a time in milliseconds from epoch to set in the browser while visual regression snapshots are being
+taken. This is useful for components that render info relating to the current time and date. This setting defaults to
+the current time. There is also the `visualRegressionIgnore` setting, which can only be set from the
+`angular-playground.json` file. This setting allows you to provide a list of RegExps to match paths of sandboxes you
+want to exclude from visual regression testing. The type of this list is
+<code>Array&lt;{{ '{' }} re: string, flags: string }&gt;</code>. Pass in the regex pattern and flags as strings, just
+as you would in the RegExp constructor.
 
 The matcher that we use has many configuration options, so if you would like to set those, you can do so via the
 `imageMatcherConfig` property in `angular-playground.json` (this is one of the few options that can only be set via
 json file). The full list of options can be found
 [here](https://github.com/americanexpress/jest-image-snapshot#optional-configuration).
+
+See below for examples of the `imageMatcherConfig` and `visualRegressionIgnore` options.
 </section>
 <div
   markdown
   path="/content/docs/visual-regressions/angular-playground-json.md"
-  lines="6-12">
+  lines="6-12,14-22">
 </div>
