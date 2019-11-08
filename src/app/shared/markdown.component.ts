@@ -7,7 +7,7 @@ import 'prismjs/components/prism-json';
 import 'prismjs/plugins/line-highlight/prism-line-highlight';
 
 @Component({
-  selector: '[markdown]',
+  selector: '[markdown]', // tslint:disable-line:component-selector
   template: `<ng-content></ng-content>`,
   styles: [`
     /* hide line numbers for prism line highlighting */

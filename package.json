@@ -8,7 +8,7 @@
     "start": "ng serve",
     "start:aot": "ng serve --aot --prod --port 4202",
     "site:deploy": "sh ./scripts/deploy.sh",
-    "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check"
+    "lint": "tslint \"src/**/*.ts\" --project tsconfig.json"
   },
   "private": true,
   "dependencies": {
