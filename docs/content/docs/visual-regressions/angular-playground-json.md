@@ -11,6 +11,16 @@
     },
     "failureThreshold": 0.1,
     "failureThresholdType": "percent"
-  }
+  },
+  ...,
+  "visualRegressionIgnore": [
+    {
+      "re": "/src/feature-[1-3]/some-component",
+      "flags": "i"
+    },
+    {
+      "re": "[a-z]+emoji"
+    }
+  ]
 }
 ```
