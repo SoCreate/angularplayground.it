@@ -8,7 +8,7 @@
     "start": "ng serve",
     "start:aot": "ng serve --aot --prod --port 4202",
     "site:deploy": "sh ./scripts/deploy.sh",
-    "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check"
+    "lint": "tslint \"src/**/*.ts\" --project tsconfig.json"
   },
   "private": true,
   "dependencies": {
@@ -26,8 +26,8 @@
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.800.1",
-    "@angular/cli": "8.0.0",
+    "@angular-devkit/build-angular": "^0.803.18",
+    "@angular/cli": "^8.0.0",
     "@angular/compiler-cli": "^8.0.0",
     "@angular/language-service": "^8.0.0",
     "@types/marked": "^0.6.5",
