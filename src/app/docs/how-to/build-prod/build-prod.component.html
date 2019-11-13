@@ -3,11 +3,11 @@
     <b>Note:</b> This feature is highly reliant on @angular/cli and therefore is subject to change.
 </blockquote>
 <section markdown>
-You can build Playground into a production application with the `--build` flag.
+You can build Playground into a production application with the `--build` or `--build-with-service-worker` flag.
 
 #### Prerequisites
 * `@angular/cli`
-* `@angular/service-worker`
+* `@angular/service-worker` (only needed for `--build-with-service-worker`)
 
 #### Configuration
 
@@ -28,8 +28,15 @@ Make sure that you have a valid `ngsw-config.json` provided within your project'
 </p>
 <section>
 <section markdown>
+##### Without Service Worker
 ```
 angular-playground --build
+cd ./dist-playground/
+http-server
+```
+##### With Service Worker
+```
+angular-playground --build-with-service-worker
 cd ./dist-playground/
 http-server
 ```
