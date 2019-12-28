@@ -39,15 +39,23 @@ export class ConfigurationComponent {
                           you want to build Playground to serve it separately (use in
                           conjunction with noWatch).`
         },
-        {
-            name: 'build',
-            type: 'boolean',
-            default: 'false',
-            cli: '--build',
-            description: `Builds Playground in production mode with a service worker. Please
+      {
+        name: 'build',
+        type: 'boolean',
+        default: 'false',
+        cli: '--build',
+        description: `Builds Playground in production mode with service workers disabled.`,
+        label: 'Requires @angular/cli'
+      },
+      {
+        name: 'buildWithServiceWorker',
+        type: 'boolean',
+        default: 'false',
+        cli: '--build-with-service-worker',
+        description: `Builds Playground in production mode with a service worker. Please
                           refer to docs/how-to/build-prod for more information.`,
-            label: 'Requires @angular/cli and @angular/service-worker'
-        },
+        label: 'Requires @angular/cli and @angular/service-worker'
+      },
         {
             name: 'checkErrors',
             type: 'boolean',
