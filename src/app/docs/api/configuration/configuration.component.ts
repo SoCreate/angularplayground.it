@@ -128,6 +128,12 @@ export class ConfigurationComponent {
                           difference exceeding the matcher threshold is found).`
         },
         {
+          name: 'viewportSizes',
+          type: 'Array<{ width: number, height: number, deviceScaleFactor?: number, isMobile?: boolean, hasTouch?: boolean, isLandscape?: boolean }>',
+          default: '[ ]',
+          description: `A list of viewport sizes at which to take screenshots for visual regression. If list is empty (default), screenshots will capture the entirety of the visible page content. Viewport options are the same as the ones seen here: https://github.com/puppeteer/puppeteer/blob/master/docs/api.md#pagesetviewportviewport`
+        },
+        {
             name: 'updateSnapshots',
             type: 'boolean',
             default: 'false',
@@ -161,7 +167,7 @@ export class ConfigurationComponent {
         },
         {
             name: 'visualRegressionIgnore',
-            type: 'Array<{ re: string, flags: string }>',
+            type: 'Array<{ regex: string, flags: string }>',
             default: `[ ]`,
             description: `A list of RegExps to match paths of sandboxes to be excluded from visual regression testing.
                           Pass in the regex pattern and flags as strings, just as in the RegExp constructor.`
