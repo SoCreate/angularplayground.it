@@ -16,5 +16,5 @@ PlaygroundModule
     ]
   });
 
-platformBrowserDynamic().boostrapModule(PlaygroundModule);
+platformBrowserDynamic().bootstrapModule(PlaygroundModule);
 ```
