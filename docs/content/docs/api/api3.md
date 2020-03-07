@@ -7,5 +7,6 @@ SandboxOfConfig {
   schemas?: any[];
   label?: string;
   declareComponent?: boolean;
+  uniqueId?: string;
 }
 ```

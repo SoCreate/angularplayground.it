@@ -4,7 +4,7 @@ Playground ships with a checking utility that will open all of your sandboxed sc
 page-by-page basis, logging whether there are console errors on that page.
 
 ```
-angular-playground --check-errors
+npx angular-playground --check-errors
 ```
 
 This can be useful for integration with a build system to ensure that when components are updated with new dependencies
@@ -34,7 +34,7 @@ you can use the `reportType` configuration parameter (valid values are 'log', 'j
 following will publish a build to the provided file in JSON format when running the checking utility:
 
 ```
-angular-playground --check-errors --report-path ./report.json --report-type json
+npx angular-playground --check-errors --report-path ./report.json --report-type json
 ```
 
 You can read more about <a routerLink="/docs/api/reporter-formats">report formats</a> in our API docs.

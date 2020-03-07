@@ -6,46 +6,45 @@ import { Component } from '@angular/core';
 })
 export class ConfigurationComponent {
     configurations = [
-        {
-            name: 'Configuration File Location',
-            type: 'string',
-            default: 'angular-playground.json',
-            cli: '--config, -C',
-            description: `The path to the config file (including file name) relative to
-                          the package.json file location.`
-        },
-        {
-            name: 'sourceRoots',
-            type: 'string[ ]',
-            default: `['./src']`,
-            cli: '--src, -S',
-            description: `The path to the directory (or directories) of your Angular source code.`
-        },
-        {
-            name: 'noWatch',
-            type: 'boolean',
-            default: 'false',
-            cli: '--no-watch',
-            description: `Disables the watch call so the CLI only builds the sandboxes.ts file.
-                          Useful for when you want to build Playground to serve it separately
-                          (use in conjunction with noServe).`
-        },
-        {
-            name: 'noServe',
-            type: 'boolean',
-            default: 'false',
-            cli: '--no-serve',
-            description: `Disables the Angular CLI-integrated ng serve call. Useful for when
-                          you want to build Playground to serve it separately (use in
-                          conjunction with noWatch).`
-        },
+      {
+          name: 'Configuration File Location',
+          type: 'string',
+          default: 'angular-playground.json',
+          cli: '--config, -C',
+          description: `The path to the config file (including file name) relative to
+                        the package.json file location.`
+      },
+      {
+          name: 'sourceRoots',
+          type: 'string[ ]',
+          default: `['./src']`,
+          cli: '--src, -S',
+          description: `The path to the directory (or directories) of your Angular source code.`
+      },
+      {
+          name: 'noWatch',
+          type: 'boolean',
+          default: 'false',
+          cli: '--no-watch',
+          description: `Disables the watch call so the CLI only builds the sandboxes.ts file.
+                        Useful for when you want to build Playground to serve it separately
+                        (use in conjunction with noServe).`
+      },
+      {
+          name: 'noServe',
+          type: 'boolean',
+          default: 'false',
+          cli: '--no-serve',
+          description: `Disables the Angular CLI-integrated ng serve call. Useful for when
+                        you want to build Playground to serve it separately (use in
+                        conjunction with noWatch).`
+      },
       {
         name: 'build',
         type: 'boolean',
         default: 'false',
         cli: '--build',
         description: `Builds Playground in production mode with service workers disabled.`,
-        label: 'Requires @angular/cli'
       },
       {
         name: 'buildWithServiceWorker',
@@ -54,7 +53,7 @@ export class ConfigurationComponent {
         cli: '--build-with-service-worker',
         description: `Builds Playground in production mode with a service worker. Please
                           refer to docs/how-to/build-prod for more information.`,
-        label: 'Requires @angular/cli and @angular/service-worker'
+        label: 'Requires @angular/service-worker'
       },
         {
             name: 'checkErrors',
@@ -64,7 +63,6 @@ export class ConfigurationComponent {
             description: `Runs playground and checks every sandbox for console errors, terminating
                           the build with either a success or failure result. Useful for integrating
                           Playground with a build system.`,
-            label: 'Requires @angular/cli'
         },
         {
             name: 'randomScenario',
@@ -110,7 +108,6 @@ export class ConfigurationComponent {
             description: `Runs playground and takes a snapshot of each scenario, then compares
                           the snapshot to the saved snapshot of that scenario. On first run, it
                           simply populates the directory of image snapshots to compare against.`,
-            label: 'Requires @angular/cli'
         },
         {
             name: 'snapshotDirectory',
@@ -155,8 +152,8 @@ export class ConfigurationComponent {
           type: 'string',
           default: `' '`,
           cli: '--path-to-sandboxes',
-          description: `For use with the --update-snapshots or --delete-snapshots flag. Only updates/deletes snapshots
-                        for sandboxes within the given directory. Expects a relative path from the /src directory.`
+          description: `For use with the --check-errors, --update-snapshots or --delete-snapshots flag. Used to filter
+                        down to sandboxes within a given directory. Expects a relative path from the /src directory.`
         },
         {
           name: 'imageSnapshotConfig',
@@ -181,12 +178,18 @@ export class ConfigurationComponent {
                           Useful for components that render date/time info. Defaults to the current time.`
         },
         {
+          name: 'visualRegressionSleepDuration',
+          type: 'number',
+          default: `100`,
+          cli: '--visual-regression-sleep-duration',
+          description: `Milliseconds to wait for sandbox scenario to load before capturing screenshot.`
+        },
+        {
             name: 'angularCli.appName',
             type: 'string',
             default: 'playground',
             cli: '--ng-cli-app',
             description: `The name of the playground app as specified in angular.json.`,
-            label: '@angular/cli only'
         },
         {
             name: 'angularCli.host',
@@ -194,7 +197,6 @@ export class ConfigurationComponent {
             default: '127.0.0.1',
             cli: '--ng-cli-host',
             description: `The host @angular/cli uses when serving Playground.`,
-            label: '@angular/cli only'
         },
         {
             name: 'angularCli.port',
@@ -202,7 +204,6 @@ export class ConfigurationComponent {
             default: '4201',
             cli: '--ng-cli-port',
             description: `The port number @angular/cli uses when serving Playground.`,
-            label: '@angular/cli only'
         },
         {
             name: 'angularCli.cmdPath',
@@ -211,7 +212,6 @@ export class ConfigurationComponent {
             cli: '--ng-cli-cmd',
             description: `The path to the @angular/cli command. Useful if you are using alternative
                           package management solutions (e.g. lerna, yarn).`,
-            label: '@angular/cli only'
         },
         {
             name: 'angularCli.args',
@@ -219,7 +219,7 @@ export class ConfigurationComponent {
             default: '[ ]',
             cli: null,
             description: `Additional arguments that can be provided to @angular/cli.`,
-            label: '@angular/cli only, not available as a CLI command'
+            label: 'Not available as a CLI command'
         }
     ];
 }

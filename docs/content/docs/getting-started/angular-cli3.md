@@ -16,7 +16,8 @@
             "index": "src/index.html",
             "main": "src/main.playground.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "tsconfig.playground.json",
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -39,10 +40,9 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": false
+              "buildOptimizer": true
             }
           }
         },

@@ -12,6 +12,6 @@ PlaygroundModule
         BrowserAnimationsModule
     ]
   });
-
+. . .
 platformBrowserDynamic().bootstrapModule(PlaygroundModule);
 ```

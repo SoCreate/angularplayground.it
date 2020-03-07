@@ -22,7 +22,7 @@ Make sure that you have a valid `ngsw-config.json` provided within your project'
 <section>
 <h4>Build with a Service Worker</h4>
 <p>
-    Assuming Playground is <a routerLink="/docs/getting-started/angular-cli">configured correctly</a>,
+    Assuming Playground is <a routerLink="/docs/getting-started/installation">configured correctly</a>,
     the following commands will build Playground with a service worker, navigate to the build output,
     and start serving content.
 </p>
@@ -30,13 +30,13 @@ Make sure that you have a valid `ngsw-config.json` provided within your project'
 <section markdown>
 ##### Without Service Worker
 ```
-angular-playground --build
+npx angular-playground --build
 cd ./dist-playground/
 http-server
 ```
 ##### With Service Worker
 ```
-angular-playground --build-with-service-worker
+npx angular-playground --build-with-service-worker
 cd ./dist-playground/
 http-server
 ```

@@ -3,13 +3,24 @@
   The Angular Playground works great as part of an overall style guide, component library,
   or documentation tool. For this reason it contains an "embed mode" that allows individual
   sandbox scenarios to be embedded in other applications with an `iframe`. When using this embed
-  mode the src will include the code needed for the sandbox scenario only and will include nothing 
+  mode the src will include the code needed for the sandbox scenario only and will include nothing
   related to the command bar or anything else from the playground.
 </section>
 <p>
-  To use the embed mode you'll just need to add <code>&embed=1</code> to the end of the url to your 
+  To use the embed mode you'll just need to add <code>&embed=1</code> to the end of the url to your
   scenario.
 </p>
 <blockquote>
     <code>.../?scenario=.%2Fapp%2Fnotice.component.sandbox/Default&embed=1</code>
+</blockquote>
+<h2>Optionally Uniquely Identify Sandboxes</h2>
+<section markdown>
+  Playground sandboxes let you create a uniqueId for each sandbox file that is then used in the URL to
+  make it easier to move sandbox files around without breaking embedded URLs.
+</section>
+<p>Add uniqueId to each sandbox file</p>
+<div markdown path="content/docs/embedding/sandboxing-components.md" lines="5"></div>
+<p>URL now uses the Unique Id</p>
+<blockquote>
+  <code>.../?scenario=c48364e7-fbd0-487d-bc7f-4b8b1e0c42dd/Default&embed=1</code>
 </blockquote>

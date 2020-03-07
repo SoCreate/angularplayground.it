@@ -1,19 +1,19 @@
 ###### ./src/tsconfig.playground.json
 ```json
 {
-  "extends": "../tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
+    "outDir": "./out-tsc/app",
     "types": []
   },
-  "include": [
-    "**/*.ts",
-    "../projects/my-lib/src/**/*.ts"
+  "files": [
+    "src/main.playground.ts",
+    "src/polyfills.ts"
   ],
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts",
-    "../projects/my-lib/src/**/*.spec.ts"
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.sandbox.ts",
+    "projects/my-lib/src/**/*.sandbox.ts"
   ]
 }
 ```
