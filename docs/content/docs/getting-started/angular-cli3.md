@@ -14,9 +14,9 @@
           "options": {
             "outputPath": "dist/playground",
             "index": "src/index.html",
-            "main": "src/main.playground.ts",
+            "main": ".angular-playground/main.playground.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.playground.json",
+            "tsConfig": ".angular-playground/tsconfig.playground.json",
             "aot": false,
             "assets": [
               "src/favicon.ico",
@@ -35,16 +35,20 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": false,
+              "extractLicenses": false,
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

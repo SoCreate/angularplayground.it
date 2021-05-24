@@ -185,6 +185,13 @@ export class ConfigurationComponent {
           description: `Milliseconds to wait for sandbox scenario to load before capturing screenshot.`
         },
         {
+          name: 'definedSandboxesPath',
+          type: 'string',
+          default: '.angular-playground/angular-playground.json',
+          cli: '--defined-sandboxes-path',
+          description: 'Defined sandboxes path (file path for CLI to write out sandboxed scenarios)'
+        },
+        {
             name: 'angularCli.appName',
             type: 'string',
             default: 'playground',

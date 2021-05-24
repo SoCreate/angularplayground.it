@@ -42,7 +42,8 @@ PlaygroundModule
       environment.production
         ? ServiceWorkerModule.register('/ngsw-worker.js')
         : []
-    ]
+    ],
+    sandboxesDefined: SandboxesDefined
   {{ '}' }});
   ```
 
