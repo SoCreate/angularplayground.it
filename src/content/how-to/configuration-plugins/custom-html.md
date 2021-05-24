@@ -15,7 +15,7 @@
 </html>
 ```
 
-###### ./src/main.playground.ts
+###### ./.angular-playground/main.playground.ts
 ```typescript
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
